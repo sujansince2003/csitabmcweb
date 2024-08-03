@@ -31,7 +31,7 @@ html {
   min-height: 100vh;
   min-width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-    url("../../Assets/partners/Covers.JPG");
+    url("../../Assets/partners/aboutimg.JPG");
   position: relative;
   background-position: center;
   background-size: cover;
