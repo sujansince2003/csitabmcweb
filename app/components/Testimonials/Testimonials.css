@@ -1,0 +1,233 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff !important;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.reviews--heading {
+  font-size: 24px !important;
+}
+.WellWishers {
+  padding: 1rem 0rem;
+}
+.swiper-pagination {
+  display: none;
+}
+.quoteIcon {
+  fill: red !important;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mySwiper {
+  height: 60vh;
+}
+.mySwiper2 {
+  height: 46vh;
+  width: 86rem;
+}
+.wrapperimg {
+  border-radius: 100%;
+  height: 100px !important;
+  width: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slidewrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  justify-content: center;
+  align-items: center;
+}
+.parentwrapper {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.para {
+  flex: 0.8;
+  text-align: left;
+}
+h5 {
+  color: red;
+}
+.SwiperHeading {
+  display: flex;
+  background-color: #ffff;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: red;
+}
+.WellWishers {
+  text-align: center;
+  color: red;
+}
+.imagePartners {
+  background-color: #ffff;
+}
+.secHeading {
+  color: black;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* For very small mobile devices  */
+
+@media screen and (max-width: 320px) and (min-width: 0px) {
+  .mySwiper2 {
+    height: 30vh;
+    width: 24rem;
+  }
+  .reviews--heading {
+    font-size: 16px;
+  }
+  .parentwrapper {
+    flex-direction: column;
+  }
+  .para {
+    text-align: center;
+    font-size: 0.66em;
+  }
+
+  .wrapperimg {
+    border-radius: 100%;
+    height: 60px !important;
+    width: 60px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* For Most of the Smartphones  */
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .mySwiper2 {
+    height: 30vh;
+    width: 40rem;
+  }
+  .reviews--heading {
+    font-size: 18px;
+  }
+  .parentwrapper {
+    flex-direction: column;
+  }
+  .para {
+    text-align: center;
+    font-size: 0.66em;
+  }
+  .wrapperimg {
+    border-radius: 100%;
+    height: 75px !important;
+    width: 75px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* For low resolution Tablets  */
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .mySwiper2 {
+    height: 30vh;
+    width: 24rem;
+  }
+  .reviews--heading {
+    font-size: 24px;
+  }
+  .parentwrapper {
+    flex-direction: column;
+  }
+  .para {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .wrapperimg {
+    border-radius: 100%;
+    height: 85px !important;
+    width: 85px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* For Tablets/Ipad  */
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .mySwiper2 {
+    height: 30vh;
+    width: 65rem;
+  }
+  .reviews--heading {
+    font-size: 18px;
+  }
+  .parentwrapper {
+    flex-direction: column;
+  }
+  .para {
+    text-align: center;
+    font-size: 1em;
+  }
+  .wrapperimg {
+    border-radius: 100%;
+    height: 93px !important;
+    width: 93px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
