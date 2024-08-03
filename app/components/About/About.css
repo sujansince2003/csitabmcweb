@@ -1,0 +1,157 @@
+html {
+  scroll-behavior: smooth;
+}
+.a-sub,
+.a-desc {
+  font-family: "Poppins", sans-serif;
+}
+.a-title {
+  color: red;
+  font-size: 24px;
+}
+
+.about {
+  height: 100vh;
+  background-color: #f2f6fb;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+}
+.about-left {
+  flex: 1.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.about-right {
+  flex: 1;
+}
+.about-card {
+  width: 70%;
+  height: 70vh;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.about-card.bg {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background-color: #6e85b7;
+  opacity: 0.7;
+}
+@media screen and (max-width: 320px) and (min-width: 0px) {
+  .a-title {
+    font-size: 18px;
+  }
+  .about-card.bg {
+    display: none;
+  }
+  /* .sep p{
+    font-size: 0.85em;
+  } */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+    padding: 2rem 0rem;
+  }
+  .about-left {
+    width: 100%;
+  }
+  .about-card {
+    width: 90%;
+    height: fit-content;
+  }
+  .about-right {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .a-title {
+    font-size: 20px;
+  }
+  .about-card.bg {
+    display: none;
+  }
+  /* .sep p{
+    font-size: 0.85em;
+  } */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+    padding: 2rem 0rem;
+  }
+  .about-left {
+    width: 100%;
+  }
+  .about-card {
+    width: 90%;
+    height: fit-content;
+  }
+  .about-right {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .a-title {
+    font-size: 24px;
+  }
+  .about-card.bg {
+    display: none;
+  }
+  .sep p {
+    font-size: 1.1em;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+    height: fit-content;
+    padding: 2rem 0rem;
+  }
+  .about-left {
+    width: 100%;
+  }
+  .about-card {
+    width: 90%;
+    height: fit-content;
+  }
+  .about-right {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .a-title {
+    font-size: 18px;
+  }
+  .about {
+    height: fit-content;
+    padding: 5rem;
+    gap: 2rem;
+  }
+  .about-img {
+    width: 100%;
+  }
+  .about-card {
+    height: 35vh;
+    width: 100%;
+  }
+  .about-card.bg {
+    width: 100%;
+
+    left: -20px;
+  }
+}
