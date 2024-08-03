@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b2430;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 99;
+}
+.header {
+  min-height: 100vh;
+  min-width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url("../../Assets/partners/Covers.JPG");
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .Typewriter {
+    font-size: 1.5rem;
+  }
+}
