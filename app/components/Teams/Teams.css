@@ -3,7 +3,7 @@
   height: 100px;
   border-radius: 100%;
 }
-.social--icons{
+.social--icons {
   display: flex;
   gap: 1em;
   justify-content: center;
