@@ -183,6 +183,20 @@ export const teamdata = [
     Facebook: "https://www.facebook.com/im.bipo",
   },
   {
+    id: 16,
+    Name: "URBISH GHIMIRE",
+    img: IMG20,
+    Post: "Executive Graphic Designer",
+    Facebook: "https://www.facebook.com/urbish.ghimire",
+  },
+  {
+    id: 17,
+    Name: "SANGIT GYAWALI",
+    img: IMG21,
+    Post: "Assistant Graphic Designer",
+    Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
+  },
+  {
     id: 12,
     Name: "KRITAN ARYAL",
     img: IMG12,
@@ -193,7 +207,7 @@ export const teamdata = [
     id: 15,
     Name: "KARUNA PYAKUREL",
     img: IMG15,
-    Post: "Event Manger",
+    Post: "HR Lead",
     Facebook: "https://www.facebook.com/karunakshetry.pyakurel",
   },
   {
@@ -224,20 +238,6 @@ export const teamdata = [
     img: IMG18,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/samir.aryal.1428",
-  },
-  {
-    id: 16,
-    Name: "URBISH GHIMIRE",
-    img: IMG20,
-    Post: "Executive Member",
-    Facebook: "https://www.facebook.com/urbish.ghimire",
-  },
-  {
-    id: 17,
-    Name: "SANGIT GYAWALI",
-    img: IMG21,
-    Post: "Executive Member",
-    Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
   },
 ];
 
