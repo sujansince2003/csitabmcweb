@@ -19,7 +19,7 @@ import IMG8 from "./Team/JEEVAN.jpg";
 import IMG9 from "./Team/BIPIN.jpg";
 import IMG10 from "./Team/KRITAN.png";
 import IMG11 from "./Team/KARUNA.jpg";
-import IMG12 from "./Team/Urbish (2).png";
+import IMG20 from "./Team/Urbish.png";
 import IMG13 from "./Team/SANGIT.png";
 import IMG14 from "./Team/DIKSHYA.jpeg";
 import IMG15 from "./Team/GOVINDA.jpg";
@@ -43,7 +43,7 @@ import Manoj from "./Team/manoj.jpg";
 import Mahendra from "./Team/mahendra.jpg";
 import Prakash from "./Team/prakash.jpg";
 import Rabin from "./Team/Rabin.jpg";
-import sindhu from "./Team/sindhu.jpg"
+import sindhu from "./Team/sindhu.jpg";
 //Exporting Navbar Links
 export const Links = [
   {
@@ -180,62 +180,34 @@ export const teamdata = [
   },
 
   {
-<<<<<<< HEAD
     id: 16,
     Name: "URBISH GHIMIRE",
     img: IMG20,
-    Post: "Executive Graphic Designer",
+    Post: " Graphic Designer",
     Facebook: "https://www.facebook.com/urbish.ghimire",
   },
   {
     id: 17,
     Name: "SANGIT GYAWALI",
-    img: IMG21,
-    Post: "Assistant Graphic Designer",
+    img: IMG13,
+    Post: "Ast.Graphic Designer",
     Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
   },
   {
     id: 12,
     Name: "KRITAN ARYAL",
-    img: IMG12,
+    img: IMG10,
     Post: "Event Manger",
     Facebook: "https://www.facebook.com/aryal.kritan",
   },
   {
     id: 15,
     Name: "KARUNA PYAKUREL",
-    img: IMG15,
-    Post: "HR Lead",
-=======
-    id: 10,
-    Name: "Kritan Aryal",
-    img: IMG10,
-    Post: "Event Manager",
-    Facebook: "https://www.facebook.com/aryal.kritan",
-  },
-  {
-    id: 11,
-    Name: "Karuna Pyakurel",
     img: IMG11,
-    Post: "Executive HR Lead",
->>>>>>> origin/main
+    Post: "HR Lead",
     Facebook: "https://www.facebook.com/karunakshetry.pyakurel",
   },
-  {
 
-    id: 12,
-    Name: "Urbish Ghimire",
-    img: IMG12,
-    Post: "Graphics Designer",
-    Facebook: "https://www.facebook.com/pratik.aryal.9615",
-  },
-  {
-    id: 13,
-    Name: "Sangeet Gyawali",
-    img: IMG13,
-    Post: "Ast. Graphics Designer",
-    Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
-  },
   {
     id: 14,
     Name: "Dikshya Sharma",
@@ -244,29 +216,26 @@ export const teamdata = [
     Facebook: "https://www.facebook.com/dikshya.sharma.9216",
   },
   {
+    id: 20,
+    Name: "Mission Paudel",
+    img: IMG16,
+    Post: "Executive Member",
+    Facebook: "https://www.facebook.com/misson.paudel.3",
+  },
+  {
     id: 15,
     Name: "Govinda Sagar Bhusal",
     img: IMG15,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/aayush.bhusal.50",
   },
-<<<<<<< HEAD
-=======
   {
-    id: 16,
-    Name: "Misson Paudel",
-    img: IMG16,
-    Post: "Executive Member",
-    Facebook: "https://www.facebook.com/misson.paudel.3",
-  },
-  {
-    id: 17,
+    id: 19,
     Name: "Samir Aryal",
     img: IMG17,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/samir.aryal.1428",
   },
->>>>>>> origin/main
 ];
 
 //Exporting testimonials data
@@ -320,7 +289,7 @@ export const Testidata = [
     image: Manoj,
     Name: "Manoj Pokharel",
     testimony:
-      'CSIT Association of BMC speaks a lot more about Whole student problem rather than just being a group of people, they always focus on unity, Co-operation, and strengths to develop the better relationship between student and administration',
+      "CSIT Association of BMC speaks a lot more about Whole student problem rather than just being a group of people, they always focus on unity, Co-operation, and strengths to develop the better relationship between student and administration",
     Post: `President at CSIT Association of Nepal-Rupandehi`,
   },
   {
@@ -328,7 +297,7 @@ export const Testidata = [
     image: Mahendra,
     Name: "Mahendra Kandel",
     testimony:
-      'I consider CSIT Association of BMC as a group of leaders of tech community who are always eager to impart knowledge and has willingness to see the change, Despite of being an organization inside academic boundary it always had contributed to national tech community, Proud to be a part of it and kudos to the new team.',
+      "I consider CSIT Association of BMC as a group of leaders of tech community who are always eager to impart knowledge and has willingness to see the change, Despite of being an organization inside academic boundary it always had contributed to national tech community, Proud to be a part of it and kudos to the new team.",
     Post: `Former President at CSITA-BMC`,
   },
   {
@@ -336,7 +305,7 @@ export const Testidata = [
     image: Sujan,
     Name: "Sujan Khatiwada",
     testimony:
-      'It was a nice moment to share the experience with curious IT people at CSIT Association, BMC.',
+      "It was a nice moment to share the experience with curious IT people at CSIT Association, BMC.",
     Post: `Fullstack Developer and founder at sathibhai.com`,
   },
   {
