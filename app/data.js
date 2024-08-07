@@ -8,29 +8,23 @@ import workshopNET from "./Assets/eventimg/workshopNET.jpg";
 import reactEvent from "./Assets/eventimg/reactEvent.jpg";
 
 //Teams data
-import IMG1 from "./Team/keshab.jpg";
-import IMG2 from "./Team/sachin.jpg";
-
-import IMG4 from "./Team/suman.jpg";
-import IMG5 from "./Team/saradsir.jpg";
-import IMG6 from "./Team/sujanb.jpg";
-import IMG7 from "./Team/bibek.jpg";
-import IMG8 from "./Team/anuradha.jpg";
-import IMG9 from "./Team/MISSON.jpeg";
-import IMG10 from "./Team/sanchit.jpeg";
-import IMG11 from "./Team/bipin.jpg";
-import IMG12 from "./Team/kritan.jpg";
-import IMG13 from "./Team/pratik.jpg";
-import IMG14 from "./Team/shikshya.jpg";
-import IMG15 from "./Team/karuna.jpeg";
-import IMG16 from "./Team/govinda.jpeg";
-import IMG17 from "./Team/dikshya.jpeg";
-import IMG18 from "./Team/samir.jpg";
-import IMG20 from "./Team/urbish.png";
-import IMG21 from "./Team/SANGIT.png";
-
-import IMG19 from "./Team/jeevan.jpeg";
-
+import IMG1 from "./Team/SUMAN.jpg";
+import IMG2 from "./Team/SUJAN.png";
+import IMG3 from "./Team/ANU.jpg";
+import IMG4 from "./Team/SANCHIT.jpg";
+import IMG5 from "./Team/BIBEK.jpeg";
+import IMG6 from "./Team/SHIKSHYA.jpg";
+import IMG7 from "./Team/PRATIK.jpg";
+import IMG8 from "./Team/JEEVAN.jpg";
+import IMG9 from "./Team/BIPIN.jpg";
+import IMG10 from "./Team/KRITAN.png";
+import IMG11 from "./Team/KARUNA.jpg";
+import IMG12 from "./Team/Urbish (2).png";
+import IMG13 from "./Team/SANGIT.png";
+import IMG14 from "./Team/DIKSHYA.jpeg";
+import IMG15 from "./Team/GOVINDA.jpg";
+import IMG16 from "./Team/MISSON.jpeg";
+import IMG17 from "./Team/SAMIR.jpg";
 import img1 from "./Assets/partners/1.png";
 import img2 from "./Assets/partners/2.png";
 import img3 from "./Assets/partners/3.png";
@@ -49,7 +43,7 @@ import Manoj from "./Team/manoj.jpg";
 import Mahendra from "./Team/mahendra.jpg";
 import Prakash from "./Team/prakash.jpg";
 import Rabin from "./Team/Rabin.jpg";
-import sindhu from "./Team/sindhu.jpg";
+import sindhu from "./Team/sindhu.jpg"
 //Exporting Navbar Links
 export const Links = [
   {
@@ -121,68 +115,72 @@ export const products = [
 export const teamdata = [
   {
     id: 1,
-    Name: "SUMAN BHATTARAI",
-    img: IMG4,
+    Name: "Suman Bhattarai",
+    img: IMG1,
     Post: "President",
     Facebook: "https://www.facebook.com/suman.bhattarai.986",
   },
   {
     id: 2,
-    Name: "SUJAN KHATRI",
-    img: IMG6,
+    Name: "Sujan Khatri",
+    img: IMG2,
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/sujansince2003",
   },
   {
-    id: 8,
-    Name: "ANURADHA PANDEY",
-    img: IMG8,
-    Post: "Vice President",
+    id: 3,
+    Name: "Anuradha Pandey",
+    img: IMG3,
+    Post: "Vice-President",
     Facebook: "https://www.facebook.com/profile.php?id=100035413025994",
   },
   {
-    id: 3,
-    Name: "SANCHIT PANDEY",
-    img: IMG10,
-    Post: "Secretary",
-    Facebook: "https://www.facebook.com/sanchitpandeyyy",
-  },
-  {
     id: 4,
-    Name: "BIBEK ACHARYA",
-    img: IMG7,
-    Post: "Joint-Secretary",
-    Facebook: "https://www.facebook.com/Bivekacharya2059",
+    Name: "Sanchit Pandey",
+    img: IMG4,
+    Post: "Secretary",
+    Facebook: "https://www.facebook.com/sanchitpandeyyy/",
   },
+
   {
     id: 5,
-    Name: "SHIKSHYA ACHARYA",
-    img: IMG14,
-    Post: "TREASURER",
+    Name: "Bivek Acharya",
+    img: IMG5,
+    Post: "Joint Secretary",
+    Facebook: "https://www.facebook.com/Bibekacharya2059",
+  },
+
+  {
+    id: 6,
+    Name: "Shikshya Acharya",
+    img: IMG6,
+    Post: "Treasurer",
     Facebook: "https://www.facebook.com/Shikshyaacharyaa",
   },
   {
-    id: 13,
-    Name: "PRATIK ARYAL",
-    img: IMG13,
-    Post: "JOINT TREASURER ",
+    id: 7,
+    Name: "Pratik Aryal",
+    img: IMG7,
+    Post: "Joint Treasurer",
     Facebook: "https://www.facebook.com/pratik.aryal.9615",
   },
   {
-    id: 6,
-    Name: "JEEVAN GHIMIRE",
-    img: IMG19,
-    Post: "Tech-Lead",
+    id: 8,
+    Name: "Jeevan Ghimire",
+    img: IMG8,
+    Post: "Tech Lead",
     Facebook: "https://www.facebook.com/imjeevanghimire",
   },
   {
-    id: 7,
-    Name: "BIPIN KHATRI ",
-    img: IMG11,
-    Post: "Ass. Tech Lead",
+    id: 9,
+    Name: "Bipin Khatri",
+    img: IMG9,
+    Post: "Ast. Tech Lead",
     Facebook: "https://www.facebook.com/im.bipo",
   },
+
   {
+<<<<<<< HEAD
     id: 16,
     Name: "URBISH GHIMIRE",
     img: IMG20,
@@ -208,37 +206,67 @@ export const teamdata = [
     Name: "KARUNA PYAKUREL",
     img: IMG15,
     Post: "HR Lead",
+=======
+    id: 10,
+    Name: "Kritan Aryal",
+    img: IMG10,
+    Post: "Event Manager",
+    Facebook: "https://www.facebook.com/aryal.kritan",
+  },
+  {
+    id: 11,
+    Name: "Karuna Pyakurel",
+    img: IMG11,
+    Post: "Executive HR Lead",
+>>>>>>> origin/main
     Facebook: "https://www.facebook.com/karunakshetry.pyakurel",
   },
   {
-    id: 9,
-    Name: "GOVINDA SAGAR BHUSAL",
-    img: IMG16,
-    Post: "Executive Member",
-    Facebook: "https://www.facebook.com/aayush.bhusal.50",
+
+    id: 12,
+    Name: "Urbish Ghimire",
+    img: IMG12,
+    Post: "Graphics Designer",
+    Facebook: "https://www.facebook.com/pratik.aryal.9615",
   },
   {
-    id: 10,
-    Name: "DIKSHYA SHARMA",
-    img: IMG17,
+    id: 13,
+    Name: "Sangeet Gyawali",
+    img: IMG13,
+    Post: "Ast. Graphics Designer",
+    Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
+  },
+  {
+    id: 14,
+    Name: "Dikshya Sharma",
+    img: IMG14,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/dikshya.sharma.9216",
   },
   {
-    id: 11,
-    Name: "MISSION PAUDEL",
-    img: IMG9,
+    id: 15,
+    Name: "Govinda Sagar Bhusal",
+    img: IMG15,
+    Post: "Executive Member",
+    Facebook: "https://www.facebook.com/aayush.bhusal.50",
+  },
+<<<<<<< HEAD
+=======
+  {
+    id: 16,
+    Name: "Misson Paudel",
+    img: IMG16,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/misson.paudel.3",
   },
-
   {
-    id: 14,
-    Name: "SAMIR ARYAL",
-    img: IMG18,
+    id: 17,
+    Name: "Samir Aryal",
+    img: IMG17,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/samir.aryal.1428",
   },
+>>>>>>> origin/main
 ];
 
 //Exporting testimonials data
@@ -292,7 +320,7 @@ export const Testidata = [
     image: Manoj,
     Name: "Manoj Pokharel",
     testimony:
-      "CSIT Association of BMC speaks a lot more about Whole student problem rather than just being a group of people, they always focus on unity, Co-operation, and strengths to develop the better relationship between student and administration",
+      'CSIT Association of BMC speaks a lot more about Whole student problem rather than just being a group of people, they always focus on unity, Co-operation, and strengths to develop the better relationship between student and administration',
     Post: `President at CSIT Association of Nepal-Rupandehi`,
   },
   {
@@ -300,7 +328,7 @@ export const Testidata = [
     image: Mahendra,
     Name: "Mahendra Kandel",
     testimony:
-      "I consider CSIT Association of BMC as a group of leaders of tech community who are always eager to impart knowledge and has willingness to see the change, Despite of being an organization inside academic boundary it always had contributed to national tech community, Proud to be a part of it and kudos to the new team.",
+      'I consider CSIT Association of BMC as a group of leaders of tech community who are always eager to impart knowledge and has willingness to see the change, Despite of being an organization inside academic boundary it always had contributed to national tech community, Proud to be a part of it and kudos to the new team.',
     Post: `Former President at CSITA-BMC`,
   },
   {
@@ -308,7 +336,7 @@ export const Testidata = [
     image: Sujan,
     Name: "Sujan Khatiwada",
     testimony:
-      "It was a nice moment to share the experience with curious IT people at CSIT Association, BMC.",
+      'It was a nice moment to share the experience with curious IT people at CSIT Association, BMC.',
     Post: `Fullstack Developer and founder at sathibhai.com`,
   },
   {

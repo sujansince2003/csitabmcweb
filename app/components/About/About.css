@@ -28,6 +28,7 @@ html {
 }
 .about-right {
   flex: 1;
+  padding-right: 50px;
 }
 .about-card {
   width: 70%;
