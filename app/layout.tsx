@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CSITABMC",
-  description: "A website for CSITABMC Assoctiation.",
+  description:
+    "CSIT Association of Butwal Multiple Campus is Non profit, Non political association of CSIT Students of Butwal Multiple Campus.",
 };
 
 export default function RootLayout({
