@@ -8,7 +8,7 @@ const Teams = ({ img, Name, Post, Facebook, Linkedin }) => {
   return (
     <div className="parent">
       <div>
-        <Image src={img} alt="" className="p-img" />
+        <Image src={img} alt="team img" className="p-img" />
       </div>
       <div className="naming">
         <div className="Name">{Name}</div>

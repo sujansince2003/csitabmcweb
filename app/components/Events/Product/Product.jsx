@@ -9,7 +9,7 @@ const Product = ({ img, title, link, id }) => {
         <div className="project-info">
           <span className="p-title">{title}</span>
         </div>
-        <Image src={img} alt="" className="event-img" />
+        <Image src={img} alt="event image" className="event-img" />
       </a>
     </>
   );

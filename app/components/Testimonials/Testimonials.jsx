@@ -39,7 +39,11 @@ const Testimonials = () => {
                   <div className="hero--wrapper">
                     <div className="parentwrapper">
                       <div className="slidewrapper">
-                        <img className="wrapperimg" src={item.image} alt="" />
+                        <img
+                          className="wrapperimg"
+                          src={item.image}
+                          alt="wrapper img"
+                        />
                         <h5>{item.Name}</h5>
                         <h5 className="secHeading">{item.Post}</h5>
                       </div>

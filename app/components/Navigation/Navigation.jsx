@@ -22,7 +22,7 @@ const Navigation = () => {
     <div className="nav-area">
       <div className="logo">
         <Link href={"/"}>
-          <Image src={IMG} />
+          <Image src={IMG} alt="nav area" />
         </Link>
       </div>
       <button
