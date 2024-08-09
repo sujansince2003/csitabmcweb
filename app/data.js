@@ -119,6 +119,7 @@ export const teamdata = [
     img: IMG1,
     Post: "President",
     Facebook: "https://www.facebook.com/suman.bhattarai.986",
+    LinkedIn: "",
   },
   {
     id: 2,
@@ -126,6 +127,7 @@ export const teamdata = [
     img: IMG2,
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/sujansince2003",
+    LinkedIn: "https://www.linkedin.com/in/sujansince2003/",
   },
   {
     id: 3,
@@ -133,6 +135,7 @@ export const teamdata = [
     img: IMG3,
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/profile.php?id=100035413025994",
+    LinkedIn: "",
   },
   {
     id: 4,
@@ -140,6 +143,7 @@ export const teamdata = [
     img: IMG4,
     Post: "Secretary",
     Facebook: "https://www.facebook.com/sanchitpandeyyy/",
+    LinkedIn: "https://www.linkedin.com/in/sanchitpandeyyy/",
   },
 
   {
@@ -148,6 +152,7 @@ export const teamdata = [
     img: IMG5,
     Post: "Joint Secretary",
     Facebook: "https://www.facebook.com/Bibekacharya2059",
+    LinkedIn: "https://www.linkedin.com/in/bivek-acharya-5746282b2/",
   },
 
   {
@@ -156,6 +161,7 @@ export const teamdata = [
     img: IMG6,
     Post: "Treasurer",
     Facebook: "https://www.facebook.com/Shikshyaacharyaa",
+    LinkedIn: "https://www.linkedin.com/in/shikshya-acharya-90b227317/",
   },
   {
     id: 7,
@@ -163,6 +169,7 @@ export const teamdata = [
     img: IMG7,
     Post: "Joint Treasurer",
     Facebook: "https://www.facebook.com/pratik.aryal.9615",
+    LinkedIn: "https://www.linkedin.com/in/pratik-aryal-256a79289/",
   },
   {
     id: 8,
@@ -170,6 +177,7 @@ export const teamdata = [
     img: IMG8,
     Post: "Tech Lead",
     Facebook: "https://www.facebook.com/imjeevanghimire",
+    LinkedIn: "https://www.linkedin.com/in/imjeevanghimire/",
   },
   {
     id: 9,
@@ -177,6 +185,7 @@ export const teamdata = [
     img: IMG9,
     Post: "Ast. Tech Lead",
     Facebook: "https://www.facebook.com/im.bipo",
+    LinkedIn: "https://www.linkedin.com/in/bipinkhatri/",
   },
 
   {
@@ -185,6 +194,7 @@ export const teamdata = [
     img: IMG20,
     Post: " Graphic Designer",
     Facebook: "https://www.facebook.com/urbish.ghimire",
+    LinkedIn: "https://www.linkedin.com/in/urbish-ghimire-00bb922ab/",
   },
   {
     id: 17,
@@ -192,6 +202,7 @@ export const teamdata = [
     img: IMG13,
     Post: "Ast.Graphic Designer",
     Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
+    LinkedIn: "https://www.linkedin.com/in/sangitgyawali/",
   },
   {
     id: 12,
@@ -199,6 +210,7 @@ export const teamdata = [
     img: IMG10,
     Post: "Event Manger",
     Facebook: "https://www.facebook.com/aryal.kritan",
+    LinkedIn: "https://www.linkedin.com/in/aryalkritan11/",
   },
   {
     id: 15,
@@ -206,6 +218,7 @@ export const teamdata = [
     img: IMG11,
     Post: "HR Lead",
     Facebook: "https://www.facebook.com/karunakshetry.pyakurel",
+    LinkedIn: "https://www.linkedin.com/in/karuna-pyakurel-abbb172a8/",
   },
 
   {
@@ -214,6 +227,7 @@ export const teamdata = [
     img: IMG14,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/dikshya.sharma.9216",
+    LinkedIn: "https://www.linkedin.com/in/dikshya2004/",
   },
   {
     id: 20,
@@ -221,6 +235,7 @@ export const teamdata = [
     img: IMG16,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/misson.paudel.3",
+    LinkedIn: "https://www.linkedin.com/in/misson-paudel-900181293/",
   },
   {
     id: 15,
@@ -228,6 +243,7 @@ export const teamdata = [
     img: IMG15,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/aayush.bhusal.50",
+    LinkedIn: "https://www.linkedin.com/in/govinda-sagar-bhusal-3685362a8/",
   },
   {
     id: 19,
@@ -235,6 +251,7 @@ export const teamdata = [
     img: IMG17,
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/samir.aryal.1428",
+    LinkedIn: "",
   },
 ];
 
