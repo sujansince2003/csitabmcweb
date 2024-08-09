@@ -1,16 +1,23 @@
 import React from "react";
-
 import "./Product.css";
-import Image from "next/image";
-const Product = ({ img, title, link, id }) => {
+import Link from "next/link";
+
+const Product = ({ img, title, link, id, desc }) => {
   return (
     <>
-      <a className="p" href={link} target="_blank" rel="noreferrer">
-        <div className="project-info">
-          <span className="p-title">{title}</span>
+      <div className="event-container">
+        <div className="card-items">
+          <img src={img} alt="" className="event-img" />
+          <div className="card-details">
+            <h4 className="events-title">{title}</h4>
+            <p className="card-description">{desc} ...</p>
+
+            <Link className="card-view-button" href={link}>
+              View
+            </Link>
+          </div>
         </div>
-        <Image src={img} fill="true" alt="event image" className="event-img" />
-      </a>
+      </div>
     </>
   );
 };

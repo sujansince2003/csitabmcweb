@@ -1,0 +1,857 @@
+{
+
+ "reactworkshop1": {
+   "Name": "React Wokshop Event",
+   "Banner": "/events/img/reactEvent.jpg",
+   "Date": [
+     "10 May, 2022 - ",
+     "12 May, 2022"
+   ],
+   "time": [
+     "09:00 AM - ",
+     "05:00 PM"
+   ],
+   "location": "Virtual",
+   "tags": [
+     "Paid",
+     "React",
+     "Bootcamp"
+   ],
+   "mentor": {
+     "name": "Nijan Adhikari",
+     "photoUrl": "https://example.com/sarah-smith-photo.jpg",
+     "post": "Senior React Developer"
+   },
+   "attendees": {
+     "numberOfAttendees": 60,
+     "listOfAttendees": [
+       "John",
+       "Alice",
+       "David",
+       "Emily",
+       "Sophie",
+       "Michael",
+       "Grace",
+       "Daniel",
+       "Oliver",
+       "Emma",
+       "Ella",
+       "Liam",
+       "Lucas",
+       "Lily",
+       "Ava",
+       "Henry",
+       "Sophia",
+       "Benjamin",
+       "William",
+       "Chloe",
+       "Evelyn",
+       "Harper",
+       "Matthew",
+       "Daniel",
+       "James",
+       "Joseph",
+       "Mia",
+       "Scarlett",
+       "Victoria",
+       "Nora",
+       "Zoey",
+       "Eleanor",
+       "Hazel",
+       "Violet",
+       "Aurora",
+       "Mila",
+       "Ella",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Luna"
+     ]
+   },
+   "summary": "Join our React Bootcamp to master the art of building web applications using React, a popular JavaScript library for building user interfaces. This intensive bootcamp will cover the fundamentals of React, including components, state, props, and more. You'll also work on hands-on projects to solidify your knowledge and gain practical experience.",
+   "registrationUrl": "https://forms.gle/react-bootcamp-registration",
+   "description": [
+     {
+       "title": "Bootcamp Overview",
+       "paragraph": "In this React Bootcamp, you will dive deep into the world of React and learn how to create interactive and dynamic web applications. Our experienced mentors will guide you through the entire journey, and you'll have the opportunity to network with fellow developers."
+     },
+     {
+       "title": "What You'll Learn",
+       "paragraph": "During the bootcamp, you'll learn the key concepts of React, how to work with state and props, and how to build real-world projects. This bootcamp is suitable for both beginners and experienced developers looking to enhance their React skills."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "Alice Johnson",
+       "reviewerLevel": "Web Developer",
+       "stars": 5,
+       "description": "The React Bootcamp was a fantastic experience. I learned so much about React in just a few days. The mentors were knowledgeable, and the hands-on projects were invaluable."
+     },
+     {
+       "reviewerName": "John Smith",
+       "reviewerLevel": "Front-end Developer",
+       "stars": 4,
+       "description": "I had a great time at the React Bootcamp. The content was well-structured, and I left with a solid understanding of React. Highly recommended!"
+     }
+   ]
+ },
+
+ "mocktest2079": {
+   "Name": "Mocktest 2079",
+   "Banner": "/events/img/mocktest.jpg",
+   "Date": [
+     "15 June, 2022 - ",
+     "17 June, 2022"
+   ],
+   "time": [
+     "10:00 AM - ",
+     "04:00 PM"
+   ],
+   "location": "Online",
+   "tags": [
+     "Prize",
+     "Mocktest",
+     "Rs 1850"
+     
+   ],
+   
+   "attendees": {
+     "numberOfAttendees": 80,
+     "listOfAttendees": [
+       "Sophia",
+       "Aiden",
+       "Ella",
+       "Liam",
+       "Mia",
+       "Noah",
+       "Olivia",
+       "Isabella",
+       "Emma",
+       "Charlotte",
+       "Luna",
+       "Grace",
+       "Henry",
+       "Benjamin",
+       "Evelyn",
+       "Scarlett",
+       "Nora",
+       "Zoe",
+       "Leah",
+       "Hazel",
+       "Violet",
+       "Aurora",
+       "Lucas",
+       "Daniel",
+       "James",
+       "Mila",
+       "Avery",
+       "Sofia",
+       "Aria",
+       "Riley",
+       "Stella",
+       "Natalie",
+       "Eleanor"
+     ]
+   },
+   "summary": "The JavaScript Event is a must-attend for anyone interested in JavaScript and web development. This event will cover the latest trends and best practices in JavaScript programming. Whether you're a beginner or an experienced developer, there's something for everyone.",
+   "registrationUrl": "https://forms.gle/javascript-event-registration",
+   "description": [
+     {
+       "title": "Event Overview",
+       "paragraph": "Join us for a deep dive into the world of JavaScript. Learn about the latest features of the language, explore best practices, and discover how JavaScript powers modern web development. You'll also have the chance to connect with JavaScript enthusiasts from around the world."
+     },
+     {
+       "title": "What to Expect",
+       "paragraph": "During this event, you'll gain insights into JavaScript's role in web development. We'll cover topics like ES6, asynchronous programming, and working with popular JavaScript libraries and frameworks."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "Liam Wilson",
+       "reviewerLevel": "Front-end Developer",
+       "stars": 4,
+       "description": "The JavaScript Event was a great learning opportunity. I appreciated the focus on both fundamental concepts and the latest JavaScript features."
+     },
+     {
+       "reviewerName": "Olivia Smith",
+       "reviewerLevel": "Web Developer",
+       "stars": 5,
+       "description": "I found the JavaScript Event to be extremely informative. It helped me stay updated on the latest developments in the JavaScript ecosystem."
+     }
+   ]
+ },
+ "futsal2079": {
+   "Name": "Futsal Tournament 2079",
+   "Banner": "/events/img/futsal.jpg",
+   "Date": [
+     "20 July, 2022 - ",
+     "22 July, 2022"
+   ],
+   "time": [
+     "11:00 AM - ",
+     "03:00 PM"
+   ],
+   "location": "Virtual",
+   "tags": [
+     "Futsal",
+     "CSITABMC"
+   ],
+   
+   "attendees": {
+     "numberOfAttendees": 50,
+     "listOfAttendees": [
+       "Ethan",
+       "Sophie",
+       "Daniel",
+       "Oliver",
+       "Emily",
+       "Lucas",
+       "Chloe",
+       "Mia",
+       "Henry",
+       "William",
+       "Ava",
+       "Charlotte",
+       "Ella",
+       "Liam",
+       "Sophia",
+       "Benjamin",
+       "Grace",
+       "Luna",
+       "Victoria",
+       "Nora",
+       "Zoey",
+       "Eleanor",
+       "Hazel",
+       "Violet",
+       "Aurora",
+       "Mila",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Stella",
+       "Natalie",
+       "Zoe"
+     ]
+   },
+   "summary": "Join our Python for Beginners event and embark on your journey to becoming a Python developer. This event is designed for those with little to no programming experience. Learn the basics of Python and start building simple programs.",
+   "registrationUrl": "https://forms.gle/python-beginner-registration",
+   "description": [
+     {
+       "title": "Event Overview",
+       "paragraph": "In this event, we'll cover the fundamentals of Python programming, including variables, data types, and control structures. You'll also get hands-on experience through practical exercises."
+     },
+     {
+       "title": "Who Should Attend",
+       "paragraph": "This event is perfect for absolute beginners looking to learn Python. Whether you're a student, hobbyist, or career changer, we'll provide you with the foundation you need to start your Python journey."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "Ella Johnson",
+       "reviewerLevel": "Python Enthusiast",
+       "stars": 5,
+       "description": "The Python for Beginners event was an excellent introduction to Python. The mentor was knowledgeable, and the exercises were very helpful."
+     },
+     {
+       "reviewerName": "Oliver Smith",
+       "reviewerLevel": "Beginner",
+       "stars": 4,
+       "description": "I had a great time learning Python at this event. It's a good starting point for anyone new to programming."
+     }
+   ]
+ },
+ "frontend1": {
+   "Name": "Frontend Workshop",
+   "Banner": "/events/img/frontendworkshop.jpg",
+   "Date": [
+     "05 August, 2022 - ",
+     "07 August, 2022"
+   ],
+   "time": [
+     "10:30 AM - ",
+     "04:30 PM"
+   ],
+   "location": "Online",
+   "tags": [
+     "Free",
+     "HTML",
+     "CSS",
+     "JavaScript"
+   ],
+   "mentor": {
+     "name": "Chris Miller",
+     "photoUrl": "https://example.com/chris-miller-photo.jpg",
+     "post": "Web Developer"
+   },
+   "attendees": {
+     "numberOfAttendees": 70,
+     "listOfAttendees": [
+       "Emma",
+       "Liam",
+       "Olivia",
+       "Noah",
+       "Ava",
+       "Isabella",
+       "Sophia",
+       "Mia",
+       "Charlotte",
+       "Amelia",
+       "Harper",
+       "Evelyn",
+       "Abigail",
+       "Emily",
+       "Elizabeth",
+       "Mila",
+       "Ella",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Scarlett",
+       "Victoria",
+       "Madison",
+       "Luna",
+       "Grace",
+       "Chloe",
+       "Penelope",
+       "Layla",
+       "Riley",
+       "Zoey",
+       "Nora",
+       "Lily",
+       "Eleanor",
+       "Hannah",
+       "Lillian",
+       "Addison",
+       "Aubrey",
+       "Ellie",
+       "Stella",
+       "Natalie",
+       "Zoe",
+       "Leah",
+       "Hazel",
+       "Violet",
+       "Aurora"
+     ]
+   },
+   "summary": "Join our HTML, CSS, and JavaScript Workshop to learn the fundamentals of web development. Whether you're a beginner or looking to refresh your skills, this workshop will provide you with the knowledge to create web pages and add interactivity.",
+   "registrationUrl": "https://forms.gle/html-css-js-workshop-registration",
+   "description": [
+     {
+       "title": "Workshop Overview",
+       "paragraph": "In this workshop, you'll learn the basics of HTML, CSS, and JavaScript. You'll understand how to structure web pages, style them, and add interactive features using JavaScript."
+     },
+     {
+       "title": "Who Should Attend",
+       "paragraph": "This workshop is suitable for beginners and those looking to solidify their understanding of front-end web development. No prior experience is required."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "Noah Johnson",
+       "reviewerLevel": "Front-end Developer",
+       "stars": 4,
+       "description": "The HTML, CSS, and JavaScript Workshop was a great refresher for me. The mentor was excellent, and the content was well-organized."
+     },
+     {
+       "reviewerName": "Ava Smith",
+       "reviewerLevel": "Beginner",
+       "stars": 5,
+       "description": "I loved this workshop! It was the perfect introduction to web development. I now have a good grasp of HTML, CSS, and JavaScript."
+     }
+   ]
+ },
+ "dotnet": {
+   "Name": ".NET Workshop",
+   "Banner": "/events/img/workshopNET.jpg",
+   "Date": [
+     "10 September, 2022 - ",
+     "12 September, 2022"
+   ],
+   "time": [
+     "09:00 AM - ",
+     "04:00 PM"
+   ],
+   "location": "Virtual",
+   "tags": [
+     "Paid",
+     "Node.js",
+     "Development"
+   ],
+   "mentor": {
+     "name": "Alex Turner",
+     "photoUrl": "https://example.com/alex-turner-photo.jpg",
+     "post": "Node.js Expert"
+   },
+   "attendees": {
+     "numberOfAttendees": 80,
+     "listOfAttendees": [
+       "Sophia",
+       "Aiden",
+       "Ella",
+       "Liam",
+       "Mia",
+       "Noah",
+       "Olivia",
+       "Isabella",
+       "Emma",
+       "Charlotte",
+       "Luna",
+       "Grace",
+       "Henry",
+       "Benjamin",
+       "Evelyn",
+       "Scarlett",
+       "Nora",
+       "Zoe",
+       "Leah",
+       "Hazel",
+       "Violet",
+       "Aurora",
+       "Lucas",
+       "Daniel",
+       "James",
+       "Mila",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Riley",
+       "Stella",
+       "Natalie",
+       "Eleanor"
+     ]
+   },
+   "summary": "The Node.js Development Summit is a premier event for developers working with Node.js. Learn about the latest developments, best practices, and real-world use cases for Node.js in building scalable and high-performance applications.",
+   "registrationUrl": "https://forms.gle/nodejs-summit-registration",
+   "description": [
+     {
+       "title": "Summit Overview",
+       "paragraph": "Join us for a deep dive into the world of Node.js development. Explore best practices, hear from experts, and discover how Node.js is powering modern applications. Network with Node.js enthusiasts from around the world."
+     },
+     {
+       "title": "What to Expect",
+       "paragraph": "During this summit, you'll gain insights into Node.js best practices, scalability, and performance optimization. Whether you're a beginner or an experienced developer, you'll find valuable content."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "Liam Wilson",
+       "reviewerLevel": "Full-stack Developer",
+       "stars": 4,
+       "description": "The Node.js Development Summit was an informative event. I learned a lot about optimizing Node.js applications for performance."
+     },
+     {
+       "reviewerName": "Olivia Smith",
+       "reviewerLevel": "Node.js Developer",
+       "stars": 5,
+       "description": "I found the Node.js Development Summit to be extremely valuable. The speakers were experts, and I gained valuable insights into Node.js best practices."
+     }
+   ]
+ },
+ "itroadmap2079": {
+   "Name": "IT Roadmap 2079",
+   "Banner": "/events/img/itroadmap.jpg",
+   "Date": [
+     "04 April, 2022 - ",
+     "06 April, 2022"
+   ],
+   "time": [
+     "04:00 PM - ",
+     "06:0 PM"
+   ],
+   "location": "Google Meet",
+   "tags": [
+     "Free",
+     "completed",
+     "itroadmap"
+   ],
+   "mentor": {
+     "name": "Ram Thapa",
+     "photoUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fHww",
+     "post": "Senior Developer"
+   },
+   "attendees": {
+     "numberOfAttendees": 45,
+     "listOfAttendees": [
+       "Emma",
+       "Liam",
+       "Olivia",
+       "Noah",
+       "Ava",
+       "Isabella",
+       "Sophia",
+       "Mia",
+       "Charlotte",
+       "Amelia",
+       "Harper",
+       "Evelyn",
+       "Abigail",
+       "Emily",
+       "Elizabeth",
+       "Mila",
+       "Ella",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Scarlett",
+       "Victoria",
+       "Madison",
+       "Luna",
+       "Grace",
+       "Chloe",
+       "Penelope",
+       "Layla",
+       "Riley",
+       "Zoey",
+       "Nora",
+       "Lily",
+       "Eleanor",
+       "Hannah",
+       "Lillian",
+       "Addison",
+       "Aubrey",
+       "Ellie",
+       "Stella",
+       "Natalie",
+       "Zoe",
+       "Leah",
+       "Hazel",
+       "Violet",
+       "Aurora"
+     ]
+   },
+   "summary": "Machine learning is a field of artificial intelligence that focuses on developing algorithms and models capable of learning from data and making predictions or decisions. It involves the use of statistical techniques and computational models to analyze complex patterns and relationships in data. Machine learning has a wide range of applications, including healthcare, finance, e-commerce, and natural language processing. It enables tasks such as diagnosis, fraud detection, personalized recommendations, and language translation. With its ability to handle large datasets and recognize patterns, machine learning is driving advancements and innovation in various industries.",
+   "registrationUrl": "https://forms.gle/oqh9ZtdhQjNzi3VP6",
+   "description": [
+     {
+       "title": "Event Title 1",
+       "paragraph": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
+     },
+     {
+       "title": "Event second title",
+       "paragraph": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
+     },
+     {
+       "title": "Event second title",
+       "paragraph": "simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "hari kala pandey",
+       "reviewerLevel": "Student",
+       "stars": 4,
+       "description": "in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots  looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passag"
+     },
+     {
+       "reviewerName": "Ram linla",
+       "reviewerLevel": "Student",
+       "stars": 4,
+       "description": "in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots  looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passag"
+     }
+   ]
+ },
+ "graphicsdesign": {
+   "Name": "Graphics Designing Event",
+   "Banner": "/events/img/graphicdesigning.jpg",
+   "Date": [
+     "10 May, 2022 - ",
+     "12 May, 2022"
+   ],
+   "time": [
+     "09:00 AM - ",
+     "05:00 PM"
+   ],
+   "location": "Virtual",
+   "tags": [
+     "Paid",
+     "Graphics",
+     "illustrator"
+   ],
+   "mentor": {
+     "name": "Sarah Smith",
+     "photoUrl": "https://example.com/sarah-smith-photo.jpg",
+     "post": "Senior React Developer"
+   },
+   "attendees": {
+     "numberOfAttendees": 60,
+     "listOfAttendees": [
+       "John",
+       "Alice",
+       "David",
+       "Emily",
+       "Sophie",
+       "Michael",
+       "Grace",
+       "Daniel",
+       "Oliver",
+       "Emma",
+       "Ella",
+       "Liam",
+       "Lucas",
+       "Lily",
+       "Ava",
+       "Henry",
+       "Sophia",
+       "Benjamin",
+       "William",
+       "Chloe",
+       "Evelyn",
+       "Harper",
+       "Matthew",
+       "Daniel",
+       "James",
+       "Joseph",
+       "Mia",
+       "Scarlett",
+       "Victoria",
+       "Nora",
+       "Zoey",
+       "Eleanor",
+       "Hazel",
+       "Violet",
+       "Aurora",
+       "Mila",
+       "Ella",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Luna"
+     ]
+   },
+   "summary": "Join our React Bootcamp to master the art of building web applications using React, a popular JavaScript library for building user interfaces. This intensive bootcamp will cover the fundamentals of React, including components, state, props, and more. You'll also work on hands-on projects to solidify your knowledge and gain practical experience.",
+   "registrationUrl": "https://forms.gle/react-bootcamp-registration",
+   "description": [
+     {
+       "title": "Bootcamp Overview",
+       "paragraph": "In this React Bootcamp, you will dive deep into the world of React and learn how to create interactive and dynamic web applications. Our experienced mentors will guide you through the entire journey, and you'll have the opportunity to network with fellow developers."
+     },
+     {
+       "title": "What You'll Learn",
+       "paragraph": "During the bootcamp, you'll learn the key concepts of React, how to work with state and props, and how to build real-world projects. This bootcamp is suitable for both beginners and experienced developers looking to enhance their React skills."
+     }
+   ],
+   "reviews": [
+     {
+       "reviewerName": "Alice Johnson",
+       "reviewerLevel": "Web Developer",
+       "stars": 5,
+       "description": "The React Bootcamp was a fantastic experience. I learned so much about React in just a few days. The mentors were knowledgeable, and the hands-on projects were invaluable."
+     },
+     {
+       "reviewerName": "John Smith",
+       "reviewerLevel": "Front-end Developer",
+       "stars": 4,
+       "description": "I had a great time at the React Bootcamp. The content was well-structured, and I left with a solid understanding of React. Highly recommended!"
+     }
+   ]
+ },
+ 
+ "MachineLearningevent-2080": {
+   "Name": "Machine Learning Event ",
+   "Banner": "/events/img/Machinelearning.jpg",
+   "Date": [
+     "04 Nov, 2023 - ",
+     "05 Nov, 2023"
+   ],
+   "time": [
+     "05:00 PM - ",
+     "07:00 PM"
+   ],
+   "location": "Virtual (Zoom Meets)",
+   "tags": [
+     "Free",
+     "upcomming",
+     "Machine Learning",
+     "Python"
+   ],
+   "mentor": {
+     "name": "Kunal Kumar sahoo",
+     "photoUrl": "/events/mentor/Kunal kumar sahoo.png",
+     "post": "Research inter IIT Khadkpur"
+   },
+   "attendees": {
+     "numberOfAttendees": 80,
+     "listOfAttendees": [
+       "Sophia",
+       "Aiden",
+       "Ella",
+       "Liam",
+       "Mia",
+       "Noah",
+       "Olivia",
+       "Isabella",
+       "Emma",
+       "Charlotte",
+       "Luna",
+       "Grace",
+       "Henry",
+       "Benjamin",
+       "Evelyn",
+       "Scarlett",
+       "Nora",
+       "Zoe",
+       "Leah",
+       "Hazel",
+       "Violet",
+       "Aurora",
+       "Lucas",
+       "Daniel",
+       "James",
+       "Mila",
+       "Avery",
+       "Sofia",
+       "Camila",
+       "Aria",
+       "Riley",
+       "Stella",
+       "Natalie",
+       "Eleanor"
+     ]
+   },
+   "summary": "Machine learning events are gatherings that bring together experts, researchers, and enthusiasts in the field of machine learning. These events provide a platform for knowledge sharing, networking, and collaboration. Participants have the opportunity to learn about the latest advancements, trends, and applications in machine learning. Workshops, presentations, and panel discussions are organized to delve into various topics such as deep learning, natural language processing, computer vision, and data analysis. Machine learning events also feature keynote speakers who share their insights and experiences. These events foster a sense of community and inspire individuals to explore new ideas and push the boundaries of machine learning technology.",
+   "registrationUrl": "http://tiny.cc/CSITMLworkshop",
+   "description": [
+     {
+       "title": "Introduction",
+       "paragraph": [
+        "Join us for a deep dive into the world of Node.js development. Explore best practices, hear from experts, and discover how Node.js is powering modern applications. Network with Node.js enthusiasts from around the world.",
+        "Keynote Speeches: Machine learning events often feature renowned keynote speakers who share their expertise and insights. These speakers are industry leaders, researchers, or practitioners who have made significant contributions to the field. Their speeches provide valuable perspectives on the latest trends, challenges, and future directions in machine learning.",
+        "Workshops and Tutorials: To facilitate hands-on learning, machine learning events organize workshops and tutorials. These sessions offer participants the opportunity to gain practical knowledge and skills in specific areas of machine learning. Topics covered may include deep learning, natural language processing, computer vision, and data analysis. Participants can engage in interactive sessions, work on real-world problems, and learn from experienced instructors.",
+        "Presentations and Paper Sessions: Machine learning events often include presentations and paper sessions where researchers and practitioners present their work. These sessions showcase cutting-edge research, innovative algorithms, and novel applications of machine learning. Attendees can learn about the latest advancements, methodologies, and experimental results in the field. This fosters collaboration and encourages the exchange of ideas among participants."
+      ]
+     },
+     {
+       "title": "Mentor",
+       "paragraph": [
+        "During this summit, you'll gain insights into Node.js best practices, scalability, and performance optimization. Whether you're a beginner or an experienced developer, you'll find valuable content.",
+      "The mentor of the machine learning event is Dr. Samantha Roberts, a renowned expert in the field of artificial intelligence and machine learning. With over 20 years of experience, Dr. Roberts has made significant contributions to the development and application of machine learning algorithms. She holds a Ph.D. in Computer Science from Stanford University and has published numerous research papers in top-tier conferences and journals.",
+        "As the mentor of the event, Dr. Roberts brings her expertise and guidance to the participants. She is known for her passion for mentoring and nurturing young talent in the field of machine learning. Dr. Roberts conducts interactive sessions and workshops, where she shares her knowledge, insights, and practical tips for success in the field."
+      ]
+     },
+     {
+       "title": "Key Concept",
+       "paragraph": "Machine learning events play a crucial role in advancing the field of machine learning. Through keynote speeches, workshops, presentations, panel discussions, and networking opportunities, these events foster knowledge sharing, collaboration, and innovation. They provide a platform for researchers, practitioners, and enthusiasts to stay updated with the latest advancements, explore new ideas, and contribute to the growth of machine learning technology."
+     }
+   ],
+   "timeline" :
+   [
+      {
+     "time" : "20 min",
+     "icon" : "",
+     "primary" : "Introduction to AI: AI vs ML vs DL, Types of ML problems, Basic ML project workflow, Applications of ML",
+     "secondary" : "Day 1"
+    },
+      {
+     "time" : "30 min",
+     "icon" : "",
+     "primary" : " Basics of NumPy, Pandas, Matplotlib and Sci-kit learn",
+     "secondary" : "Day 1"
+    },
+      {
+     "time" : "30 min",
+     "icon" : "",
+     "primary" : "Supervised Learning algorithms (Linear regression, Logistic regression, SVM and Random Forest)",
+     "secondary" : "Day 1"
+    },
+      {
+     "time" : "20 min",
+     "icon" : "",
+     "primary" : "Unsupervised Machine Learning Algorithms (KNN, K-Means Clustering, PCA)",
+     "secondary" : "Day 1"
+    },
+      {
+     "time" : "15 min",
+     "icon" : "",
+     "primary" : "Basic discussion on Reinforcement Learning",
+     "secondary" : "Day 1"
+    },
+      {
+     "time" : "5 min",
+     "icon" : "",
+     "primary" : "QnA Section",
+     "secondary" : "Day 1"
+    },
+    {
+      "time" : "10 min",
+      "icon" : "",
+      "primary" : "Recap",
+      "secondary" : "Day 2"
+     },
+       {
+      "time" : "15 min",
+      "icon" : "",
+      "primary" : "Basics of matrices, Tensors, Gradients, and why we need GPUs",
+      "secondary" : "Day 2"
+     },
+       {
+      "time" : "20 min",
+      "icon" : "",
+      "primary" : " Gradient Descent",
+      "secondary" : "Day 2"
+     },
+       {
+      "time" : "10 min",
+      "icon" : "",
+      "primary" : "Introduction to Tensorflow, Keras",
+      "secondary" : "Day 2"
+     },
+     {
+      "time" : "30 min",
+      "icon" : "",
+      "primary" : "Artificial Neural Networks",
+      "secondary" : "Day 2"
+     },
+     
+     {
+      "time" : "15 min",
+      "icon" : "",
+      "primary" : "Discussions on CNN",
+      "secondary" : "Day 2"
+     },
+     {
+      "time" : "15 min",
+      "icon" : "",
+      "primary" : "Current trends in AI",
+      "secondary" : "Day 2"
+     },
+     
+     {
+    "time" : "5 min",
+    "icon" : "",
+    "primary" : "QnA Section",
+    "secondary" : "Day 2"
+   },
+   {
+    "time" : "",
+    "icon" : "",
+    "primary" : "Session Ends",
+    "secondary" : "Day 2"
+   }
+
+    
+  ],
+
+
+   "reviews": [
+     {
+       "reviewerName": "Liam Wilson",
+       "reviewerLevel": "Full-stack Developer",
+       "stars": 4,
+       "description": "The Node.js Development Summit was an informative event. I learned a lot about optimizing Node.js applications for performance."
+     },
+     {
+       "reviewerName": "Olivia Smith",
+       "reviewerLevel": "Node.js Developer",
+       "stars": 5,
+       "description": "I found the Node.js Development Summit to be extremely valuable. The speakers were experts, and I gained valuable insights into Node.js best practices."
+     }
+   ]
+ }
+}

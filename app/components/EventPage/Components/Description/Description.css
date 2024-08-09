@@ -1,0 +1,22 @@
+
+.middle-contents{
+    margin: 2rem auto;
+    padding: 0 2rem ;
+    max-width: 65rem;
+
+}
+
+.middle-contents .decs{
+    margin: 3rem 0;
+}
+
+.heading{
+    font-weight: bolder;
+    font-size: 1.5rem;
+     color: #262967;
+}
+
+
+.description{
+    padding: 10px 0;
+}

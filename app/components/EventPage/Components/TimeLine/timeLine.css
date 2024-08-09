@@ -1,0 +1,26 @@
+.TimeLine{
+    background: rgb(239, 239, 239); 
+    padding: 3rem 0;
+}
+.timeLine-title{
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.timeline-primary{
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 1170px) {
+    .TimeLine{
+        padding: 3rem 5rem 3rem 2rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .TimeLine{
+        padding: 2rem;
+    }
+}

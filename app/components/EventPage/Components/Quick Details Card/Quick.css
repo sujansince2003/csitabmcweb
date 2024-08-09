@@ -1,0 +1,180 @@
+
+
+.upper-div{
+    padding: 3rem 50px 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(244, 246, 255);
+    
+}
+
+.img{
+    object-fit: cover;
+    height: 28rem;
+    width: 40rem;
+    border-radius: 15px;
+  
+
+}
+
+
+.event{
+    padding: 0 2rem;
+    margin: auto;
+    width: 95%;
+    padding: 2rem;
+    text-align: left;
+    position: relative;
+}
+
+
+
+.event-title{
+    font-size: xx-large;
+    font-weight: 700;
+  /* padding-left: 15px; */
+
+}
+
+.event-details{
+    
+    font-size: small;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   gap: 10px;
+   margin: 5px 0;
+}
+
+.icon{
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 15px;
+    text-align: left;
+}
+
+.event-ide{
+    font-weight: 400;
+}
+
+.hr-line{
+    width: 100%;
+    padding: 0.3px;
+    margin: 10px 0;
+    background: rgba(130, 130, 130, 0.573);
+    border: none;
+}
+
+.mentor{
+    display: flex;
+    width: 42vw;
+}
+
+.mentorimg{
+    
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    border-radius: 100%;
+}
+
+.mentoricon{
+    width: 20px;
+}
+
+.mentortxt{
+ 
+   display: flex;
+   align-items: center;
+   font-weight: 600;
+   font-size: larger;
+   padding: 0 15px;
+   gap: 10px;
+}
+
+.attendeesnamehover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.mentorname{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  
+    font-size: small;
+    gap: 20px;
+}
+
+.attendees{
+   
+    font-weight: 600;
+    font-size: large;
+    padding: 0px 20px;
+
+    
+}
+
+.attendeesname{
+    margin-top: 5px;
+    font-size: .9rem;
+    padding: 5px 25px;
+}
+
+.wholesummary{
+    padding: 0 10px;
+    
+
+}
+
+.event-summary-title{
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.event-summary-text{
+    font-size: 1rem;
+}
+
+.button{
+   margin: 10px 0; 
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    background-color: navy;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    padding: 12px 20px;
+    border: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    margin-top: 5px;
+    
+    
+}
+
+.button a:hover{
+    background-color: rgb(22, 22, 173);
+}
+
+
+@media  screen and (max-width:1100px ) {
+
+    .event{
+        top: -4rem;
+    }
+    .upper-div{
+        padding: 0 ;
+        
+    }
+}
