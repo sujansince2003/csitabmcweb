@@ -6,6 +6,7 @@ import "./navigation.css";
 import { Link as ScrollLink } from "react-scroll";
 import { Links } from "../../data";
 import Image from "next/image";
+import Link from "next/link";
 const Navigation = () => {
   window.onscroll = () => {
     let navbar = document.querySelector(".nav-area");
@@ -20,7 +21,9 @@ const Navigation = () => {
   return (
     <div className="nav-area">
       <div className="logo">
-        <Image src={IMG} />
+        <Link href={"/"}>
+          <Image src={IMG} />
+        </Link>
       </div>
       <button
         className="hamburger"
