@@ -12,7 +12,8 @@ const about = () => {
             src={
               "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723188288/team2081_wq5hob.jpg"
             }
-            fill="true"
+            width={500}
+            height={400}
             alt="about"
             className="about-img"
           />
