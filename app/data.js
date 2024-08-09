@@ -1,49 +1,3 @@
-//Workshop data
-import mocktest from "./Assets/eventimg/mocktest.jpg";
-import frontendworkshop from "./Assets/eventimg/frontendworkshop.jpg";
-import futsal from "./Assets/eventimg/futsal.jpg";
-import graphicdesigning from "./Assets/eventimg/graphicdesigning.jpg";
-import itroadmap from "./Assets/eventimg/itroadmap.jpg";
-import workshopNET from "./Assets/eventimg/workshopNET.jpg";
-import reactEvent from "./Assets/eventimg/reactEvent.jpg";
-
-//Teams data
-import IMG1 from "./Team/suman.jpg";
-import IMG2 from "./Team/SUJAN.png";
-import IMG3 from "./Team/ANU.jpg";
-import IMG4 from "./Team/SANCHIT.jpg";
-import IMG5 from "./Team/BIBEK.jpeg";
-import IMG6 from "./Team/shikshya.jpg";
-import IMG7 from "./Team/pratik.jpg";
-import IMG8 from "./Team/JEEVAN.jpg";
-import IMG9 from "./Team/bipin.jpg";
-import IMG10 from "./Team/KRITAN.png";
-import IMG11 from "./Team/KARUNA.jpg";
-import IMG20 from "./Team/Urbish.png";
-import IMG13 from "./Team/SANGIT.png";
-import IMG14 from "./Team/dikshya.jpeg";
-import IMG15 from "./Team/GOVINDA.jpg";
-import IMG16 from "./Team/MISSON.jpeg";
-import IMG17 from "./Team/samir.jpg";
-import img1 from "./Assets/partners/1.png";
-import img2 from "./Assets/partners/2.png";
-import img3 from "./Assets/partners/3.png";
-import img4 from "./Assets/partners/4.jpg";
-import img5 from "./Assets/partners/5.jpg";
-import img6 from "./Assets/partners/6.png";
-import img7 from "./Assets/partners/7.png";
-import img8 from "./Assets/partners/8.png";
-import img9 from "./Assets/partners/9.jpg";
-import img10 from "./Assets/partners/tech.png";
-//Testimonials data
-import Bishan from "./Team/bishan.jpg";
-import Saroj from "./Team/saroj.jpg";
-import Sujan from "./Team/Sujan.jpg";
-import Manoj from "./Team/manoj.jpg";
-import Mahendra from "./Team/mahendra.jpg";
-import Prakash from "./Team/prakash.jpg";
-import Rabin from "./Team/Rabin.jpg";
-import sindhu from "./Team/sindhu.jpg";
 //Exporting Navbar Links
 export const Links = [
   {
@@ -77,37 +31,37 @@ export const products = [
   {
     id: 1,
     title: "Mock Test 2079",
-    img: mocktest,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191232/mocktest_mqzpoi.jpg",
   },
   {
     id: 2,
     title: "Frontend Workshop",
-    img: frontendworkshop,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191227/frontendworkshop_r24n64.jpg",
   },
   {
     id: 3,
     title: "Futsal Tournament",
-    img: futsal,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191228/futsal_idocrt.jpg",
   },
   {
     id: 4,
     title: "Graphic Designing Workshop",
-    img: graphicdesigning,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191232/graphicdesigning_cqiav4.jpg",
   },
   {
     id: 5,
     title: "IT Roadmap Event",
-    img: itroadmap,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191231/itroadmap_migntc.jpg",
   },
   {
     id: 6,
     title: ".NET Workshop",
-    img: workshopNET,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191235/workshopNET_k188jd.jpg",
   },
   {
     id: 7,
     title: "React Workshop",
-    img: reactEvent,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191233/reactEvent_jrvwjk.jpg",
   },
 ];
 
@@ -116,7 +70,7 @@ export const teamdata = [
   {
     id: 1,
     Name: "Suman Bhattarai",
-    img: IMG1,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190562/suman_r6pfi0.jpg",
     Post: "President",
     Facebook: "https://www.facebook.com/suman.bhattarai.986",
     LinkedIn: "",
@@ -124,7 +78,7 @@ export const teamdata = [
   {
     id: 2,
     Name: "Sujan Khatri",
-    img: IMG2,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190553/SUJAN_clyi3v.png",
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/sujansince2003",
     LinkedIn: "https://www.linkedin.com/in/sujansince2003/",
@@ -132,7 +86,7 @@ export const teamdata = [
   {
     id: 3,
     Name: "Anuradha Pandey",
-    img: IMG3,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190537/ANU_kwix9a.jpg",
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/profile.php?id=100035413025994",
     LinkedIn: "",
@@ -140,7 +94,7 @@ export const teamdata = [
   {
     id: 4,
     Name: "Sanchit Pandey",
-    img: IMG4,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190545/SANCHIT_p2f5ue.jpg",
     Post: "Secretary",
     Facebook: "https://www.facebook.com/sanchitpandeyyy/",
     LinkedIn: "https://www.linkedin.com/in/sanchitpandeyyy/",
@@ -149,7 +103,7 @@ export const teamdata = [
   {
     id: 5,
     Name: "Bivek Acharya",
-    img: IMG5,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190536/BIBEK_ypwryr.jpg",
     Post: "Joint Secretary",
     Facebook: "https://www.facebook.com/Bibekacharya2059",
     LinkedIn: "https://www.linkedin.com/in/bivek-acharya-5746282b2/",
@@ -158,7 +112,7 @@ export const teamdata = [
   {
     id: 6,
     Name: "Shikshya Acharya",
-    img: IMG6,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190551/shikshya_qw8rge.jpg",
     Post: "Treasurer",
     Facebook: "https://www.facebook.com/Shikshyaacharyaa",
     LinkedIn: "https://www.linkedin.com/in/shikshya-acharya-90b227317/",
@@ -166,7 +120,7 @@ export const teamdata = [
   {
     id: 7,
     Name: "Pratik Aryal",
-    img: IMG7,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190545/pratik_odbieh.jpg",
     Post: "Joint Treasurer",
     Facebook: "https://www.facebook.com/pratik.aryal.9615",
     LinkedIn: "https://www.linkedin.com/in/pratik-aryal-256a79289/",
@@ -174,7 +128,7 @@ export const teamdata = [
   {
     id: 8,
     Name: "Jeevan Ghimire",
-    img: IMG8,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190539/JEEVAN_pjjq7c.jpg",
     Post: "Tech Lead",
     Facebook: "https://www.facebook.com/imjeevanghimire",
     LinkedIn: "https://www.linkedin.com/in/imjeevanghimire/",
@@ -182,7 +136,7 @@ export const teamdata = [
   {
     id: 9,
     Name: "Bipin Khatri",
-    img: IMG9,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190536/bipin_fjumt4.jpg",
     Post: "Ast. Tech Lead",
     Facebook: "https://www.facebook.com/im.bipo",
     LinkedIn: "https://www.linkedin.com/in/bipinkhatri/",
@@ -191,7 +145,7 @@ export const teamdata = [
   {
     id: 16,
     Name: "URBISH GHIMIRE",
-    img: IMG20,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190608/Urbish_e2eo3q.png",
     Post: " Graphic Designer",
     Facebook: "https://www.facebook.com/urbish.ghimire",
     LinkedIn: "https://www.linkedin.com/in/urbish-ghimire-00bb922ab/",
@@ -199,7 +153,7 @@ export const teamdata = [
   {
     id: 17,
     Name: "SANGIT GYAWALI",
-    img: IMG13,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190548/SANGIT_cddatl.png",
     Post: "Ast.Graphic Designer",
     Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
     LinkedIn: "https://www.linkedin.com/in/sangitgyawali/",
@@ -207,7 +161,7 @@ export const teamdata = [
   {
     id: 12,
     Name: "KRITAN ARYAL",
-    img: IMG10,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190556/KRITAN_wyjb7r.png",
     Post: "Event Manger",
     Facebook: "https://www.facebook.com/aryal.kritan",
     LinkedIn: "https://www.linkedin.com/in/aryalkritan11/",
@@ -215,7 +169,7 @@ export const teamdata = [
   {
     id: 15,
     Name: "KARUNA PYAKUREL",
-    img: IMG11,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190540/KARUNA_lfuxdb.jpg",
     Post: "HR Lead",
     Facebook: "https://www.facebook.com/karunakshetry.pyakurel",
     LinkedIn: "https://www.linkedin.com/in/karuna-pyakurel-abbb172a8/",
@@ -224,7 +178,7 @@ export const teamdata = [
   {
     id: 14,
     Name: "Dikshya Sharma",
-    img: IMG14,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190535/dikshya_sbjib8.jpg",
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/dikshya.sharma.9216",
     LinkedIn: "https://www.linkedin.com/in/dikshya2004/",
@@ -232,7 +186,7 @@ export const teamdata = [
   {
     id: 20,
     Name: "Mission Paudel",
-    img: IMG16,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190542/MISSON_oumhyz.jpg",
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/misson.paudel.3",
     LinkedIn: "https://www.linkedin.com/in/misson-paudel-900181293/",
@@ -240,7 +194,7 @@ export const teamdata = [
   {
     id: 15,
     Name: "Govinda Sagar Bhusal",
-    img: IMG15,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190539/GOVINDA_cma3ba.jpg",
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/aayush.bhusal.50",
     LinkedIn: "https://www.linkedin.com/in/govinda-sagar-bhusal-3685362a8/",
@@ -248,7 +202,7 @@ export const teamdata = [
   {
     id: 19,
     Name: "Samir Aryal",
-    img: IMG17,
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190544/samir_ylt8wf.jpg",
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/samir.aryal.1428",
     LinkedIn: "",
@@ -257,22 +211,63 @@ export const teamdata = [
 
 //Exporting testimonials data
 export const Partdata = [
-  { id: 10, Image: img10 },
-  { id: 3, Image: img3 },
-  { id: 4, Image: img4 },
-  { id: 1, Image: img1 },
-  { id: 2, Image: img2 },
-  { id: 5, Image: img5 },
-  { id: 6, Image: img6 },
-  { id: 7, Image: img7 },
-  { id: 8, Image: img8 },
-  { id: 9, Image: img9 },
+  {
+    id: 10,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191356/tech_j5vnyn.png",
+  },
+  {
+    id: 3,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191322/3_mxc7jg.png",
+  },
+  {
+    id: 4,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191324/4_cr2dm8.jpg",
+  },
+  {
+    id: 1,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191319/1_a6ilde.jpg",
+  },
+  {
+    id: 2,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191320/2_bgvdtz.png",
+  },
+  {
+    id: 5,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191336/5_po8z5b.jpg",
+  },
+  {
+    id: 6,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191338/6_xj1gys.png",
+  },
+  {
+    id: 7,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191340/7_avzaau.png",
+  },
+  {
+    id: 8,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191353/8_iuulbk.png",
+  },
+  {
+    id: 9,
+    Image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191355/9_kevbjw.jpg",
+  },
 ];
 
 export const Testidata = [
   {
     id: 1,
-    image: Rabin,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191198/Rabin_iuak4j.jpg",
     Name: "Rabin Pandey",
     testimony: `Technology can be our closest companion, and technology can likewise be the greatest partypopper of our lives.It plays a major role in our lives.
     As a part of CSIT Association of BMC, the most challenging part for me was to make the changes in directions, systems as well college guidelines which somehow got solved and which was possible by our team. Majority of innovation will be exhibit soon and lastly working with an energetic team leading by me was a wonderful experience ever in my lifetime.`,
@@ -280,14 +275,16 @@ export const Testidata = [
   },
   {
     id: 1,
-    image: Bishan,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191190/bishan_uso0w3.jpg",
     Name: "Bishan Bashyal",
     testimony: `CSIT Association of BMC a group of highly energetic tech enthusiast, I remember founding this organization from scratch and now the new tenures took this organization to next level, more than i imagined. `,
     Post: `IT Officer and Founder President of CSITA-BMC`,
   },
   {
     id: 2,
-    image: Saroj, //We are importing objects so no JSX
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191203/saroj_gmx9dk.jpg", //We are importing objects so no JSX
     Name: "Saroj Dahal",
     testimony:
       '"My first session on “Roadmap to IT Career” organized by CSIT Association of BMC was a memorable one . I felt a cosy aura while mentoring on the event. Truth to be told, I always had a good vibe with Butwal people and from this event,  I surely can say that , “ I felt it “  . Cheers to the Team"',
@@ -295,7 +292,8 @@ export const Testidata = [
   },
   {
     id: 3,
-    image: Prakash,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191193/prakash_kaxftv.jpg",
     Name: "Prakash Dhakal",
     testimony:
       "CSIT Association of BMC एउटा परिवार हो, म यो संस्थालाई, संस्था भन्दा पनि परिवार भन्न रुचाउने गर्छु। जहिले देखि यस संस्थाको जन्म भयो त्यसपछि नै सम्पुर्ण बिद्यार्थीको अभिभावकको रुपमा काम गरिरहेको छ,बिद्यार्थीहरुको आवाज उठाउने र सम्बोधन गराउने काम गरिरहेको छ। यस संस्थाले क्याम्पसमै उल्लेखनीय कामहरु त गरेको छ सङ्सङै बिद्यार्थी-बिद्यार्थी बिचको घनिष्ठ आत्मियता बढाउन महत्त्वपूर्ण योगदान गरेको छ। CSIT पढ्ने बिद्यार्थी एकजुट छन भन्ने सन्देश क्याम्पसभर दिएको छ। मैले आज सम्म धेरै संस्थामा काम गरेको छु,मलाइ ती संस्थामध्ये सबैभन्दा प्यारो संस्था CSITA-BMC नै हो।",
@@ -303,7 +301,8 @@ export const Testidata = [
   },
   {
     id: 4,
-    image: Manoj,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191192/manoj_sewh6d.jpg",
     Name: "Manoj Pokharel",
     testimony:
       "CSIT Association of BMC speaks a lot more about Whole student problem rather than just being a group of people, they always focus on unity, Co-operation, and strengths to develop the better relationship between student and administration",
@@ -311,7 +310,8 @@ export const Testidata = [
   },
   {
     id: 5,
-    image: Mahendra,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191192/mahendra_zw1m9i.jpg",
     Name: "Mahendra Kandel",
     testimony:
       "I consider CSIT Association of BMC as a group of leaders of tech community who are always eager to impart knowledge and has willingness to see the change, Despite of being an organization inside academic boundary it always had contributed to national tech community, Proud to be a part of it and kudos to the new team.",
@@ -319,7 +319,8 @@ export const Testidata = [
   },
   {
     id: 6,
-    image: Sujan,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191201/Sujan_wpthhs.jpg",
     Name: "Sujan Khatiwada",
     testimony:
       "It was a nice moment to share the experience with curious IT people at CSIT Association, BMC.",
@@ -327,7 +328,8 @@ export const Testidata = [
   },
   {
     id: 7,
-    image: sindhu,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191200/sindhu_o5pjdy.jpg",
     Name: "Sindhu Aryal",
     testimony:
       "Seeing the CSIT Association of BMC growing beautifully with the mission and vision of helping IT enthusiasts to find a way out of their IT career, widening the reach beyond the college and giving back to the community; gives me immense pleasure.Hats off to you guys for  your tireless efforts on shaping it in a way so that upcoming students don't have to face the same barriers as we did in the past. ",
