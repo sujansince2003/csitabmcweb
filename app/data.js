@@ -24,7 +24,7 @@ import IMG13 from "./Team/SANGIT.png";
 import IMG14 from "./Team/dikshya.jpeg";
 import IMG15 from "./Team/GOVINDA.jpg";
 import IMG16 from "./Team/MISSON.jpeg";
-import IMG17 from "./Team/SAMIR.jpg";
+import IMG17 from "./Team/samir.jpg";
 import img1 from "./Assets/partners/1.png";
 import img2 from "./Assets/partners/2.png";
 import img3 from "./Assets/partners/3.png";
