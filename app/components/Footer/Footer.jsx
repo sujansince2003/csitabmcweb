@@ -1,6 +1,10 @@
 import React from "react";
 import logo from "../../Assets/partners/logohero.png";
 import { BsFillTelephoneFill, BsFacebook } from "react-icons/bs";
+import { LuInstagram } from "react-icons/lu";
+import { SiLinkedin } from "react-icons/si";
+import { RiTwitterXFill } from "react-icons/ri";
+
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 
@@ -25,7 +29,8 @@ const Footer = () => {
               </IconContext.Provider>
             }
             title="Phone"
-            text="+9779869144346"
+            text1="+977-9869144346"
+            text2="+977-9843409076"
           />
           <ContactItem
             icon={
@@ -46,7 +51,8 @@ const Footer = () => {
               </IconContext.Provider>
             }
             title="Address"
-            text="Butwal-Golpark"
+            text1="Golpark-3,Butwal"
+            text2="Butwal Multiple Campus"
           />
           <ContactItem
             icon={
@@ -63,33 +69,92 @@ const Footer = () => {
               </IconContext.Provider>
             }
             title="Email"
-            text="csitassociationbmc@gmail.com"
+            text1="csitassociationbmc@gmail.com"
           />
         </div>
         <div className="social-item-wrapper">
           <span className="logo-bmc">
             <Image src={logo} alt="logo" />
           </span>
-          <div className="social-links-wrapper">
-            <SocialLink
-              sicon={
-                <IconContext.Provider
-                  value={{
-                    color: "white",
-                    size: "33px",
-                    className: "global-class-name",
-                  }}
-                >
-                  <a
-                    href="https://www.facebook.com/csit.bmc/"
-                    target="_blank"
-                    rel="noreferrer"
+          <div className="social-links-wrapper ">
+            <div className="flex gap-3">
+              <SocialLink
+                sicon={
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      size: "25px",
+                      className: "global-class-name",
+                    }}
                   >
-                    <BsFacebook />
-                  </a>
-                </IconContext.Provider>
-              }
-            />
+                    <a
+                      href="https://www.facebook.com/csit.bmc/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <BsFacebook />
+                    </a>
+                  </IconContext.Provider>
+                }
+              />
+              <SocialLink
+                sicon={
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      size: "25px",
+                      className: "global-class-name",
+                    }}
+                  >
+                    <a
+                      href="https://www.linkedin.com/company/csitabmc"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <SiLinkedin />
+                    </a>
+                  </IconContext.Provider>
+                }
+              />
+              <SocialLink
+                sicon={
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      size: "25px",
+                      className: "global-class-name",
+                    }}
+                  >
+                    <a
+                      href="https://x.com/csitabmc"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <RiTwitterXFill />
+                    </a>
+                  </IconContext.Provider>
+                }
+              />
+              <SocialLink
+                sicon={
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      size: "25px",
+                      className: "global-class-name",
+                    }}
+                  >
+                    <a
+                      href="https://www.instagram.com/csitabmc/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <LuInstagram />
+                    </a>
+                  </IconContext.Provider>
+                }
+              />
+            </div>
           </div>
         </div>
         <div className="footer--end">
@@ -136,7 +201,8 @@ function ContactItem(props) {
           </span>
 
           <div className="info">
-            <p>{props.text}</p>
+            <p>{props.text1}</p>
+            <p>{props.text2}</p>
           </div>
         </div>
       </div>
