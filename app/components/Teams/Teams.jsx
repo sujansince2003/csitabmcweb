@@ -1,10 +1,10 @@
 import React from "react";
 import { BsFacebook } from "react-icons/bs";
-import { AiFillGithub } from "react-icons/ai";
+import { SiLinkedin } from "react-icons/si";
 import "./Teams.css";
 import Image from "next/image";
 
-const Teams = ({ img, Name, Post, Facebook, Github }) => {
+const Teams = ({ img, Name, Post, Facebook, Linkedin }) => {
   return (
     <div className="parent">
       <div>
@@ -14,10 +14,15 @@ const Teams = ({ img, Name, Post, Facebook, Github }) => {
         <div className="Name">{Name}</div>
         <div className="Post">{Post}</div>
         <div className="social--icons">
-          <div>
+          <div className="flex gap-2">
             <a href={Facebook} target="_blank">
-              <BsFacebook size={"25px"} color="#3B5998" />
+              <BsFacebook size={"20px"} color="#3B5998" />
             </a>
+            {Linkedin.length !== 0 && (
+              <a href={Linkedin} target="_blank">
+                <SiLinkedin size={"20px"} color="#3B5998" />
+              </a>
+            )}
           </div>
         </div>
       </div>
