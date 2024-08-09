@@ -48,8 +48,8 @@ const Testimonials = () => {
                           className="wrapperimg"
                           src={item.image}
                           alt="wrapper img"
-                          width={200}
-                          height={200}
+                          width={100}
+                          height={100}
                         />
                         <h5>{item.Name}</h5>
                         <h5 className="secHeading">{item.Post}</h5>
