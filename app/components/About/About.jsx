@@ -1,5 +1,5 @@
 import React from "react";
-import ImG2 from "../../Assets/partners/team2081.jpeg";
+
 import "./About.css";
 import Image from "next/image";
 const about = () => {
@@ -8,7 +8,14 @@ const about = () => {
       <div className="about-left">
         <div className="about-card bg"></div>
         <div className="about-card">
-          <Image src={ImG2} alt="about" className="about-img" />
+          <Image
+            src={
+              "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723188288/team2081_wq5hob.jpg"
+            }
+            fill="true"
+            alt="about"
+            className="about-img"
+          />
         </div>
       </div>
       <div className="about-right">

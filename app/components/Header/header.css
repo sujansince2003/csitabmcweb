@@ -31,7 +31,7 @@ html {
   min-height: 100vh;
   min-width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-    url("../../Assets/partners/aboutimg.JPG");
+    url("https://res.cloudinary.com/dol8m5gx7/image/upload/v1723189007/aboutimg_hmc9ke.jpg");
   position: relative;
   background-position: center;
   background-size: cover;

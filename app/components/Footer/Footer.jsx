@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../Assets/partners/logohero.png";
 import { BsFillTelephoneFill, BsFacebook } from "react-icons/bs";
 import { LuInstagram } from "react-icons/lu";
 import { SiLinkedin } from "react-icons/si";
@@ -74,7 +73,14 @@ const Footer = () => {
         </div>
         <div className="social-item-wrapper">
           <span className="logo-bmc">
-            <Image src={logo} alt="logo" />
+            <Image
+              src={
+                "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191383/logohero_nsqj8h.png"
+              }
+              width={60}
+              height={60}
+              alt="logo"
+            />
           </span>
           <div className="social-links-wrapper ">
             <div className="flex gap-3">

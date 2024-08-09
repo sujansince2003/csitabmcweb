@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IMG from "../../Assets/partners/logohero.png";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import "./navigation.css";
@@ -22,7 +22,14 @@ const Navigation = () => {
     <div className="nav-area">
       <div className="logo">
         <Link href={"/"}>
-          <Image src={IMG} alt="nav area" />
+          <Image
+            src={
+              "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191383/logohero_nsqj8h.png"
+            }
+            width={70}
+            height={70}
+            alt="logo"
+          />
         </Link>
       </div>
       <button
