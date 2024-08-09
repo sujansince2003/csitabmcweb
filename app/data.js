@@ -89,7 +89,7 @@ export const teamdata = [
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190537/ANU_kwix9a.jpg",
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/profile.php?id=100035413025994",
-    LinkedIn: "",
+    LinkedIn: "https://www.linkedin.com/in/anuradha-pandey-2936a2321/",
   },
   {
     id: 4,
