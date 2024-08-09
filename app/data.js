@@ -8,20 +8,20 @@ import workshopNET from "./Assets/eventimg/workshopNET.jpg";
 import reactEvent from "./Assets/eventimg/reactEvent.jpg";
 
 //Teams data
-import IMG1 from "./Team/SUMAN.jpg";
+import IMG1 from "./Team/suman.jpg";
 import IMG2 from "./Team/SUJAN.png";
 import IMG3 from "./Team/ANU.jpg";
 import IMG4 from "./Team/SANCHIT.jpg";
 import IMG5 from "./Team/BIBEK.jpeg";
-import IMG6 from "./Team/SHIKSHYA.jpg";
-import IMG7 from "./Team/PRATIK.jpg";
+import IMG6 from "./Team/shikshya.jpg";
+import IMG7 from "./Team/pratik.jpg";
 import IMG8 from "./Team/JEEVAN.jpg";
-import IMG9 from "./Team/BIPIN.jpg";
+import IMG9 from "./Team/bipin.jpg";
 import IMG10 from "./Team/KRITAN.png";
 import IMG11 from "./Team/KARUNA.jpg";
 import IMG20 from "./Team/Urbish.png";
 import IMG13 from "./Team/SANGIT.png";
-import IMG14 from "./Team/DIKSHYA.jpeg";
+import IMG14 from "./Team/dikshya.jpeg";
 import IMG15 from "./Team/GOVINDA.jpg";
 import IMG16 from "./Team/MISSON.jpeg";
 import IMG17 from "./Team/SAMIR.jpg";
