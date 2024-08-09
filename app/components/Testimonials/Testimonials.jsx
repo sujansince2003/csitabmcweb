@@ -5,12 +5,15 @@ import "swiper/css/autoplay";
 // Import Swiper styles
 import { FaQuoteLeft } from "react-icons/fa";
 import "swiper/css";
+
 import "swiper/css/pagination";
 import { Testidata } from "../../data";
 import { Partdata } from "../../data";
 import "./Testimonials.css";
 // import { Pagination } from "swiper";
-import SwiperCore, { Autoplay, Pagination } from "swiper/core";
+import SwiperCore from "swiper/core";
+import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 SwiperCore.use([Autoplay]); //import swipercore to use autoplay
 const Testimonials = () => {
   return (
@@ -22,7 +25,9 @@ const Testimonials = () => {
         <Swiper
           slidesPerView={1}
           loop={true}
-          autoplay={true} //For autoenabling the swiper functionality with infinite loop
+          autoplay={{
+            delay: 2000,
+          }}
           speed={2000}
           spaceBetween={30}
           pagination={{
@@ -39,10 +44,12 @@ const Testimonials = () => {
                   <div className="hero--wrapper">
                     <div className="parentwrapper">
                       <div className="slidewrapper">
-                        <img
+                        <Image
                           className="wrapperimg"
                           src={item.image}
                           alt="wrapper img"
+                          width={200}
+                          height={200}
                         />
                         <h5>{item.Name}</h5>
                         <h5 className="secHeading">{item.Post}</h5>
@@ -79,7 +86,12 @@ const Testimonials = () => {
               return (
                 <div>
                   <SwiperSlide key={items.id}>
-                    <img className="wrapperimg" src={items.Image} alt="" />
+                    <Image
+                      className="wrapperimg"
+                      src={items.Image}
+                      alt=""
+                      fill
+                    />
                   </SwiperSlide>
                 </div>
               );
