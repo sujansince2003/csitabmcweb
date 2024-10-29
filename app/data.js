@@ -13,6 +13,10 @@ export const Links = [
     path: "events",
   },
   {
+    title: "Notices",
+    path: "/notices",
+  },
+  {
     title: "Teams",
     path: "teams",
   },
