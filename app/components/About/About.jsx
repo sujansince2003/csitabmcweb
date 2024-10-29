@@ -20,13 +20,13 @@ const about = () => {
         </div>
       </div>
       <div className="about-right">
-        <h1 className="a-title">About Us</h1>
+        <h1 className="a-title">About Us </h1>
         <div className="sep">
           <p className="a-sub" data-aos="fade-left">
             <span style={{ fontWeight: "bold" }}>CSIT Association of BMC</span>{" "}
             is a non-profitable organization inside Butwal Multiple Campus
             created for the welfare of CSIT Students by the CSIT students and
-            operating actively since 2016
+            operating actively since 2016.
           </p>
           <br />
           <p className="a-desc" data-aos="fade-left" data-aos-delay={200}>
