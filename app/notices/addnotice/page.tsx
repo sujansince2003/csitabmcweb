@@ -27,7 +27,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-const uploadPresetvalue = process.env.CLOUDINARY_UPLOAD_PRESET;
+const uploadPresetvalue = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
+
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   description: z.string().min(1, "Description is required"),
