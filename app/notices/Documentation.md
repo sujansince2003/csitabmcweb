@@ -142,8 +142,8 @@ export default function NoticesList({ notices }: NoticesListProps) {
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-8 text-center">College Notices</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {notices.map((notice) => (
-          <Card key={notice.id} className="flex flex-col">
+        {notices.map((notice,index) => (
+          <Card key={index} className="flex flex-col">
             <CardHeader className="p-0">
               <Image
                 src={notice.photo}
