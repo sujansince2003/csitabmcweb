@@ -12,9 +12,18 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://csitabmc.com"),
   title: "CSITABMC",
   description:
     "CSIT Association of Butwal Multiple Campus is Non profit, Non political association of CSIT Students of Butwal Multiple Campus.",
+  openGraph: {
+    images: {
+      url: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191383/logohero_nsqj8h.png",
+      width: 1200,
+      height: 630,
+      alt: "CSIT Association of Butwal Multiple Campus",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -25,13 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-      <NextTopLoader showSpinner={false} color="blue" />
+        <NextTopLoader showSpinner={false} color="red" />
         <nav className="bg-background/60 backdrop-blur-xl shadow-sm fixed z-50 w-full top-0">
           <NavBar />
         </nav>
         <NavBar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

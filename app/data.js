@@ -18,47 +18,88 @@ export const NavLinkPaths = [
   },
 ];
 
-//Exporting Event details
-export const products = [
+export const eventDetails = [
   {
-    id: 1,
-    title: "Mock Test 2079",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191232/mocktest_mqzpoi.jpg",
+    id: "free-mock-test-bsc-csit",
+    title: "FREE Mock Test BSc. CSIT",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191232/mocktest_mqzpoi.jpg",
+    date: "15th Magh, Saturday",
+    time: "12:00pm - 2:00pm",
+    venue: "Butwal Multiple Campus",
+    category: "Academic",
+    link: "",
   },
   {
-    id: 2,
+    id: "frontend-workshop",
     title: "Frontend Workshop",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191227/frontendworkshop_r24n64.jpg",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191227/frontendworkshop_r24n64.jpg",
+    date: "8th - 15th Feb",
+    time: "6:15 pm onwards",
+    venue: "Google Meet",
+    category: "Workshop",
+    link: "",
   },
   {
-    id: 3,
+    id: "futsal-tournament",
     title: "Futsal Tournament",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191228/futsal_idocrt.jpg",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191228/futsal_idocrt.jpg",
+    date: "15th Magh, Saturday",
+    time: "12:00pm - 2:00pm",
+    venue: "Butwal Multiple Campus",
+    category: "Academic",
+    link: "#",
   },
   {
-    id: 4,
+    id: "graphic-designing-workshop",
     title: "Graphic Designing Workshop",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191232/graphicdesigning_cqiav4.jpg",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191232/graphicdesigning_cqiav4.jpg",
+    date: "15th Magh, Saturday",
+    time: "12:00pm - 2:00pm",
+    venue: "Butwal Multiple Campus",
+    category: "Academic",
+    link: "#",
   },
   {
-    id: 5,
+    id: "it-roadmap-event",
     title: "IT Roadmap Event",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191231/itroadmap_migntc.jpg",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191231/itroadmap_migntc.jpg",
+    date: "15th Magh, Saturday",
+    time: "12:00pm - 2:00pm",
+    venue: "Butwal Multiple Campus",
+    category: "Academic",
+    link: "#",
   },
   {
-    id: 6,
+    id: "net-workshop",
     title: ".NET Workshop",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191235/workshopNET_k188jd.jpg",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191235/workshopNET_k188jd.jpg",
+    date: "15th Magh, Saturday",
+    time: "12:00pm - 2:00pm",
+    venue: "Butwal Multiple Campus",
+    category: "Academic",
+    link: "#",
   },
   {
-    id: 7,
+    id: "react-workshop",
     title: "React Workshop",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191233/reactEvent_jrvwjk.jpg",
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191233/reactEvent_jrvwjk.jpg",
+    date: "15th Magh, Saturday",
+    time: "12:00pm - 2:00pm",
+    venue: "Butwal Multiple Campus",
+    category: "Academic",
+    link: "#",
   },
 ];
 
 //Exporting Teams data
-export const teamdata = [
+export const TeamDetails = [
   {
     id: 1,
     Name: "Suman Bhattarai",
@@ -201,8 +242,7 @@ export const teamdata = [
   },
 ];
 
-//Exporting testimonials data
-export const Partdata = [
+export const Partnerdata = [
   {
     id: 10,
     Image:
@@ -255,7 +295,7 @@ export const Partdata = [
   },
 ];
 
-export const Testidata = [
+export const TestimonialData = [
   {
     id: 1,
     image:
@@ -264,14 +304,6 @@ export const Testidata = [
     testimony: `Technology can be our closest companion, and technology can likewise be the greatest partypopper of our lives.It plays a major role in our lives.
     As a part of CSIT Association of BMC, the most challenging part for me was to make the changes in directions, systems as well college guidelines which somehow got solved and which was possible by our team. Majority of innovation will be exhibit soon and lastly working with an energetic team leading by me was a wonderful experience ever in my lifetime.`,
     Post: `Senior Advisor of CSITA-BMC`,
-  },
-  {
-    id: 1,
-    image:
-      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191190/bishan_uso0w3.jpg",
-    Name: "Bishan Bashyal",
-    testimony: `CSIT Association of BMC a group of highly energetic tech enthusiast, I remember founding this organization from scratch and now the new tenures took this organization to next level, more than i imagined. `,
-    Post: `IT Officer and Founder President of CSITA-BMC`,
   },
   {
     id: 2,
@@ -326,5 +358,13 @@ export const Testidata = [
     testimony:
       "Seeing the CSIT Association of BMC growing beautifully with the mission and vision of helping IT enthusiasts to find a way out of their IT career, widening the reach beyond the college and giving back to the community; gives me immense pleasure.Hats off to you guys for  your tireless efforts on shaping it in a way so that upcoming students don't have to face the same barriers as we did in the past. ",
     Post: `Web Developer and President at Butwal Coder Girls`,
+  },
+  {
+    id: 8,
+    image:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191190/bishan_uso0w3.jpg",
+    Name: "Bishan Bashyal",
+    testimony: `CSIT Association of BMC a group of highly energetic tech enthusiast, I remember founding this organization from scratch and now the new tenures took this organization to next level, more than i imagined. `,
+    Post: `IT Officer and Founder President of CSITA-BMC`,
   },
 ];

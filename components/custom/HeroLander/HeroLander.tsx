@@ -1,18 +1,15 @@
 "use client";
 import React, { useEffect } from "react";
-import "./header.css";
+import "./hero.css";
 import Typewriter from "typewriter-effect";
 import Particles from "react-particles";
-import { particlesConfig } from "../../constant/Constant";
 import Aos from "aos";
-const Header = () => {
+const HeroLander = () => {
   useEffect(() => {
     Aos.init({ easing: "ease", duration: 700 });
   });
   return (
     <section data-aos="fade-up" className="header" id="home">
-      <Particles className="particles" params={particlesConfig} />
-
       <div className="typewriter">
         <Typewriter
           options={{
@@ -27,9 +24,8 @@ const Header = () => {
           }}
         />
       </div>
-      {/* <MessengerCustomerChat pageId="151990145269970" appId="590338082605549" /> */}
     </section>
   );
 };
 
-export default Header;
+export default HeroLander;
