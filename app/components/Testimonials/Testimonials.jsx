@@ -40,7 +40,7 @@ const Testimonials = () => {
             //While rendering data on screen return the component with small brackets
             return (
               <div>
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={key}>
                   <div className="hero--wrapper">
                     <div className="parentwrapper">
                       <div className="slidewrapper">
@@ -85,7 +85,7 @@ const Testimonials = () => {
             {Partdata.map((items, key) => {
               return (
                 <div>
-                  <SwiperSlide key={items.id}>
+                  <SwiperSlide key={key}>
                     <Image
                       className="wrapperimg"
                       src={items.Image}

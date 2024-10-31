@@ -8,10 +8,10 @@ const List = () => {
       <h1 className="event-heading">Some Events Organized By CSITA-BMC</h1>
       <div className="pl-texts"></div>
       <div className="pl-list">
-        {products.map((item) => (
+        {products.map((item,index) => (
           <Product
             title={item.title}
-            key={item.id}
+            key={index}
             img={item.img}
             link={item.link}
           />

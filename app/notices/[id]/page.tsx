@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Mail, MapPin, Phone, User, Download } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, use } from "react";
 
 interface Notice {
   id: string;
@@ -27,7 +27,8 @@ interface Notice {
   tags: string[];
 }
 
-export default function NoticeDetail({ params }: { params: { id: string } }) {
+export default function NoticeDetail(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
   const router = useRouter();
   const [notice, setNotice] = useState<Notice | null>(null);
 

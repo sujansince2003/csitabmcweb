@@ -36,7 +36,7 @@ export default function Home() {
           <About />
           <List />
           <Tlist />
-          <Testimonials />
+          {/* <Testimonials /> */}
           <Footer />
         </>
       )}
