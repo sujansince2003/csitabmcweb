@@ -43,9 +43,9 @@ const eventData = {
 export default async function EventPage({
   params,
 }: {
-  params: { eventId: string };
+  params: Promise<{ eventId: string }>;
 }) {
-  const eventId = params.eventId;
+  const eventId = (await params).eventId;
   const data = eventDetails;
   const myData = data.find((item) => item.id === eventId);
   if (!myData) {
