@@ -8,7 +8,6 @@ import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 
 import { IconContext } from "react-icons";
-import "./footer.css";
 import Image from "next/image";
 const Footer = () => {
   return (

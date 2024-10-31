@@ -1,32 +1,20 @@
 //Exporting Navbar Links
-export const Links = [
+export const NavLinkPaths = [
   {
     title: "Home",
-    path: "home",
+    path: "/",
   },
   {
     title: "About",
-    path: "about",
-  },
-  {
-    title: "Events",
-    path: "events",
+    path: "/about",
   },
   {
     title: "Notices",
     path: "/notices",
   },
   {
-    title: "Teams",
-    path: "teams",
-  },
-  {
-    title: "Reviews",
-    path: "myReview",
-  },
-  {
     title: "Contact",
-    path: "FooterDiv",
+    path: "/contact",
   },
 ];
 

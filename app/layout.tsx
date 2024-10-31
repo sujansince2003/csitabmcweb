@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/custom/NavBar/NavBar";
+import Footer from "@/components/custom/Footer";
+import NextTopLoader from "nextjs-toploader";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: "normal",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "CSITABMC",
@@ -17,8 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={poppins.className}>
+      <NextTopLoader showSpinner={false} color="blue" />
+        <nav className="bg-background/60 backdrop-blur-xl shadow-sm fixed z-50 w-full top-0">
+          <NavBar />
+        </nav>
+        <NavBar />
         {children}
+        <Footer/>
       </body>
     </html>
   );
