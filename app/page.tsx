@@ -1,45 +1,19 @@
 "use client";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import {
-  Testimonials,
-  Navigation,
-  Header,
-  About,
-  Teams,
-  Loader,
-  Footer,
-  List,
-  Tlist,
-} from "./components";
-import Aos from "aos";
 import "aos/dist/aos.css";
+import About from "./about/page";
+import Event from "./events/page";
+import HeroLander from "@/components/custom/HeroLander/HeroLander";
+import Testimonial from "@/components/custom/Testimonial";
+import CommunityPartners from "@/components/custom/CommunityPartners";
 
 export default function Home() {
-  const [loader, setloader] = useState(true);
-  useEffect(() => {
-    Aos.init({ easing: "ease", duration: 700 });
-  });
-  useEffect(() => {
-    setTimeout(() => {
-      setloader(false);
-    }, 2000);
-  });
   return (
-    <div>
-      {loader ? (
-        <Loader />
-      ) : (
-        <>
-          <Navigation />
-          <Header />
-          <About />
-          <List />
-          <Tlist />
-          <Testimonials />
-          <Footer />
-        </>
-      )}
-    </div>
+    <>
+      <HeroLander/>
+      <About/>
+      <Event/>
+      <Testimonial/>
+      <CommunityPartners/>
+    </>
   );
 }
