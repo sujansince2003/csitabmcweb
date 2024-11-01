@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
-import Particles from "react-particles";
 import Aos from "aos";
 const HeroLander = () => {
   useEffect(() => {

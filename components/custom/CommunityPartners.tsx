@@ -34,7 +34,7 @@ export default function Component() {
   return (
     <div className="w-full max-w-7xl mx-auto py-12 overflow-hidden">
        <h2 className="relative text-2xl font-medium text-center mb-12 pb-2">We Have 
-        <span className="text-red-600"> Wroked With </span>
+        <span className="text-red-600"> Worked With </span>
       <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-36 h-[2px] bg-red-600" />
       </h2>
       <div className="relative">

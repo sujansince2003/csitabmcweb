@@ -136,18 +136,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-sm text-center">
           <p>© 2024 CSIT Association Of BMC. All Rights Reserved.</p>
-          <p className="mt-2">
-            Developed by{" < "}
-            <Link href="#" className="text-blue-400 hover:underline">
-              {" "}
-              Sachin Pantha
-            </Link>
-            {" && "}
-            <Link href="#" className="text-blue-400 hover:underline">
-              Sarad Gyawali
-            </Link>
-            {" /> "}
-          </p>
+          <p className="mt-2">Developed by {"< ME />"}</p>
         </div>
       </div>
     </footer>
