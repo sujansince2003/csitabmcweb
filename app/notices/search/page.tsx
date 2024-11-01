@@ -17,7 +17,7 @@ const NoticeSearch = async ({
 
   const searchResult = await searchResultByQuery(query);
   if (searchResult.length == 0) return <NoticeNotFoundForQuery query={query} />;
-  console.log(searchResult);
+
 
   return (
     <div className="container">
