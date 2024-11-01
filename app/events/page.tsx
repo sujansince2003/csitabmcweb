@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Clock, MapPin } from "lucide-react";
@@ -10,27 +7,17 @@ export default function Event() {
   return (
     <section className="py-16 px-4 md:px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative pb-2 text-2xl font-medium text-center mb-12"
-        >
+        <h2 className="relative pb-2 text-2xl font-medium text-center mb-12">
           <span className="text-red-600">Some Events</span> Organized By
           CSITA-BMC
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-60 h-[2px] bg-red-600" />
-        </motion.h2>
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {eventDetails.map((event, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Link href={`events/${event.id}`} className="block group">
-                <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+            <div key={index}>
+              <Link href={`events/${event.id}`} className="block h-full group">
+                <div className=" h-full relative bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
                   <div className="relative h-64">
                     <Image
                       src={event.image}
@@ -59,12 +46,6 @@ export default function Event() {
                             </span>
                           </div>
                         )}
-                        {event.time && (
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            <span className="text-sm">{event.time}</span>
-                          </div>
-                        )}
                         {event.venue && (
                           <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4" />
@@ -76,7 +57,7 @@ export default function Event() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

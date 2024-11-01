@@ -5,6 +5,10 @@ export const NavLinkPaths = [
     path: "/",
   },
   {
+    title: "Events",
+    path: "/events",
+  },
+  {
     title: "About",
     path: "/about",
   },
