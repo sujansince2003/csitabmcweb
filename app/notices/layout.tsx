@@ -19,7 +19,7 @@ export default function NoticeLayout({
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex items-center gap-6 md:gap-8">
             <Link href="/notices">
-              <h1 className="text-xl font-bold">Notice Board</h1>
+              <h1 className="text-xl font-bold text-primary">Notice Board</h1>
             </Link>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">

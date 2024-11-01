@@ -1,10 +1,15 @@
 export interface NoticeTypes {
   id: string;
-  photo: string;
   title: string;
   description: string;
+  fullContent: string;
+  photo: string | null;
+  publishedDate: Date;
   category: string;
   publishedBy: string;
-  publishedDate: string;
-  publisherAvatar: string;
+  department: string;
+  contactEmail: string;
+  contactPhone: string | null;
+  updatedAt: Date;
+  publisherAvatar?: string;
 }
