@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://csitabmc.com"),
-  title: "CSITABMC",
+  title: "CSIT Assocaiotn Of BMC",
   description:
     "CSIT Association of Butwal Multiple Campus is Non profit, Non political association of CSIT Students of Butwal Multiple Campus.",
   openGraph: {
