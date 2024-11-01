@@ -7,7 +7,7 @@ const DownloadNotice = ({ notice }: { notice: NoticeTypes }) => {
   const handleDownload = async () => {
     if (notice) {
       try {
-        const response = await fetch(notice.photo);
+        const response = await fetch(notice.photo as string);
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement("a");

@@ -1,7 +1,6 @@
 import searchResultByQuery from "@/app/api/notices/action";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { NoticeTypes } from "@/types/Notice";
 import { Search } from "lucide-react";
 import Form from "next/form";
 import React from "react";
@@ -18,10 +17,11 @@ const NoticeSearch = async ({
   const searchResult = await searchResultByQuery(query);
   if (searchResult.length == 0) return <NoticeNotFoundForQuery query={query} />;
 
-
   return (
     <div className="container">
-      <h3 className="py-4 text-xl font-medium">Search Result for : {query} ({searchResult.length})</h3>
+      <h3 className="py-4 text-xl font-medium">
+        Search Result for : {query} ({searchResult.length})
+      </h3>
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {searchResult.map((notice) => {
           return <NoticeCardComponent key={notice.id} notice={notice} />;

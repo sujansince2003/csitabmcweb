@@ -58,7 +58,7 @@ export default async function NoticeDetail({
           <Image
             src={
               notice.photo !== ""
-                ? notice.photo
+                ? (notice.photo as string)
                 : "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191383/logohero_nsqj8h.png"
             }
             width={800}
