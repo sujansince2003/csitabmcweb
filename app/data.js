@@ -5,6 +5,10 @@ export const NavLinkPaths = [
     path: "/",
   },
   {
+    title: "Events",
+    path: "/events",
+  },
+  {
     title: "About",
     path: "/about",
   },
@@ -101,7 +105,7 @@ export const eventDetails = [
 //Exporting Teams data
 export const TeamDetails = [
   {
-    id: 1,
+    id: "081PSB1",
     Name: "Suman Bhattarai",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190562/suman_r6pfi0.jpg",
     Post: "President",
@@ -109,7 +113,7 @@ export const TeamDetails = [
     LinkedIn: "",
   },
   {
-    id: 2,
+    id: "081VPSK2",
     Name: "Sujan Khatri",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190553/SUJAN_clyi3v.png",
     Post: "Vice-President",
@@ -117,7 +121,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/sujansince2003/",
   },
   {
-    id: 3,
+    id: "081VPAP3",
     Name: "Anuradha Pandey",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190537/ANU_kwix9a.jpg",
     Post: "Vice-President",
@@ -125,7 +129,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/anuradha-pandey-2936a2321/",
   },
   {
-    id: 4,
+    id: "081SSP4",
     Name: "Sanchit Pandey",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190545/SANCHIT_p2f5ue.jpg",
     Post: "Secretary",
@@ -134,7 +138,7 @@ export const TeamDetails = [
   },
 
   {
-    id: 5,
+    id: "081JSBA5",
     Name: "Bivek Acharya",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190536/BIBEK_ypwryr.jpg",
     Post: "Joint Secretary",
@@ -143,7 +147,7 @@ export const TeamDetails = [
   },
 
   {
-    id: 6,
+    id: "081TSA6",
     Name: "Shikshya Acharya",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190551/shikshya_qw8rge.jpg",
     Post: "Treasurer",
@@ -151,7 +155,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/shikshya-acharya-90b227317/",
   },
   {
-    id: 7,
+    id: "081JTPA7",
     Name: "Pratik Aryal",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190545/pratik_odbieh.jpg",
     Post: "Joint Treasurer",
@@ -159,7 +163,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/pratik-aryal-256a79289/",
   },
   {
-    id: 8,
+    id: "081TLJG8",
     Name: "Jeevan Ghimire",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190539/JEEVAN_pjjq7c.jpg",
     Post: "Tech Lead",
@@ -167,7 +171,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/imjeevanghimire/",
   },
   {
-    id: 9,
+    id: "081ATLBK9",
     Name: "Bipin Khatri",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190536/bipin_fjumt4.jpg",
     Post: "Ast. Tech Lead",
@@ -176,15 +180,15 @@ export const TeamDetails = [
   },
 
   {
-    id: 16,
+    id: "081GDUG10",
     Name: "URBISH GHIMIRE",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190608/Urbish_e2eo3q.png",
-    Post: " Graphic Designer",
+    Post: "Graphic Designer",
     Facebook: "https://www.facebook.com/urbish.ghimire",
     LinkedIn: "https://www.linkedin.com/in/urbish-ghimire-00bb922ab/",
   },
   {
-    id: 17,
+    id: "081AGDSG11",
     Name: "SANGIT GYAWALI",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190548/SANGIT_cddatl.png",
     Post: "Ast.Graphic Designer",
@@ -192,7 +196,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/sangitgyawali/",
   },
   {
-    id: 12,
+    id: "081EMKA12",
     Name: "KRITAN ARYAL",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190556/KRITAN_wyjb7r.png",
     Post: "Event Manger",
@@ -200,7 +204,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/aryalkritan11/",
   },
   {
-    id: 15,
+    id:"081HRLKP13",
     Name: "KARUNA PYAKUREL",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190540/KARUNA_lfuxdb.jpg",
     Post: "HR Lead",
@@ -209,7 +213,7 @@ export const TeamDetails = [
   },
 
   {
-    id: 14,
+    id: "081EMDS14",
     Name: "Dikshya Sharma",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190535/dikshya_sbjib8.jpg",
     Post: "Executive Member",
@@ -217,7 +221,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/dikshya2004/",
   },
   {
-    id: 20,
+    id: "081EMMP15",
     Name: "Mission Paudel",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190542/MISSON_oumhyz.jpg",
     Post: "Executive Member",
@@ -225,7 +229,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/misson-paudel-900181293/",
   },
   {
-    id: 15,
+    id: "081EMGSB16",
     Name: "Govinda Sagar Bhusal",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190539/GOVINDA_cma3ba.jpg",
     Post: "Executive Member",
@@ -233,7 +237,7 @@ export const TeamDetails = [
     LinkedIn: "https://www.linkedin.com/in/govinda-sagar-bhusal-3685362a8/",
   },
   {
-    id: 19,
+    id: "081EMSA17",
     Name: "Samir Aryal",
     img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190544/samir_ylt8wf.jpg",
     Post: "Executive Member",

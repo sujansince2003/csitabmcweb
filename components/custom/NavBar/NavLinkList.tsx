@@ -43,7 +43,7 @@ export default NavLinkList;
 
 const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
   return (
-    <div className="flex flex-col space-y-4 py-4 justify-end items-center w-full md:space-x-4 md:flex-row md:space-y-0">
+    <div className="font-medium flex flex-col space-y-4 py-4 justify-end items-center w-full md:space-x-8 md:flex-row md:space-y-0">
       {NavLinkPaths.map((item, index) => (
         <NavLink
           href={item.path}
@@ -54,8 +54,8 @@ const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
         </NavLink>
       ))}
 
-      <NavLink href="/events" {...(toggleMenu && { onClick: toggleMenu })}>
-        <Button>Events</Button>
+      <NavLink href="/login" {...(toggleMenu && { onClick: toggleMenu })}>
+        <Button>Log in</Button>
       </NavLink>
     </div>
   );

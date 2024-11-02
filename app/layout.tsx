@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://csitabmc.com"),
-  title: "CSITABMC",
+  title: "CSIT Assocaiotn Of BMC",
   description:
     "CSIT Association of Butwal Multiple Campus is Non profit, Non political association of CSIT Students of Butwal Multiple Campus.",
   openGraph: {
@@ -39,7 +39,7 @@ export default function RootLayout({
         <nav className="bg-background/60 backdrop-blur-xl shadow-sm fixed z-50 w-full top-0">
           <NavBar />
         </nav>
-        <NavBar />
+        <div className="bg-white h-[72px]" />
         {children}
         <Footer />
       </body>
