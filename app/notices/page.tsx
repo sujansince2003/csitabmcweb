@@ -1,20 +1,30 @@
+"use client";
+import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { NoticeTypes } from "@/types/Notice";
 import { NoticeCardComponent } from "./components/NoticeCard";
 import NoticeHeader from "./components/NoticeHeader";
 
-async function getNotices(): Promise<NoticeTypes[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/notices`, {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch notices");
-  }
-  return res.json();
-}
+export default function NoticePage() {
+  const [notices, setNotices] = useState<NoticeTypes[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export default async () => {
-  const notices = await getNotices();
+  useEffect(() => {
+    const fetchNotices = async () => {
+      try {
+        const res = await fetch("/api/notices"); // Uses relative path
+        const data = await res.json();
+        setNotices(data);
+      } catch (error) {
+        console.error("Failed to fetch notices:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchNotices();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
   return (
     <>
       <NoticeHeader />
@@ -81,4 +91,4 @@ export default async () => {
       </div>
     </>
   );
-};
+}
