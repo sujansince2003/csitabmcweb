@@ -26,8 +26,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
 
-const uploadPresetvalue = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
+const uploadPresetvalue =
+  process.env.NEXT_PUBLIC_CLOUDINARY_NOTICE_UPLOAD_PRESET;
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
@@ -53,6 +56,7 @@ interface CloudinaryResult {
 
 export default function UploadNotice() {
   const router = useRouter();
+  const { data: session, status } = useSession();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [photoUrl, setPhotoUrl] = useState("");
 
@@ -104,69 +108,27 @@ export default function UploadNotice() {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <Card className="max-w-2xl mx-auto">
-        <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">
-            Upload New Notice
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <FormField
-                control={form.control}
-                name="title"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Title</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="description"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Short Description</FormLabel>
-                    <FormControl>
-                      <Textarea {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="fullContent"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Full Content</FormLabel>
-                    <FormControl>
-                      <Textarea {...field} className="min-h-[200px]" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {session && session.user.role === "ADMIN" ? (
+        <Card className="max-w-2xl mx-auto">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold text-center">
+              Upload New Notice
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-4"
+              >
                 <FormField
                   control={form.control}
-                  name="publishedDate"
+                  name="title"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Publish Date</FormLabel>
+                      <FormLabel>Title</FormLabel>
                       <FormControl>
-                        <div className="relative">
-                          <Input type="date" {...field} />
-                          <Calendar
-                            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-                            size={20}
-                          />
-                        </div>
+                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -174,178 +136,250 @@ export default function UploadNotice() {
                 />
                 <FormField
                   control={form.control}
-                  name="category"
+                  name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Category</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select category" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="academic">Academic</SelectItem>
-                          <SelectItem value="administrative">
-                            Administrative
-                          </SelectItem>
-                          <SelectItem value="events">Events</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormLabel>Short Description</FormLabel>
+                      <FormControl>
+                        <Textarea {...field} />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-              </div>
-              <FormField
-                control={form.control}
-                name="tags"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Tags (comma-separated)</FormLabel>
-                    <FormControl>
-                      <Input
-                        {...field}
-                        placeholder="e.g. registration, deadline, important"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="department"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Department</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="publishedBy"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Published By</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="contactEmail"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Contact Email</FormLabel>
-                    <FormControl>
-                      <Input type="email" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="contactPhone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Contact Phone</FormLabel>
-                    <FormControl>
-                      <Input type="tel" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="location"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Location</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="photo"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Notice Photo</FormLabel>
-                    <FormControl className="hidden">
-                      <Input {...field} value={photoUrl} onChange={() => {}} />
-                    </FormControl>
-                    <CldUploadWidget
-                      // uploadPreset="rqubslck"
-                      uploadPreset={uploadPresetvalue}
-                      onSuccess={(result) => {
-                        const info = result?.info as
-                          | CloudinaryResult
-                          | undefined;
-                        if (info) {
-                          setPhotoUrl(info.url);
-                          form.setValue("photo", info.url); // Sync with form
-                        }
-                      }}
-                    >
-                      {({ open }) => (
-                        <button
-                          className="block text-gray-50 bg-blue-500 p-3 rounded-2xl"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            open();
-                          }}
+                <FormField
+                  control={form.control}
+                  name="fullContent"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Full Content</FormLabel>
+                      <FormControl>
+                        <Textarea {...field} className="min-h-[200px]" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="publishedDate"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Publish Date</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Input type="date" {...field} />
+                            <Calendar
+                              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                              size={20}
+                            />
+                          </div>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="category"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Category</FormLabel>
+                        <Select
+                          onValueChange={field.onChange}
+                          defaultValue={field.value}
                         >
-                          Upload an Image
-                        </button>
-                      )}
-                    </CldUploadWidget>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {photoUrl && (
-                <div className="mt-4">
-                  <img
-                    src={photoUrl}
-                    alt="Uploaded preview"
-                    className="w-full rounded-lg"
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select category" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="academic">Academic</SelectItem>
+                            <SelectItem value="administrative">
+                              Administrative
+                            </SelectItem>
+                            <SelectItem value="events">Events</SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
                 </div>
-              )}
+                <FormField
+                  control={form.control}
+                  name="tags"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Tags (comma-separated)</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder="e.g. registration, deadline, important"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="department"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Department</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="publishedBy"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Published By</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="contactEmail"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Contact Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="contactPhone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Contact Phone</FormLabel>
+                      <FormControl>
+                        <Input type="tel" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="location"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Location</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="photo"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Notice Photo</FormLabel>
+                      <FormControl className="hidden">
+                        <Input
+                          {...field}
+                          value={photoUrl}
+                          onChange={() => {}}
+                        />
+                      </FormControl>
+                      <CldUploadWidget
+                        // uploadPreset="rqubslck"
+                        uploadPreset={uploadPresetvalue}
+                        onSuccess={(result) => {
+                          const info = result?.info as
+                            | CloudinaryResult
+                            | undefined;
+                          if (info) {
+                            setPhotoUrl(info.url);
+                            form.setValue("photo", info.url); // Sync with form
+                          }
+                        }}
+                      >
+                        {({ open }) => (
+                          <button
+                            className="block text-gray-50 bg-blue-500 p-3 rounded-2xl"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              open();
+                            }}
+                          >
+                            Upload an Image
+                          </button>
+                        )}
+                      </CldUploadWidget>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                {photoUrl && (
+                  <div className="mt-4">
+                    <img
+                      src={photoUrl}
+                      alt="Uploaded preview"
+                      className="w-full rounded-lg"
+                    />
+                  </div>
+                )}
 
-              <div className="flex justify-between pt-4">
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() => router.push("/")}
-                >
-                  Cancel
-                </Button>
-                <Button type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Uploading..." : "Upload Notice"}
-                </Button>
+                <div className="flex justify-between pt-4">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => router.push("/")}
+                  >
+                    Cancel
+                  </Button>
+                  <Button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Uploading..." : "Upload Notice"}
+                  </Button>
+                </div>
+              </form>
+            </Form>
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="container mx-auto p-4 max-w-4xl">
+          <Card>
+            <CardHeader>
+              <div className="flex justify-between items-start">
+                <div>
+                  <CardTitle className="text-2xl font-bold">
+                    Admin Access Required
+                  </CardTitle>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    You must be logged in as an admin to upload
+                    notices.&nbsp;&nbsp;
+                    <Link className="text-blue-500" href="/login">
+                      Login
+                    </Link>
+                  </p>
+                </div>
               </div>
-            </form>
-          </Form>
-        </CardContent>
-      </Card>
+            </CardHeader>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }

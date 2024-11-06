@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     });
     return NextResponse.json(notice);
   } catch (error) {
-    console.log(error);
+
     return NextResponse.json(
       { error: "An error occurred while creating the notice." },
       { status: 500 }
@@ -50,11 +50,12 @@ export async function GET(request: Request) {
       const notices = await prisma.notice.findMany({
         orderBy: { publishedDate: "desc" },
       });
+
       return NextResponse.json(notices);
     }
   } catch (error) {
     return NextResponse.json(
-      { error: "An error occurred while fetching notices." },
+      { error: "An error occurred while fetching noticesddd." },
       { status: 500 }
     );
   }
