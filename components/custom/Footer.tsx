@@ -9,9 +9,11 @@ import {
   Mail,
   Phone,
   MapPin,
+  Github,
 } from "lucide-react";
 import Link from "next/link";
 import NavLink from "./NavBar/NavLinks";
+import { Gideon_Roman } from "next/font/google";
 
 export default function Footer() {
   return (
@@ -27,19 +29,31 @@ export default function Footer() {
               Empowering students through technology and innovation since 2016.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-white transition-colors">
+              <Link
+                href="https://www.facebook.com/csit.bmc"
+                className="hover:text-white transition-colors"
+              >
                 <Facebook className="w-6 h-6" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="hover:text-white transition-colors">
+              <Link
+                href="https://x.com/csitabmc"
+                className="hover:text-white transition-colors"
+              >
                 <Twitter className="w-6 h-6" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="hover:text-white transition-colors">
+              <Link
+                href="https://www.instagram.com/csitabmc"
+                className="hover:text-white transition-colors"
+              >
                 <Instagram className="w-6 h-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="hover:text-white transition-colors">
+              <Link
+                href="https://np.linkedin.com/company/csitabmc"
+                className="hover:text-white transition-colors"
+              >
                 <Linkedin className="w-6 h-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -136,7 +150,18 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-sm text-center">
           <p>© 2024 CSIT Association Of BMC. All Rights Reserved.</p>
-          <p className="mt-2">Developed by {"< ME />"}</p>
+          <p className="mt-2">
+            Discover the Code Behind this project :&nbsp;
+            <span>
+              <Link
+                target="_blank"
+                href={"https://github.com/sujansince2003/csitabmcweb"}
+                className="text-blue-300 hover:text-white transition-colors"
+              >
+                GitHub
+              </Link>
+            </span>
+          </p>
         </div>
       </div>
     </footer>
