@@ -13,7 +13,11 @@ export default function TeamList() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {TeamDetails.map((member, index) => (
-            <Link href={`/mb/${member.id}`} key={index} className=" bg-gray-100 p-4">
+            <Link
+              href={`/mb/${member.id}`}
+              key={index}
+              className=" bg-white shadow-lg rounded-lg hover:scale-105 transition-all duration-500 p-4 "
+            >
               <Image
                 src={member.img}
                 alt={member.Name}
@@ -22,11 +26,11 @@ export default function TeamList() {
                 className="rounded-sm"
               />
 
-              <div>
-                <h3 className="text-lg font-semibold text-red-600">
+              <div className="text-center pt-2">
+                <h3 className="text-base font-semibold text-red-600">
                   {member.Name}
                 </h3>
-                <p className="text-gray-600">{member.Post}</p>
+                <p className="text-gray-600 text-sm">{member.Post}</p>
               </div>
             </Link>
           ))}
