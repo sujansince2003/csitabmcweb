@@ -36,14 +36,18 @@ const NavLinkList = () => {
       </div>
 
       {/* mobile menue */}
-      <div className="md:hidden flex items-center w-full justify-end">
-        <button className="pl-2" onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <X className="w-8 h-8" />
-          ) : (
-            <Menu className="w-8 h-8" />
-          )}
-        </button>
+      <div className="md:hidden  flex items-center  w-full justify-end">
+        <div className="flex  justify-center items-center gap-2">
+          <ProfileAvatar />
+
+          <button className="pl-2" onClick={toggleMenu}>
+            {isMenuOpen ? (
+              <X className="w-8 h-8" />
+            ) : (
+              <Menu className="w-8 h-8" />
+            )}
+          </button>
+        </div>
       </div>
       {isMenuOpen && (
         <div className="md:hidden flex flex-col absolute z-[1000] top-16 left-0 w-full bg-background backdrop-blur-xl shadow-sm">
@@ -58,7 +62,29 @@ export default NavLinkList;
 
 const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
   const { data: session, status } = useSession();
+
+  return (
+    <div className="font-medium flex flex-col space-y-4 py-4 justify-end items-center w-full md:space-x-8 md:flex-row md:space-y-0">
+      {NavLinkPaths.map((item, index) => (
+        <NavLink
+          href={item.path}
+          key={index}
+          {...(toggleMenu && { onClick: toggleMenu })}
+        >
+          {item.title}
+        </NavLink>
+      ))}
+      <div className="hidden md:block">
+        <ProfileAvatar toggleMenu={toggleMenu} />
+      </div>
+    </div>
+  );
+};
+
+//profile avatar card
+function ProfileAvatar({ toggleMenu }: { toggleMenu?: () => void | boolean }) {
   const router = useRouter();
+  const { data: session, status } = useSession();
   const [userProfileAvatar, setUserProfileAvatar] = useState<string>();
   const [isLoading, setIsLoading] = useState(true); // Track loading state
   const fetchUserProfile = async () => {
@@ -78,70 +104,58 @@ const NavList = ({ toggleMenu }: { toggleMenu?: () => void | boolean }) => {
 
   useEffect(() => {
     fetchUserProfile();
-  }, [router, userProfileAvatar]);
+  }, [session, userProfileAvatar]);
 
   async function handleLogout() {
     await signOut({ redirect: false });
     router.push("/");
   }
   return (
-    <div className="font-medium flex flex-col space-y-4 py-4 justify-end items-center w-full md:space-x-8 md:flex-row md:space-y-0">
-      {NavLinkPaths.map((item, index) => (
-        <NavLink
-          href={item.path}
-          key={index}
-          {...(toggleMenu && { onClick: toggleMenu })}
-        >
-          {item.title}
-        </NavLink>
-      ))}
+    <>
+      {session ? (
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+              {isLoading ? (
+                <>
+                  <Skeleton className="h-8 w-8" />
+                </>
+              ) : (
+                <>
+                  <Avatar className="h-9 w-9 border">
+                    <AvatarImage
+                      src={userProfileAvatar}
+                      alt={session.user.email || ""}
+                    />
+                    <AvatarFallback>
+                      {session.user.email?.charAt(0) || "U"}
+                    </AvatarFallback>
+                  </Avatar>
+                </>
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <Link href="/profile">
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+            </Link>
 
-      <div className="hidden sm:ml-6 sm:flex sm:items-center">
-        {session ? (
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                {isLoading ? (
-                  <>
-                    <Skeleton className="h-8 w-8" />
-                  </>
-                ) : (
-                  <>
-                    <Avatar className="h-9 w-9 border">
-                      <AvatarImage
-                        src={userProfileAvatar}
-                        alt={session.user.email || ""}
-                      />
-                      <AvatarFallback>
-                        {session.user.email?.charAt(0) || "U"}
-                      </AvatarFallback>
-                    </Avatar>
-                  </>
-                )}
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <Link href="/profile">
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-              </Link>
-
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={handleLogout}>
-                <span className="text-gray-500 flex gap-1 items-center">
-                  <LogOut className="w-3 h-4" />
-                  Logout
-                </span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        ) : (
-          <div className="space-x-4">
-            <NavLink href="/login" {...(toggleMenu && { onClick: toggleMenu })}>
-              <Button onClick={() => router.push("/login")}>Log in</Button>
-            </NavLink>
-          </div>
-        )}
-      </div>
-    </div>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onClick={handleLogout}>
+              <span className="text-gray-500 flex gap-1 items-center">
+                <LogOut className="w-3 h-4" />
+                Logout
+              </span>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      ) : (
+        <div className="space-x-4">
+          <NavLink href="/login" {...(toggleMenu && { onClick: toggleMenu })}>
+            <Button onClick={() => router.push("/login")}>Log in</Button>
+          </NavLink>
+        </div>
+      )}
+    </>
   );
-};
+}
