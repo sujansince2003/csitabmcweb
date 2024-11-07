@@ -8,6 +8,7 @@ import {
   Phone,
   MapPin,
   Calendar,
+  Github,
 } from "lucide-react";
 import { TeamDetails } from "@/app/data";
 import NotFound from "@/app/not-found";
@@ -76,7 +77,7 @@ export default async function Profile({
                       className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition-colors"
                       aria-label="Email"
                     >
-                      <Mail className="w-5 h-5" />
+                      <Github className="w-5 h-5" />
                     </Link>
                   </div>
                   <div className="space-y-3 text-gray-600">
@@ -84,10 +85,13 @@ export default async function Profile({
                       <Phone className="w-5 h-5" />
                       <span>+977-9876543210</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-5 h-5" />
-                      <span>Joined 2023</span>
-                    </div>
+                    <Link
+                      href={`mailto:${profile.Email}`}
+                      className="flex items-center gap-2"
+                    >
+                      <Mail className="w-5 h-5" />
+                      <span>{profile.Email}</span>
+                    </Link>
                   </div>
                 </div>
               </div>

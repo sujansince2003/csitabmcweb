@@ -12,11 +12,18 @@ export default function NoticePage() {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const res = await fetch("/api/notices"); // Uses relative path
+        const res = await fetch("/api/notices");
         const data = await res.json();
-        setNotices(data);
+
+        if (Array.isArray(data)) {
+          setNotices(data);
+        } else {
+          console.error("Fetched data is not an array:", data);
+          setNotices([]);
+        }
       } catch (error) {
         console.error("Failed to fetch notices:", error);
+        setNotices([]);
       } finally {
         setLoading(false);
       }
