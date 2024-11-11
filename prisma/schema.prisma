@@ -14,6 +14,7 @@ model Notice {
   description   String
   fullContent   String
   photo         String?
+  photopublicId String?
   publishedDate DateTime
   publishedBy   String
   department    String
