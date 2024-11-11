@@ -1,9 +1,10 @@
+"use client";
 import searchResultByQuery from "@/app/api/notices/action";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import Form from "next/form";
-import React from "react";
+import React, { useState } from "react";
 import { NoticeCardComponent } from "../components/NoticeCard";
 
 const NoticeSearch = async ({
@@ -11,6 +12,7 @@ const NoticeSearch = async ({
 }: {
   searchParams: Promise<{ query: string }>;
 }) => {
+  const [deletedNotice, setdeletedNotice] = useState(false);
   const query = (await searchParams).query;
   if (!query || query == "") return <QueryNotFound />;
 
@@ -24,7 +26,13 @@ const NoticeSearch = async ({
       </h3>
       <div className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {searchResult.map((notice) => {
-          return <NoticeCardComponent key={notice.id} notice={notice} />;
+          return (
+            <NoticeCardComponent
+              key={notice.id}
+              notice={notice}
+              setdeletedNotice={setdeletedNotice}
+            />
+          );
         })}
       </div>
     </div>
