@@ -8,12 +8,14 @@ import NoticeHeader from "./components/NoticeHeader";
 export default function NoticePage() {
   const [notices, setNotices] = useState<NoticeTypes[]>([]);
   const [loading, setLoading] = useState(true);
+  const [deletedNotice, setdeletedNotice] = useState(false);
 
   useEffect(() => {
     const fetchNotices = async () => {
       try {
         const res = await fetch("/api/notices"); // Uses relative path
         const data = await res.json();
+
         setNotices(data);
       } catch (error) {
         console.error("Failed to fetch notices:", error);
@@ -22,7 +24,7 @@ export default function NoticePage() {
       }
     };
     fetchNotices();
-  }, []);
+  }, [deletedNotice]);
 
   if (loading) return <div>Loading...</div>;
   return (
@@ -48,7 +50,11 @@ export default function NoticePage() {
               >
                 {notices.map((notice) => {
                   return (
-                    <NoticeCardComponent key={notice.id} notice={notice} />
+                    <NoticeCardComponent
+                      key={notice.id}
+                      notice={notice}
+                      setdeletedNotice={setdeletedNotice}
+                    />
                   );
                 })}
               </TabsContent>
@@ -59,7 +65,11 @@ export default function NoticePage() {
                 {notices.map((notice) => {
                   if (notice.category == "administrative")
                     return (
-                      <NoticeCardComponent key={notice.id} notice={notice} />
+                      <NoticeCardComponent
+                        key={notice.id}
+                        notice={notice}
+                        setdeletedNotice={setdeletedNotice}
+                      />
                     );
                 })}
               </TabsContent>
@@ -70,7 +80,11 @@ export default function NoticePage() {
                 {notices.map((notice) => {
                   if (notice.category == "events")
                     return (
-                      <NoticeCardComponent key={notice.id} notice={notice} />
+                      <NoticeCardComponent
+                        key={notice.id}
+                        notice={notice}
+                        setdeletedNotice={setdeletedNotice}
+                      />
                     );
                 })}
               </TabsContent>
@@ -81,7 +95,11 @@ export default function NoticePage() {
                 {notices.map((notice) => {
                   if (notice.category == "academic")
                     return (
-                      <NoticeCardComponent key={notice.id} notice={notice} />
+                      <NoticeCardComponent
+                        key={notice.id}
+                        notice={notice}
+                        setdeletedNotice={setdeletedNotice}
+                      />
                     );
                 })}
               </TabsContent>
