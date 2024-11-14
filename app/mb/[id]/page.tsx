@@ -111,12 +111,14 @@ export default async function Profile({
                   field of Information Technology.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat.
+                  Being an active member of the CSITABMC has not only helped me
+                  improve my technical skills but has also given me valuable
+                  chances to grow personally. I've developed important skills in
+                  leadership, teamwork, and communication, all of which are key
+                  for success in both my studies and future career. I'm
+                  passionate about supporting the association's mission to
+                  promote technology and look forward to working with others who
+                  share the same goal of driving innovation in the IT field.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Leadership</Badge>
