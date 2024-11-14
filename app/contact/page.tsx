@@ -194,7 +194,7 @@ export default function ContactUs() {
               </h2>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=..."
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.6510102975053!2d83.47007464290205!3d27.710676847109525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996873e6c33d6bf%3A0x969e9716a8ecad23!2sCSIT%20Association%20of%20BMC!5e1!3m2!1sen!2snp!4v1730372812466!5m2!1sen!2snp"
                   width="600"
                   height="200"
                   style={{ border: 0 }}
