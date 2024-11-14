@@ -105,11 +105,10 @@ export default async function Profile({
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   I am {profile.Name}, serving as the {profile.Post} of the CSIT
-                  Association at Butwal Multiple Campus (BMC). In my role, I
-                  actively collaborate with fellow IT students to organize
-                  workshops, events, and seminars that foster learning,
-                  innovation, and skill development in the field of Information
-                  Technology.
+                  Association of BMC. In my role, I actively collaborate with
+                  fellow IT students to organize workshops, events, and seminars
+                  that foster learning, innovation, and skill development in the
+                  field of Information Technology.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa
