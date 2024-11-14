@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -35,7 +35,7 @@ const uploadPresetvalue =
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   description: z.string().min(1, "Description is required"),
-  fullContent: z.string().min(1, "Full content is required"),
+  fullContent: z.string().optional(),
   publishedDate: z.string().min(1, "Published date is required"),
   publishedBy: z.string().min(1, "Publisher is required"),
   category: z.string().min(1, "Category is required"),
@@ -45,6 +45,7 @@ const formSchema = z.object({
   contactPhone: z.string().optional(),
   location: z.string().optional(),
   photo: z.any().optional(),
+  photopublicId: z.any().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -59,6 +60,16 @@ export default function UploadNotice() {
   const { data: session, status } = useSession();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [photoUrl, setPhotoUrl] = useState("");
+  const [defaultValues, setDefaultValues] = useState({
+    tags: "important, notice,CSIT",
+    department: "CSIT Department",
+    publishedBy: "CSIT Department of BMC",
+    contactEmail: "csitassociationbmc@gmail.com",
+    contactPhone: "9843409076",
+    location: "Golpark,Butwal,Nepal",
+    category: "administrative",
+    publishedDate: new Date().toISOString().split("T")[0],
+  });
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -66,16 +77,30 @@ export default function UploadNotice() {
       title: "",
       description: "",
       fullContent: "",
-      publishedDate: "",
-      publishedBy: "",
-      category: "",
-      tags: "",
-      department: "",
-      contactEmail: "",
-      contactPhone: "",
-      location: "",
+      publishedDate: defaultValues.publishedDate,
+      publishedBy: defaultValues.publishedBy,
+      category: defaultValues.category, // Set default category
+      tags: defaultValues.tags,
+      department: defaultValues.department,
+      contactEmail: defaultValues.contactEmail,
+      contactPhone: defaultValues.contactPhone,
+      location: defaultValues.location,
     },
   });
+
+  useEffect(() => {
+    // Update form values when defaultValues change
+    form.reset({
+      ...form.getValues(),
+      publishedBy: defaultValues.publishedBy,
+      category: defaultValues.category, // Include category in reset
+      tags: defaultValues.tags,
+      department: defaultValues.department,
+      contactEmail: defaultValues.contactEmail,
+      contactPhone: defaultValues.contactPhone,
+      location: defaultValues.location,
+    });
+  }, [defaultValues, form]);
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     setIsSubmitting(true);
@@ -104,6 +129,13 @@ export default function UploadNotice() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleFieldClick = (fieldName: keyof typeof defaultValues) => {
+    setDefaultValues((prev) => ({
+      ...prev,
+      [fieldName]: form.getValues(fieldName),
+    }));
   };
 
   return (
@@ -187,7 +219,10 @@ export default function UploadNotice() {
                       <FormItem>
                         <FormLabel>Category</FormLabel>
                         <Select
-                          onValueChange={field.onChange}
+                          onValueChange={(value) => {
+                            field.onChange(value);
+                            handleFieldClick("category");
+                          }}
                           defaultValue={field.value}
                         >
                           <FormControl>
@@ -209,22 +244,25 @@ export default function UploadNotice() {
                     )}
                   />
                 </div>
-                <FormField
-                  control={form.control}
-                  name="tags"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Tags (comma-separated)</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          placeholder="e.g. registration, deadline, important"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="hidden">
+                  <FormField
+                    control={form.control}
+                    name="tags"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Tags (comma-separated)</FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            placeholder="e.g. registration, deadline, important"
+                            onClick={() => handleFieldClick("tags")}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
                 <FormField
                   control={form.control}
                   name="department"
@@ -232,7 +270,10 @@ export default function UploadNotice() {
                     <FormItem>
                       <FormLabel>Department</FormLabel>
                       <FormControl>
-                        <Input {...field} />
+                        <Input
+                          {...field}
+                          onClick={() => handleFieldClick("department")}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -245,7 +286,10 @@ export default function UploadNotice() {
                     <FormItem>
                       <FormLabel>Published By</FormLabel>
                       <FormControl>
-                        <Input {...field} />
+                        <Input
+                          {...field}
+                          onClick={() => handleFieldClick("publishedBy")}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -258,7 +302,11 @@ export default function UploadNotice() {
                     <FormItem>
                       <FormLabel>Contact Email</FormLabel>
                       <FormControl>
-                        <Input type="email" {...field} />
+                        <Input
+                          type="email"
+                          {...field}
+                          onClick={() => handleFieldClick("contactEmail")}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -271,7 +319,11 @@ export default function UploadNotice() {
                     <FormItem>
                       <FormLabel>Contact Phone</FormLabel>
                       <FormControl>
-                        <Input type="tel" {...field} />
+                        <Input
+                          type="tel"
+                          {...field}
+                          onClick={() => handleFieldClick("contactPhone")}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -284,7 +336,10 @@ export default function UploadNotice() {
                     <FormItem>
                       <FormLabel>Location</FormLabel>
                       <FormControl>
-                        <Input {...field} />
+                        <Input
+                          {...field}
+                          onClick={() => handleFieldClick("location")}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -304,7 +359,6 @@ export default function UploadNotice() {
                         />
                       </FormControl>
                       <CldUploadWidget
-                        // uploadPreset="rqubslck"
                         uploadPreset={uploadPresetvalue}
                         onSuccess={(result) => {
                           const info = result?.info as
@@ -313,6 +367,7 @@ export default function UploadNotice() {
                           if (info) {
                             setPhotoUrl(info.url);
                             form.setValue("photo", info.url); // Sync with form
+                            form.setValue("photopublicId", info.public_id); // Sync with form
                           }
                         }}
                       >
@@ -341,7 +396,6 @@ export default function UploadNotice() {
                     />
                   </div>
                 )}
-
                 <div className="flex justify-between pt-4">
                   <Button
                     type="button"
