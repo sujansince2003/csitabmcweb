@@ -111,6 +111,7 @@ export const TeamDetails = [
     Post: "President",
     Facebook: "https://www.facebook.com/suman.bhattarai.986",
     LinkedIn: "",
+    Github: "",
     Email: "suman@csitabmc.com",
   },
   {
@@ -120,6 +121,7 @@ export const TeamDetails = [
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/sujansince2003",
     LinkedIn: "https://www.linkedin.com/in/sujansince2003/",
+    Github: "https://github.com/sujansince2003",
     Email: "sujan@csitabmc.com",
   },
   {
@@ -129,6 +131,7 @@ export const TeamDetails = [
     Post: "Vice-President",
     Facebook: "https://www.facebook.com/profile.php?id=100035413025994",
     LinkedIn: "https://www.linkedin.com/in/anuradha-pandey-2936a2321/",
+    Github: "https://github.com/AnuradhaPandey812",
     Email: "anuradha@csitabmc.com",
   },
   {
@@ -138,6 +141,7 @@ export const TeamDetails = [
     Post: "Secretary",
     Facebook: "https://www.facebook.com/sanchitpandeyyy/",
     LinkedIn: "https://www.linkedin.com/in/sanchitpandeyyy/",
+    Github: "https://github.com/sanchitpandeyyy",
     Email: "sanchit@csitabmc.com",
   },
 
@@ -148,6 +152,7 @@ export const TeamDetails = [
     Post: "Joint Secretary",
     Facebook: "https://www.facebook.com/Bibekacharya2059",
     LinkedIn: "https://www.linkedin.com/in/bivek-acharya-5746282b2/",
+    Github: "",
     Email: "bivek@csitabmc.com",
   },
 
@@ -158,6 +163,7 @@ export const TeamDetails = [
     Post: "Treasurer",
     Facebook: "https://www.facebook.com/Shikshyaacharyaa",
     LinkedIn: "https://www.linkedin.com/in/shikshya-acharya-90b227317/",
+    Github: "https://github.com/Shikshyaacharyaa",
     Email: "shikshya@csitabmc.com",
   },
   {
@@ -167,6 +173,7 @@ export const TeamDetails = [
     Post: "Joint Treasurer",
     Facebook: "https://www.facebook.com/pratik.aryal.9615",
     LinkedIn: "https://www.linkedin.com/in/pratik-aryal-256a79289/",
+    Github: "",
     Email: "pratik@csitabmc.com",
   },
   {
@@ -176,6 +183,7 @@ export const TeamDetails = [
     Post: "Tech Lead",
     Facebook: "https://www.facebook.com/imjeevanghimire",
     LinkedIn: "https://www.linkedin.com/in/imjeevanghimire/",
+    Github: "",
     Email: "jeevan@csitabmc.com",
   },
   {
@@ -185,6 +193,7 @@ export const TeamDetails = [
     Post: "Ast. Tech Lead",
     Facebook: "https://www.facebook.com/im.bipo",
     LinkedIn: "https://www.linkedin.com/in/bipinkhatri/",
+    Github: "https://github.com/im-bipo",
     Email: "bipin@csitabmc.com",
   },
 
@@ -195,6 +204,7 @@ export const TeamDetails = [
     Post: "Graphic Designer",
     Facebook: "https://www.facebook.com/urbish.ghimire",
     LinkedIn: "https://www.linkedin.com/in/urbish-ghimire-00bb922ab/",
+    Github: "",
     Email: "urbish@csitabmc.com",
   },
   {
@@ -204,6 +214,7 @@ export const TeamDetails = [
     Post: "Ast.Graphic Designer",
     Facebook: "https://www.facebook.com/SangeeT.GyAwaLi52",
     LinkedIn: "https://www.linkedin.com/in/sangitgyawali/",
+    Github: "",
     Email: "sangit@csitabmc.com",
   },
   {
@@ -213,6 +224,7 @@ export const TeamDetails = [
     Post: "Event Manger",
     Facebook: "https://www.facebook.com/aryal.kritan",
     LinkedIn: "https://www.linkedin.com/in/aryalkritan11/",
+    Github: "",
     Email: "kritan@csitabmc.com",
   },
   {
@@ -222,6 +234,7 @@ export const TeamDetails = [
     Post: "HR Lead",
     Facebook: "https://www.facebook.com/karunakshetry.pyakurel",
     LinkedIn: "https://www.linkedin.com/in/karuna-pyakurel-abbb172a8/",
+    Github: "",
     Email: "karuna@csitabmc.com",
   },
 
@@ -232,6 +245,7 @@ export const TeamDetails = [
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/dikshya.sharma.9216",
     LinkedIn: "https://www.linkedin.com/in/dikshya2004/",
+    Github: "",
     Email: "dikshya@csitabmc.com",
   },
   {
@@ -241,6 +255,7 @@ export const TeamDetails = [
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/misson.paudel.3",
     LinkedIn: "https://www.linkedin.com/in/misson-paudel-900181293/",
+    Github: "",
     Email: "mission@csitabmc.com",
   },
   {
@@ -250,6 +265,7 @@ export const TeamDetails = [
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/aayush.bhusal.50",
     LinkedIn: "https://www.linkedin.com/in/govinda-sagar-bhusal-3685362a8/",
+    Github: "",
     Email: "govinda@csitabmc.com",
   },
   {
@@ -259,6 +275,7 @@ export const TeamDetails = [
     Post: "Executive Member",
     Facebook: "https://www.facebook.com/samir.aryal.1428",
     LinkedIn: "",
+    Github: "",
     Email: "samir@csitabmc.com",
   },
 ];

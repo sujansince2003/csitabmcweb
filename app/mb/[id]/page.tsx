@@ -73,18 +73,18 @@ export default async function Profile({
                       <Linkedin className="w-5 h-5" />
                     </Link>
                     <Link
-                      href="mailto:contact@example.com"
+                      href={profile.Github}
                       className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition-colors"
-                      aria-label="Email"
+                      aria-label="Github"
                     >
                       <Github className="w-5 h-5" />
                     </Link>
                   </div>
-                  <div className="space-y-3 text-gray-600">
-                    <div className="flex items-center gap-2">
+                  <div className="space-y-3 pt-2 text-gray-600">
+                    {/* <div className="flex items-center gap-2">
                       <Phone className="w-5 h-5" />
                       <span>+977-9876543210</span>
-                    </div>
+                    </div> */}
                     <Link
                       href={`mailto:${profile.Email}`}
                       className="flex items-center gap-2"
@@ -104,13 +104,12 @@ export default async function Profile({
                   About {profile.Name.split(" ")[0]}
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Ut labore et dolore magna aliqua, ut enim ad minim veniam.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
+                  I am {profile.Name}, serving as the {profile.Post} of the CSIT
+                  Association at Butwal Multiple Campus (BMC). In my role, I
+                  actively collaborate with fellow IT students to organize
+                  workshops, events, and seminars that foster learning,
+                  innovation, and skill development in the field of Information
+                  Technology.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa
