@@ -48,7 +48,7 @@ export default function NoticePage() {
                 value="all"
                 className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
               >
-                {notices.map((notice) => {
+                {notices?.map((notice) => {
                   return (
                     <NoticeCardComponent
                       key={notice.id}
@@ -62,7 +62,7 @@ export default function NoticePage() {
                 value="administrative"
                 className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
               >
-                {notices.map((notice) => {
+                {notices?.map((notice) => {
                   if (notice.category == "administrative")
                     return (
                       <NoticeCardComponent
@@ -77,7 +77,7 @@ export default function NoticePage() {
                 value="events"
                 className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
               >
-                {notices.map((notice) => {
+                {notices?.map((notice) => {
                   if (notice.category == "events")
                     return (
                       <NoticeCardComponent
@@ -92,7 +92,7 @@ export default function NoticePage() {
                 value="academic"
                 className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
               >
-                {notices.map((notice) => {
+                {notices?.map((notice) => {
                   if (notice.category == "academic")
                     return (
                       <NoticeCardComponent
