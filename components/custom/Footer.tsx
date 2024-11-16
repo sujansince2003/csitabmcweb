@@ -23,7 +23,7 @@ export default function Footer() {
           {/* About Section */}
           <div>
             <h2 className="text-2xl font-bold text-white mb-4">
-              CSIT Association
+              CSIT Association of BMC
             </h2>
             <p className="mb-4">
               Empowering students through technology and innovation since 2016.
