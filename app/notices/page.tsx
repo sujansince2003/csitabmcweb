@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { NoticeTypes } from "@/types/Notice";
 import { NoticeCardComponent } from "./components/NoticeCard";
 import NoticeHeader from "./components/NoticeHeader";
+import CSITLoader from "./loader";
 
 export default function NoticePage() {
   const [notices, setNotices] = useState<NoticeTypes[]>([]);
@@ -26,7 +27,7 @@ export default function NoticePage() {
     fetchNotices();
   }, [deletedNotice]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <CSITLoader />;
   return (
     <>
       <NoticeHeader />
