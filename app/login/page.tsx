@@ -104,12 +104,19 @@ export default function LoginPage() {
             <Button type="submit" className="w-full">
               Log in
             </Button>
+
             <div>
               Don't have an account ?
               <span className="text-blue-600">
                 <Link href="/signup"> Sign Up</Link>
               </span>
             </div>
+            <div>
+              <span className="text-blue-600">
+                <Link href="/forgotpassword"> Forgot Password ?</Link>
+              </span>
+            </div>
+
           </CardFooter>
         </form>
       </Card>
