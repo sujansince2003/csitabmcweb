@@ -25,15 +25,8 @@ export const validateRegistration = async (name: string, email: string) => {
         exists: false,
         nameMatch: false,
         paid: false,
-        message: "No registration found with this email.",
-        name: {
-          status: false,
-          message: "No registration found",
-        },
-        payment: {
-          status: false,
-          message: "No registration found",
-        },
+        name: { status: false },
+        payment: { status: false },
       };
     }
 
@@ -45,17 +38,8 @@ export const validateRegistration = async (name: string, email: string) => {
       exists: true,
       nameMatch,
       paid: isPaid,
-      message:
-        nameMatch && isPaid
-          ? "Your registration has been verified successfully."
-          : "Please check the status details below:",
-
-      payment: {
-        status: isPaid,
-        message: isPaid
-          ? "Payment completed, you can now attend the event"
-          : "Payment is currently pending. Please complete the payment at the earliest to secure your spot as seats are limited and ensure your participation in the event.",
-      },
+      name: { status: nameMatch },
+      payment: { status: isPaid },
     };
   } catch (error) {
     console.error("Error validating registration:", error);
