@@ -1,28 +1,20 @@
 "use server";
-export const getAllRegestration = async () => {
+
+export const getAllRegistration = async () => {
   try {
     const response = await fetch(process.env.REGESTATION_DATA_API as string);
     const res = await response.json();
     const data = res.data;
     return data;
   } catch (error) {
-    return error;
+    console.error("Error fetching registration data:", error);
+    throw error;
   }
 };
 
-export const getRegestrationById = async (email: string) => {
-  const data = await getAllRegestration();
-  const regestrationDetails = data.find((item: any) => {
-    if (item.Email === email) {
-      return item;
-    }
-  });
-  return regestrationDetails;
-};
-
-export const validateRegestration = async (name: string, email: string) => {
+export const validateRegistration = async (name: string, email: string) => {
   try {
-    const Data = await getAllRegestration();
+    const Data = await getAllRegistration();
     const user = Data.find(
       (item: any) =>
         item.Email.toUpperCase().trim() === email.toUpperCase().trim()
@@ -57,20 +49,16 @@ export const validateRegestration = async (name: string, email: string) => {
         nameMatch && isPaid
           ? "Your registration has been verified successfully."
           : "Please check the status details below:",
-      name: {
-        status: nameMatch,
-        message: nameMatch
-          ? "Name verified successfully"
-          : "Name does not match. If entered wrong during registration, email team@csitabmc.com",
-      },
+
       payment: {
         status: isPaid,
         message: isPaid
           ? "Payment completed, you can now attend the event"
-          : "Payment pending. Please complete the payment. Else you won't be able to attend the event.",
+          : "Payment is currently pending. Please complete the payment at the earliest to secure your spot as seats are limited and ensure your participation in the event.",
       },
     };
   } catch (error) {
-    return { error: "Internal Server Error" };
+    console.error("Error validating registration:", error);
+    throw error;
   }
 };

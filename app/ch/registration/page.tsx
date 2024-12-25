@@ -1,17 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import {
-  getAllRegestration,
-  getRegestrationById,
-  validateRegestration,
-} from "../../actions/regestrationValidate";
-
+import { validateRegistration } from "@/app/actions/regestrationValidate";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import Image from "next/image";
-import { AlertCircle, CheckCircle2 } from "lucide-react";
+import StatusPage from "@/components/custom/Statuspage";
+
 interface ValidationResult {
   exists: boolean;
   nameMatch: boolean;
@@ -26,7 +21,8 @@ interface ValidationResult {
     message: string;
   };
 }
-const RegestrationValidation = () => {
+
+const RegistrationValidation = () => {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ValidationResult | null>(null);
 
@@ -40,7 +36,7 @@ const RegestrationValidation = () => {
     const email = formData.get("email");
 
     try {
-      const data = await validateRegestration(name as string, email as string);
+      const data = await validateRegistration(name as string, email as string);
       setResult(data as ValidationResult);
     } catch (error) {
       setResult({
@@ -53,8 +49,9 @@ const RegestrationValidation = () => {
 
     setLoading(false);
   }
+
   return (
-    <div className="mx-auto max-w-md space-y-6 p-6">
+    <div className="mx-auto max-w-4xl space-y-6 p-6">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">Event Registration Status</h1>
         <p className="text-gray-500">
@@ -65,11 +62,11 @@ const RegestrationValidation = () => {
           alt="form banner"
           width={500}
           height={300}
-          className="rounded-md"
+          className="rounded-md mx-auto"
         />
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
         <div className="space-y-2">
           <Label htmlFor="name">Full Name</Label>
           <Input
@@ -96,54 +93,9 @@ const RegestrationValidation = () => {
         </Button>
       </form>
 
-      {result && !("error" in result) && (
-        <div className="space-y-4">
-          <Alert
-            variant={
-              result.exists && result.nameMatch && result.paid
-                ? "successful"
-                : "destructive"
-            }
-          >
-            {result.nameMatch && result.paid ? (
-              <CheckCircle2 className="h-4 w-4" color="green" />
-            ) : (
-              <AlertCircle className="h-4 w-4" />
-            )}
-            <AlertDescription>{result.message}</AlertDescription>
-          </Alert>
-
-          {result.exists && result.name && result.payment && (
-            <div className="space-y-2">
-              {!result.name.status && (
-                <Alert
-                  variant={result.name.status ? "successful" : "destructive"}
-                >
-                  {result.name.status ? (
-                    <CheckCircle2 className="h-4 w-4" color="green" />
-                  ) : (
-                    <AlertCircle className="h-4 w-4" />
-                  )}
-                  <AlertDescription>{result.name.message}</AlertDescription>
-                </Alert>
-              )}
-
-              <Alert
-                variant={result.payment.status ? "successful" : "destructive"}
-              >
-                {result.payment.status ? (
-                  <CheckCircle2 className="h-4 w-4" color="green" />
-                ) : (
-                  <AlertCircle className="h-4 w-4" />
-                )}
-                <AlertDescription>{result.payment.message}</AlertDescription>
-              </Alert>
-            </div>
-          )}
-        </div>
-      )}
+      {result && <StatusPage result={result} />}
     </div>
   );
 };
 
-export default RegestrationValidation;
+export default RegistrationValidation;
