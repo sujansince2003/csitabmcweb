@@ -51,7 +51,7 @@ const RegistrationValidation = () => {
   }
 
   return (
-    <div className="mx-auto max-w-4xl space-y-6 p-6">
+    <div className="mx-auto  max-w-2xl space-y-6 p-6">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">Event Registration Status</h1>
         <p className="text-gray-500">
@@ -66,7 +66,7 @@ const RegistrationValidation = () => {
         />
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-4 mx-auto">
         <div className="space-y-2">
           <Label htmlFor="name">Full Name</Label>
           <Input
