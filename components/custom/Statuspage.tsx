@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import { DiscordLogoIcon } from "@radix-ui/react-icons";
 
 interface StatusCardProps {
   status: "pending" | "verified" | "error";
@@ -38,131 +40,130 @@ export default function StatusPage({ result }: StatusPageProps) {
   let cardProps: StatusCardProps;
 
   if (!result.exists) {
-    cardProps = {
-      status: "error",
-      title: "Registration Not Found",
-      description: "No registration found with this email.",
-    };
-  } else if (!result.nameMatch) {
-    cardProps = {
-      status: "pending",
-      title: "Name Verification Pending",
-      description: result.name?.message || "",
-      details: {
-        type: "name",
-        content: "",
-        errorMessage:
-          "You have entered a different name. Make sure your name matches your student ID card. The same name will be on your certificate.",
-        contactInfo:
-          "For name correction, email team@csitabmc.com or raise your issue in Discord",
-      },
-    };
-  } else if (!result.paid) {
-    cardProps = {
-      status: "pending",
-      title: "Payment Pending",
-      description:
-        result.payment?.message ||
-        "Payment is required to complete your registration",
-      details: {
-        type: "payment",
-        content: "Payment Details",
-        imageUrl: "/payment.png",
-      },
-    };
-  } else {
-    cardProps = {
-      status: "verified",
-      title: "Registration Verified",
-      description: "Your registration has been verified successfully.",
-      details: {
-        type: "discord",
-        content: "Join Discord",
-        imageUrl: "https://discord.gg/6MVAkW3T",
-      },
-    };
+    return (
+      <div className="rounded-xl border-2 border-red-500 p-6 shadow-lg transition-all hover:shadow-xl">
+        <div className="mb-4 flex items-center justify-between">
+          <span className="w-full text-center text-xl font-bold text-red-500">
+            Registration Not Found
+          </span>
+          <span className="h-3 w-3 rounded-full bg-red-500 shadow-inner"></span>
+        </div>
+        <div className="rounded-lg bg-red-50 p-4">
+          <h3 className="mb-2 text-lg font-medium">Register Now</h3>
+          <p className="text-sm text-gray-700">
+            Your Email Id is not found in our Record.{" "}
+          </p>
+          <p className="text-sm text-gray-700">
+            <a href="https://forms.gle/HuyEfKSYgJfNs6zM9">
+              <Button className="my-2 w-full">Register Now</Button>
+            </a>
+            <p className="mt-2 text-center text-xs text-gray-600">
+              Direct link:{" "}
+              <a
+                href="https://forms.gle/HuyEfKSYgJfNs6zM9"
+                className="text-[#5865F2] hover:underline"
+              >
+                https://forms.gle/HuyEfKSYgJfNs6zM9
+              </a>
+            </p>
+          </p>
+        </div>
+      </div>
+    );
+  }
+  if (!result.paid) {
+    return (
+      <div className="rounded-xl border-2 border-red-500 p-6 shadow-lg transition-all hover:shadow-xl">
+        <div className="mb-4 flex items-center justify-between">
+          <span className="w-full text-center text-xl font-bold text-red-500">
+            Payment Pending
+          </span>
+          <span className="h-3 w-3 rounded-full bg-red-500 shadow-inner"></span>
+        </div>
+        <div className="mb-4 rounded-lg bg-red-100 p-4">
+          <p className="text-sm text-gray-700">
+            IT may take some time to reflect the payment after sending money.
+            For payment Enquery:{" "}
+            <a href="tel:989849511233" className="font-bold">
+              9849511233
+            </a>
+          </p>
+        </div>
+        <div className="space-y-3">
+          <h3 className="text-lg font-medium text-gray-800">Payment details</h3>
+          <Image
+            src="/payment.png"
+            alt="Payment details"
+            width={500}
+            height={300}
+            className="rounded-md mx-auto"
+          />
+        </div>
+      </div>
+    );
   }
 
+  if (!result.nameMatch) {
+    return (
+      <div className="rounded-xl border-2 border-green-500 p-6 shadow-lg transition-all hover:shadow-xl">
+        <Verified />
+        <div className="mt-6 space-y-3 rounded-lg bg-red-100 p-4">
+          <h3 className="text-lg font-medium text-red-600">Name Incorrect</h3>
+          <p className="text-sm text-gray-700">
+            You have entered a different name. Make sure your name matches your
+            student ID card. The same name will be on your certificate.
+          </p>
+          <p className="text-sm italic text-gray-600">
+            For name correction, email team@csitabmc.com or drop your issue in
+            discord.
+          </p>
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className="container mx-auto p-6">
-      <StatusCard {...cardProps} />
+    <div className="rounded-xl border-2 border-green-500 p-6 shadow-lg transition-all hover:shadow-xl">
+      <Verified />
     </div>
   );
 }
 
-function StatusCard({ status, title, description, details }: StatusCardProps) {
+const Verified = () => {
   return (
-    <Card
-      className={cn(
-        "p-6 border-2",
-        status === "pending"
-          ? "border-red-500"
-          : status === "verified"
-          ? "border-green-500"
-          : "border-yellow-500"
-      )}
-    >
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold">{title}</h2>
-        <span
-          className={cn(
-            "w-3 h-3 rounded-full",
-            status === "pending"
-              ? "bg-red-700"
-              : status === "verified"
-              ? "bg-green-500"
-              : "bg-yellow-500"
-          )}
-        />
+    <>
+      <div className="mb-4 flex items-center justify-between">
+        <span className="w-full text-center text-xl font-bold text-green-500">
+          Verified
+        </span>
+        <span className="h-3 w-3 rounded-full bg-green-500 shadow-inner"></span>
       </div>
-
-      <p className="text-sm text-gray-600 mb-4">{description}</p>
-
-      {details && (
-        <div className="space-y-4">
-          <h3 className="font-medium">{details.content}</h3>
-
-          {details.type === "payment" && details.imageUrl && (
-            <div className="bg-blue-900 aspect-video relative">
-              <Image
-                src={details.imageUrl}
-                alt="Payment details"
-                fill
-                className="object-cover"
-              />
-            </div>
-          )}
-
-          {details.type === "discord" && details.imageUrl && (
-            <p className="text-sm">
-              Joining Link :{" "}
-              <a className="text-blue-500" href="https://discord.gg/6MVAkW3T">
-                {details.imageUrl}
-              </a>
-            </p>
-          )}
-
-          {details.type === "name" && (
-            <>
-              {details.errorMessage && (
-                <div className="mt-4">
-                  <h4 className="text-red-500 font-medium mb-2">
-                    Name Incorrect
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    {details.errorMessage}
-                  </p>
-                  {details.contactInfo && (
-                    <p className="text-sm text-gray-600 italic mt-2">
-                      {details.contactInfo}
-                    </p>
-                  )}
-                </div>
-              )}
-            </>
-          )}
+      <div className="mb-4 rounded-lg bg-green-100 p-4">
+        <p className="text-sm text-gray-700">
+          Your Registration is Booked. Keep checking your mail and discord for
+          further update.
+        </p>
+      </div>
+      <div className="space-y-3">
+        <div className="rounded-lg bg-green-50 p-4">
+          <h3 className="text-lg font-medium">Join Discord</h3>
+          <a
+            href="https://discord.gg/6MVAkW3T"
+            className=" my-2 inline-flex w-full items-center justify-center rounded-lg bg-[#5865F2] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#4752C4]"
+          >
+            <DiscordLogoIcon className="mr-2 h-5 w-5" />
+            Join Discord Server
+          </a>
+          <p className="mt-2 text-center text-xs text-gray-600">
+            Direct link:{" "}
+            <a
+              href="https://discord.gg/6MVAkW3T"
+              className="text-[#5865F2] hover:underline"
+            >
+              https://discord.gg/6MVAkW3T
+            </a>
+          </p>
         </div>
-      )}
-    </Card>
+      </div>
+    </>
   );
-}
+};
