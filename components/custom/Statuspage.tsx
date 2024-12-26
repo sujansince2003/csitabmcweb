@@ -47,7 +47,8 @@ export default function StatusPage({ result }: StatusPageProps) {
           details={{
             type: "payment",
             content: "Payment details",
-            imageUrl: "/payment.png",
+            imageUrl:
+              "https://res.cloudinary.com/dijifdkxp/image/upload/v1735223337/payment-bmcevents_ye01zh.png",
             contactInfo:
               " It may take some time for the payment status to reflect after sending money. Please allow a few hours for the update and check back again later. For furthur payment Enquiry: 9849511233",
           }}
