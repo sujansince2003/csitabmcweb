@@ -103,8 +103,12 @@ function ProfileAvatar({ toggleMenu }: { toggleMenu?: () => void | boolean }) {
   };
 
   useEffect(() => {
-    fetchUserProfile();
-  }, [session, userProfileAvatar]);
+    const timeout = setTimeout(() => {
+      if (session) fetchUserProfile();
+    }, 200); // Debounce fetch to 200ms
+
+    return () => clearTimeout(timeout); // Clean up timeout
+  }, [session]);
 
   async function handleLogout() {
     await signOut({ redirect: false });
