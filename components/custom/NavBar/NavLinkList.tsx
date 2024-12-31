@@ -89,13 +89,16 @@ function ProfileAvatar({ toggleMenu }: { toggleMenu?: () => void | boolean }) {
   const [isLoading, setIsLoading] = useState(true); // Track loading state
   const fetchUserProfile = async () => {
     try {
+      console.log("fetching user profile");
       const response = await fetch("/api/user/update-profile");
       if (!response.ok) {
-        throw new Error("Failed to fetch user profile");
+        throw new Error("Failed to fetch user haha profile");
       }
+      console.log("fetching user profile 2");
       const data = await response.json();
       setUserProfileAvatar(data.user.imageurl);
     } catch (error) {
+      console.log("fetching user profile catch");
       console.error("Error fetching user profile:", error);
     } finally {
       setIsLoading(false); // Once the fetch is done, set loading to false
