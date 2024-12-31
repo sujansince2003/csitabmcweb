@@ -1,11 +1,15 @@
 "use client";
+import Certificate from "@/components/custom/Certificate";
+import { Button } from "@/components/ui/button";
+import { PDFRenderer, PDFViewer } from "@react-pdf/renderer";
+import dynamic from "next/dynamic";
 import React from "react";
 
 const styles = {
   page: {
-    width: "842px",
-    height: "595px",
-    flexDirection: "column" as "column",
+    width: "100%",
+    height: "100%",
+    flexDirection: "column",
     backgroundColor: "#FFFFFF",
     position: "relative",
   },
@@ -24,7 +28,7 @@ const styles = {
     width: "200px",
     height: "100%",
     backgroundColor: "#F3F4F6",
-    zIndex: 0,
+    zIndex: 1,
   },
   content: {
     position: "relative",
@@ -35,6 +39,7 @@ const styles = {
     width: "120px",
     height: "30px",
     marginBottom: "60px",
+    objectFit: "contain",
   },
   headerText: {
     position: "absolute",
@@ -80,9 +85,11 @@ const styles = {
   seal: {
     position: "absolute",
     bottom: "40px",
-    right: "100px",
+    right: "120px",
     width: "120px",
     height: "120px",
+    objectFit: "contain",
+    zIndex: 100,
   },
   verifyText: {
     position: "absolute",
@@ -93,55 +100,65 @@ const styles = {
   },
 };
 
+const PDFDownloadLink = dynamic(
+  () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  }
+);
+
 export default function CertificateGenerator() {
-  // StreamPDF;
   return (
     <div className="container mx-auto p-4">
       <div className="mb-4">
-        <div className="border p-4 h-[40rem] bg-white shadow-lg">
-          {/* <PPDFF/> */}
-          <div className=" overflow-hidden">
-            {/* <Certificate /> */}
-            <div>
-              <div style={styles.page}>
-                <div style={styles.border} />
-                <div style={styles.ribbon} />
-                <div style={styles.content}>
-                  <img
-                    style={styles.logo}
-                    src="/placeholder.svg?height=30&width=120"
-                  />
-                  <p style={styles.headerText}>COURSE CERTIFICATE</p>
+        <div className="grid place-items-center">
+          {/* <PDFViewer width="100%" height="600px">
+            <Certificate />
+          </PDFViewer> */}
+          <div className="">
+            <div style={styles.page}>
+              <div style={styles.border} />
+              <div style={styles.ribbon} />
+              <div style={styles.content}>
+                <img style={styles.logo} src="/logo.png" />
+                <p style={styles.headerText}>CSIABMC CERTIFICATE</p>
 
-                  <p style={styles.name}>{"name"}</p>
-                  <p style={styles.courseText}>has completed:</p>
+                <p style={styles.name}>BIPIN KHATRI</p>
+                <p style={styles.courseText}>has completed:</p>
 
-                  <p style={styles.courseName}>{"course"}</p>
-                  <p style={styles.courseDescription}>
-                    an online non-credit course authorized by Coursera and
-                    offered through Coursera
-                  </p>
+                <p style={styles.courseName}>Fudmantel to Web Developments</p>
+                <p style={styles.courseDescription}>
+                  an Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Nihil quasi alias recusandae vitae unde doloribus sapiente
+                  amet at accusamus optio.
+                </p>
 
-                  <div style={styles.signatureSection}>
-                    <img
-                      style={styles.signature}
-                      src="/placeholder.svg?height=40&width=120"
-                    />
-                    <p style={styles.signatureText}>Instructor Signature</p>
-                  </div>
-
-                  <img
-                    style={styles.seal}
-                    src="/placeholder.svg?height=120&width=120"
-                  />
-
-                  <p style={styles.verifyText}>
-                    Verify at coursera.org/verify/CERT-
-                    {Math.random().toString(36).substr(2, 9).toUpperCase()}
-                  </p>
+                <div style={styles.signatureSection}>
+                  <img style={styles.signature} src="/logo.png" />
+                  <p style={styles.signatureText}>Instructor Signature</p>
                 </div>
+
+                <img style={styles.seal} src="/logo.png" />
+
+                <p style={styles.verifyText}>
+                  Verify at csitabmc.com/certificate/CERT-
+                  {Math.random().toString(36).substr(2, 9).toUpperCase()}
+                </p>
               </div>
             </div>
+          </div>
+          <div>
+            <PDFDownloadLink
+              document={<Certificate />}
+              fileName="certificate.pdf"
+            >
+              {({ loading }: { loading: boolean }) => (
+                <Button disabled={loading}>
+                  {loading ? "Generating PDF..." : "Download Certificate"}
+                </Button>
+              )}
+            </PDFDownloadLink>
           </div>
         </div>
       </div>

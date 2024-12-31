@@ -14,8 +14,8 @@ import {
 
 const styles = StyleSheet.create({
   page: {
-    width: "842px",
-    height: "595px",
+    width: "820px",
+    height: "480px",
     flexDirection: "column",
     backgroundColor: "#FFFFFF",
     position: "relative",
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     width: "200px",
     height: "100%",
     backgroundColor: "#F3F4F6",
-    zIndex: 0,
+    zIndex: 1,
   },
   content: {
     position: "relative",
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     width: "120px",
     height: "30px",
     marginBottom: "60px",
+    objectFit: "contain",
   },
   headerText: {
     position: "absolute",
@@ -91,9 +92,11 @@ const styles = StyleSheet.create({
   seal: {
     position: "absolute",
     bottom: "40px",
-    right: "100px",
+    right: "120px",
     width: "120px",
     height: "120px",
+    objectFit: "contain",
+    zIndex: 100,
   },
   verifyText: {
     position: "absolute",
@@ -110,37 +113,32 @@ interface CertificateProps {
 
 const Certificate = () => (
   <Document>
-    <Page style={styles.page}>
+    <Page size={[820, 480]} style={styles.page}>
       <View style={styles.border} />
       <View style={styles.ribbon} />
       <View style={styles.content}>
-        <Image style={styles.logo} src="/placeholder.svg?height=30&width=120" />
-        <Text style={styles.headerText}>COURSE CERTIFICATE</Text>
+        <Image style={styles.logo} src="/logo.png" />
+        <Text style={styles.headerText}>CSITABMC CERTIFICATE</Text>
 
-        <Text style={styles.name}>{"name"}</Text>
+        <Text style={styles.name}>BIPIN KHATRI</Text>
         <Text style={styles.courseText}>has completed:</Text>
 
-        <Text style={styles.courseName}>{"course"}</Text>
+        <Text style={styles.courseName}>Fudmantel to Web Developments</Text>
         <Text style={styles.courseDescription}>
-          an online non-credit course authorized by Coursera and offered through
-          Coursera
+          an Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
+          quasi alias recusandae vitae unde doloribus sapiente amet at accusamus
+          optio.
         </Text>
 
         <View style={styles.signatureSection}>
-          {/* <Image
-            style={styles.signature}
-            src="/placeholder.svg?height=40&width=120"
-          /> */}
+          <Image style={styles.signature} src="/logo.png" />
           <Text style={styles.signatureText}>Instructor Signature</Text>
         </View>
 
-        {/* <Image
-          style={styles.seal}
-          src="/placeholder.svg?height=120&width=120"
-        /> */}
+        <Image style={styles.seal} src="/logo.png" />
 
         <Text style={styles.verifyText}>
-          Verify at coursera.org/verify/CERT-
+          Verify at csitabmc.com/certificate/CERT-
           {Math.random().toString(36).substr(2, 9).toUpperCase()}
         </Text>
       </View>
