@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { DiscIcon as Discord } from "lucide-react";
+import { Button } from "../ui/button";
 
 interface ValidationResult {
   exists: boolean;
@@ -16,6 +17,8 @@ interface ValidationResult {
     status: boolean;
     message: string;
   };
+  id?: string;
+  card?: string;
 }
 
 interface StatusPageProps {
@@ -32,43 +35,25 @@ export default function StatusPage({ result }: StatusPageProps) {
           description="No registration found with this email."
           details={{
             type: "register",
-            content: "Register Now",
-            link: "https://forms.gle/HuyEfKSYgJfNs6zM9",
+            content: "",
+            link: "",
           }}
         />
       );
     }
-    if (!result.paid) {
-      return (
-        <StatusCard
-          status="pending"
-          title="Payment Pending"
-          description=" Payment is currently pending. Please complete the payment at the earliest to secure your spot as seats are limited and ensure your participation in the event."
-          details={{
-            type: "payment",
-            content: "Payment details",
-            imageUrl:
-              "https://res.cloudinary.com/dijifdkxp/image/upload/v1735223337/payment-bmcevents_ye01zh.png",
-            contactInfo:
-              " It may take some time for the payment status to reflect after sending money. Please allow a few hours for the update and check back again later. For furthur payment Enquiry: 9849511233",
-          }}
-        />
-      );
-    }
+    console.log(result);
     if (!result.nameMatch) {
       return (
         <StatusCard
           status="verified"
           title="Verified"
-          description="Your Registration is Booked. Keep checking your mail and discord for further update."
+          description="Registration Verified, get your id card below"
           details={{
-            type: "name",
-            content: "Join Discord",
-            link: "https://discord.gg/6MVAkW3T",
-            errorMessage:
-              "You have entered a different name. Make sure your name matches your student ID card. The same name will be on your certificate.",
+            type: "payment",
+            content: "ID Card",
+            imageUrl: `https://drive.google.com/uc?export=view&id=${result.card}`,
             contactInfo:
-              "For name correction, email team@csitabmc.com or drop your issue in discord.",
+              "Your Name Doesn't match with the registration. Please contact us for further details.",
           }}
         />
       );
@@ -77,11 +62,12 @@ export default function StatusPage({ result }: StatusPageProps) {
       <StatusCard
         status="verified"
         title="Verified"
-        description="Your Registration is Booked. Keep checking your mail and discord for further update."
+        description="Registration Verified, get your id card below"
         details={{
-          type: "discord",
-          content: "Join Discord",
-          link: "https://discord.gg/6MVAkW3T",
+          type: "payment",
+          content: "ID Card",
+          imageUrl: `https://drive.google.com/uc?export=view&id=${result.card}`,
+          contactInfo: "",
         }}
       />
     );
@@ -178,14 +164,21 @@ function StatusCard({ status, title, description, details }: StatusCardProps) {
                 alt="Payment details"
                 width={800}
                 height={800}
-                className="object-cover w-full h-full"
+                className="object-contain w-full max-h-80"
               />
             </div>
+            <a href={details.imageUrl} download>
+              <Button className="w-full bg-[#3063a1] hover:bg-blue-900 active:bg-blue-900 my-2">
+                Download
+              </Button>
+            </a>
 
-            <p className="text-black text-sm text-center rounded-md p-4 mt-2 bg-stone-200">
-              <span className="text-red-600 font-semibold"> NOTE:</span>{" "}
-              {details.contactInfo}
-            </p>
+            {details.contactInfo && (
+              <p className="text-black text-sm text-center rounded-md p-4 mt-2 bg-stone-200">
+                <span className="text-red-600 font-semibold"> NOTE:</span>{" "}
+                {details.contactInfo}
+              </p>
+            )}
           </div>
         )}
 
