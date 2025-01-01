@@ -1,5 +1,7 @@
 "use server";
 
+import { Card } from "@/components/ui/card";
+
 export const getAllRegistration = async () => {
   try {
     const response = await fetch(process.env.REGESTATION_DATA_API as string);
@@ -36,6 +38,8 @@ export const validateRegistration = async (name: string, email: string) => {
 
     return {
       exists: true,
+      id: user.ID,
+      card: user["Image ID"],
       nameMatch,
       paid: isPaid,
       name: { status: nameMatch },

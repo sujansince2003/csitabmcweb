@@ -20,6 +20,9 @@ interface ValidationResult {
     status: boolean;
     message: string;
   };
+
+  id?: string;
+  card?: string;
 }
 
 const RegistrationValidation = () => {
