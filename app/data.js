@@ -196,17 +196,17 @@ export const TeamDetails = [
     Github: "https://github.com/im-bipo",
     Email: "bipin@csitabmc.com",
   },
-
   {
-    id: "081GDUG10",
-    Name: "URBISH GHIMIRE",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190608/Urbish_e2eo3q.png",
-    Post: "Graphic Designer",
-    Facebook: "https://www.facebook.com/urbish.ghimire",
-    LinkedIn: "https://www.linkedin.com/in/urbish-ghimire-00bb922ab/",
+    id: "081EMGSB16",
+    Name: "Govinda Sagar Bhusal",
+    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190539/GOVINDA_cma3ba.jpg",
+    Post: "Graphics Designer",
+    Facebook: "https://www.facebook.com/aayush.bhusal.50",
+    LinkedIn: "https://www.linkedin.com/in/govinda-sagar-bhusal-3685362a8/",
     Github: "",
-    Email: "urbish@csitabmc.com",
+    Email: "govinda@csitabmc.com",
   },
+ 
   {
     id: "081AGDSG11",
     Name: "SANGIT GYAWALI",
@@ -258,16 +258,7 @@ export const TeamDetails = [
     Github: "",
     Email: "mission@csitabmc.com",
   },
-  {
-    id: "081EMGSB16",
-    Name: "Govinda Sagar Bhusal",
-    img: "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723190539/GOVINDA_cma3ba.jpg",
-    Post: "Executive Member",
-    Facebook: "https://www.facebook.com/aayush.bhusal.50",
-    LinkedIn: "https://www.linkedin.com/in/govinda-sagar-bhusal-3685362a8/",
-    Github: "",
-    Email: "govinda@csitabmc.com",
-  },
+  
   {
     id: "081EMSA17",
     Name: "Samir Aryal",
