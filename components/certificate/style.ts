@@ -2,7 +2,7 @@ import { Font, StyleSheet } from "@react-pdf/renderer";
 
 Font.register({
     family: "Cardo",
-    src: "http://localhost:3000/Cardo-Bold.ttf",
+    src: "/Cardo-Bold.ttf",
 });
 
 Font.register({
