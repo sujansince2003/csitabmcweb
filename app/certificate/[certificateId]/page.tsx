@@ -1,5 +1,6 @@
 import React from "react";
 import DownloadCertificate from "./DownloadCertificate";
+import { Card, CardContent } from "@/components/ui/card";
 export interface CertificateData {
   uniqueId: string;
   participantName: string;
@@ -30,9 +31,17 @@ const CertificateData = async ({
     const data = await response.json();
   return (
     <div>
-      <h1>Certificate Verified</h1>
-      <div>the certificate id : {certificateId}</div>
+      <Card>
+        <CardContent className="pt-6">
+          <div className="mt-4 max-w-[30rem] p-[5rem] rounded-md m-auto text-center border text-gray-400">
+            Your browser cannot render the certificate. You can download it using the button below the card.
+          </div>
+          <div className="text-xl mt-2 text-center">{data.participantName}</div>
+        </CardContent>
+      </Card>
+      <div className="flex justify-center mb-4">
       <DownloadCertificate certificateData={data} />
+      </div>
     </div>
   )
 } catch (error) {
