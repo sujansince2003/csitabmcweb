@@ -7,11 +7,11 @@ Font.register({
 
 Font.register({
     family: "Montserrat",
-    src: "http://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf",
+    src: "/Montserrat.ttf",
 });
 Font.register({
     family: "GreatVibes",
-    src: "http://fonts.gstatic.com/s/greatvibes/v4/6q1c0ofG6NKsEhAc2eh-3Z0EAVxt0G0biEntp43Qt6E.ttf",
+    src: "/GreatVibes.ttf",
 });
 
 export const styles = StyleSheet.create({
@@ -67,7 +67,7 @@ export const styles = StyleSheet.create({
     awardedTo: {
         fontSize: "20px",
         paddingTop: "35px",
-        fontFamily: "Cardo",
+        fontFamily: "Montserrat",
     },
     batch: {
         height: " 100px",
@@ -85,14 +85,14 @@ export const styles = StyleSheet.create({
         // textOverflow: "ellipsis",
         overflow: "hidden",
         textAlign: "center",
-        fontFamily: "Cardo",
+        fontFamily: "GreatVibes",
         color: "red",
     },
     para: {
         paddingTop: "30px",
         fontSize: "14px",
         textAlign: "center",
-        fontFamily: "Cardo",
+        fontFamily: "Montserrat",
     },
     signs: {
         position: "absolute",
@@ -124,7 +124,7 @@ export const styles = StyleSheet.create({
     },
     signName: {
         fontSize: "20px",
-        fontFamily: "Cardo",
+        fontFamily: "Montserrat",
         textAlign: "center",
         paddingVertical: "5px",
         borderTop: "1px solid black",
@@ -133,7 +133,7 @@ export const styles = StyleSheet.create({
     },
     postName: {
         fontSize: "15px",
-        fontFamily: "Cardo",
+        fontFamily: "Montserrat",
         width: "100%",
         textAlign: "center",
         marginTop: "5px",
