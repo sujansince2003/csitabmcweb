@@ -85,15 +85,16 @@ export const styles = StyleSheet.create({
     },
     name: {
         fontSize: "3rem",
-        // textOverflow: "ellipsis",
         overflow: "hidden",
         textAlign: "center",
         fontFamily: "GreatVibes",
         color: "red",
     },
     para: {
+        maxWidth: "650px",
+        margin: "auto",
         paddingTop: "30px",
-        fontSize: "14px",
+        fontSize: "13.1px",
         textAlign: "center",
         fontFamily: "Montserrat",
     },

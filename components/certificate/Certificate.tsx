@@ -1,4 +1,5 @@
 import React from "react";
+import { format } from "date-fns";
 import {
   Page,
   Text,
@@ -48,12 +49,15 @@ const Certificate = ({ data }: { data: CertificateData }) => (
         <View>
           <Text style={styles.para}>
             This certificate is proudly presented to {data.participantName} in
-            recognition of their participation in the workshop titled{" "}
-            <Text style={{ color: "red" }}> {data.event.title}</Text>,
-            organized by the CSIT Association of BMC. The workshop was conducted
-            from {new Date(data.event.startDate).toLocaleDateString()} to{" "}
-            {new Date(data.event.endDate).toLocaleDateString()}. This
-            certificate acknowledges their successful completion of the program.
+            recognition of their participation in the workshop titled as{" "}
+            <Text style={{ color: "red" }}> {data.event.title}</Text>, organized
+            by the CSIT Association of BMC. The workshop was conducted from{" "}
+            <Text style={{ color: "red" }}>
+              {format(new Date(data.event.startDate), "MMMM do")} to{" "}
+              {format(new Date(data.event.endDate), "MMMM do, yyyy")}
+            </Text>
+            . This certificate acknowledges their successful completion of the
+            program.
           </Text>
         </View>
         <View style={styles.signs}>
@@ -77,6 +81,6 @@ const Certificate = ({ data }: { data: CertificateData }) => (
       </View>
     </Page>
   </Document>
-)
+);
 
 export default Certificate;
