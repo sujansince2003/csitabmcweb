@@ -27,23 +27,56 @@ model Notice {
 }
 
 model User {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
   name            String?
-  email           String    @unique
+  email           String        @unique
   emailVerifiedAt DateTime?
-  isEmailVerified Boolean   @default(false)
+  isEmailVerified Boolean       @default(false)
   loginOtp        String?
   // resetPasswordToken String?   @unique
   password        String
   imageurl        String?
   imagepublicId   String?
-  role            Role      @default(USER)
-  department      String?   @default("Bsc.CSIT")
+  role            Role          @default(USER)
+  department      String?       @default("Bsc.CSIT")
   semester        String?
   bio             String?
   location        String?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  certificates    Certificate[]
+}
+
+model Event {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  startDate   DateTime
+  endDate     DateTime
+  location    String
+  organizer   String
+  category    String
+  tags        String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  certificates Certificate[] // Relation to certificates
+}
+
+model Certificate {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  participantName String
+  uniqueId        String   @unique
+  eventId         String   @db.ObjectId
+  event           Event    @relation(fields: [eventId], references: [id])
+  userId          String?  @db.ObjectId
+  user            User?    @relation(fields: [userId], references: [id])
+  issuedAt        DateTime @default(now())
+  downloadUrl     String?
+  isVerified      Boolean  @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum Role {
