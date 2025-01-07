@@ -126,7 +126,7 @@ export const styles = StyleSheet.create({
         marginLeft: "70px",
     },
     signName: {
-        fontSize: "20px",
+        fontSize: "18px",
         fontFamily: "Montserrat",
         textAlign: "center",
         paddingVertical: "5px",
@@ -135,7 +135,7 @@ export const styles = StyleSheet.create({
         width: "100%",
     },
     postName: {
-        fontSize: "15px",
+        fontSize: "12px",
         fontFamily: "Montserrat",
         width: "100%",
         textAlign: "center",
