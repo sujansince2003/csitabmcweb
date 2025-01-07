@@ -67,7 +67,7 @@ export const styles = StyleSheet.create({
     awardedTo: {
         fontSize: "20px",
         paddingTop: "35px",
-        fontFamily: "Montserrat",
+        fontFamily: "Cardo",
     },
     batch: {
         height: " 100px",
@@ -85,14 +85,14 @@ export const styles = StyleSheet.create({
         // textOverflow: "ellipsis",
         overflow: "hidden",
         textAlign: "center",
-        fontFamily: "GreatVibes",
+        fontFamily: "Cardo",
         color: "red",
     },
     para: {
         paddingTop: "30px",
         fontSize: "14px",
         textAlign: "center",
-        fontFamily: "Montserrat",
+        fontFamily: "Cardo",
     },
     signs: {
         position: "absolute",
@@ -124,7 +124,7 @@ export const styles = StyleSheet.create({
     },
     signName: {
         fontSize: "20px",
-        fontFamily: "Montserrat",
+        fontFamily: "Cardo",
         textAlign: "center",
         paddingVertical: "5px",
         borderTop: "1px solid black",
@@ -133,7 +133,7 @@ export const styles = StyleSheet.create({
     },
     postName: {
         fontSize: "15px",
-        fontFamily: "Montserrat",
+        fontFamily: "Cardo",
         width: "100%",
         textAlign: "center",
         marginTop: "5px",
