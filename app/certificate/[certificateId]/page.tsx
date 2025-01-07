@@ -1,36 +1,6 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import dynamic from "next/dynamic";
-import Certificate from "@/components/certificate/Certificate";
-import { PDFViewer } from "@react-pdf/renderer";
-// const PDFViewer = dynamic(
-//   () => import("@react-pdf/renderer").then((mod) => mod.PDFViewer),
-//   {
-//     ssr: false,
-//     loading: () => <p>Loading PDF Viewer...</p>,
-//   }
-// );
-
-// const PDFDownloadLink = dynamic(
-//   () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
-//   {
-//     ssr: false,
-//     loading: () => <p>Loading Download Link...</p>,
-//   }
-// );
-
-// const Certificate = dynamic(
-//   () => import("@/components/certificate/Certificate"),
-//   {
-//     ssr: false,
-//     loading: () => <p>Loading Certificate...</p>,
-//   }
-// );
-
-interface CertificateData {
+import React from "react";
+import DownloadCertificate from "./DownloadCertificate";
+export interface CertificateData {
   uniqueId: string;
   participantName: string;
   event: {
@@ -45,58 +15,34 @@ interface CertificateData {
   issuedAt: string;
 }
 
-export default function CertificateGenerator() {
-  const { certificateId } = useParams();
-  const [certificateData, setCertificateData] =
-    useState<CertificateData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+const CertificateData = async ({
+  params,
+}: {
+  params: Promise<{ certificateId: string }>;
+}) => {
+  const { certificateId } = await params;
 
-  useEffect(() => {
-    const fetchCertificate = async () => {
-      try {
-        const response = await fetch(`/api/certificate/${certificateId}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch certificate");
-        }
-        const data = await response.json();
-        setCertificateData(data);
-      } catch (err) {
-        setError("Error fetching certificate data");
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCertificate();
-  }, [certificateId]);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-  if (!certificateData) return <p>No certificate found</p>;
-
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/certificate/${certificateId}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch certificate");
+    }
+    const data = await response.json();
   return (
-    <div className="container mx-auto p-4">
-      <div className="mb-4">
-        <div className="grid place-items-center">
-          <PDFViewer width="100%" height="600px">
-            <Certificate data={certificateData} />
-          </PDFViewer>
-          <div>
-            {/* <PDFDownloadLink
-              document={<Certificate data={certificateData} />}
-              fileName={`certificate-${certificateData.uniqueId}.pdf`}
-            >
-              {({ loading }: { loading: boolean }) => (
-                <Button disabled={loading}>
-                  {loading ? "Generating PDF..." : "Download Certificate"}
-                </Button>
-              )}
-            </PDFDownloadLink> */}
-          </div>
-        </div>
-      </div>
+    <div>
+      <h1>Certificate Verified</h1>
+      <div>the certificate id : {certificateId}</div>
+      <DownloadCertificate certificateData={data} />
     </div>
-  );
+  )
+} catch (error) {
+ return (
+    <div>
+      <h1>Certificate Not Found</h1>
+      <div>the certificate id : {certificateId}</div>
+    </div>
+ ) 
 }
+}
+
+export default CertificateData;

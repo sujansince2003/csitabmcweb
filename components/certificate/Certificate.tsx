@@ -48,10 +48,10 @@ const Certificate = ({ data }: { data: CertificateData }) => (
         <View>
           <Text style={styles.para}>
             This certificate is proudly presented to {data.participantName} in
-            recognition of their participation in the workshop titled "
-            {data.event.title}", organized by the CSIT Association of BMC. The
-            workshop was conducted from{" "}
-            {new Date(data.event.startDate).toLocaleDateString()} to{" "}
+            recognition of their participation in the workshop titled{" "}
+            <Text style={{ color: "red" }}> {data.event.title}</Text>,
+            organized by the CSIT Association of BMC. The workshop was conducted
+            from {new Date(data.event.startDate).toLocaleDateString()} to{" "}
             {new Date(data.event.endDate).toLocaleDateString()}. This
             certificate acknowledges their successful completion of the program.
           </Text>
@@ -77,15 +77,6 @@ const Certificate = ({ data }: { data: CertificateData }) => (
       </View>
     </Page>
   </Document>
-  //   <div>
-  //     <p> {data.participantName}</p>
-  //     <p>{data.event.title}</p>
-  //     <p>{data.issuedAt}</p>
-  //     <p>{data.uniqueId}</p>
-  //     <img
-  //       src={`https://api.qrserver.com/v1/create-qr-code/?data=https://csitabmc.com/certificate/${data.uniqueId}&color=0c2044&bgcolor=F1F1F1`}
-  //     />
-  //   </div>
-);
+)
 
 export default Certificate;

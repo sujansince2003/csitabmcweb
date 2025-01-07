@@ -1,26 +1,15 @@
-"use client";
 import React from "react";
-import Certificate from "@/components/certificate/Certificate";
-import { PDFViewer } from "@react-pdf/renderer";
-
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: "row",
-    backgroundColor: "#E4E4E4",
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1,
-  },
-});
-
-// Create Document Component
+import InputForm from "./InputForm";
 
 const page = () => {
-  return <div>Certificate page</div>;
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center h-[20rem]">
+        <h2 className="my-5 text-lg">Enter your Certificate ID</h2>
+        <InputForm />
+      </div>
+    </>
+  );
 };
 
 export default page;
