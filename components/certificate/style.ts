@@ -3,15 +3,18 @@ import { Font, StyleSheet } from "@react-pdf/renderer";
 Font.register({
     family: "Cardo",
     src: "/Cardo-Bold.ttf",
+
 });
 
 Font.register({
     family: "Montserrat",
     src: "/Montserrat.ttf",
+    fallback: "sans-serif",
 });
 Font.register({
     family: "GreatVibes",
     src: "/GreatVibes.ttf",
+    fallback: "sans-serif",
 });
 
 export const styles = StyleSheet.create({
