@@ -89,6 +89,7 @@ export const styles = StyleSheet.create({
         textAlign: "center",
         fontFamily: "GreatVibes",
         color: "red",
+        textTransform: "capitalize"
     },
     para: {
         maxWidth: "650px",
