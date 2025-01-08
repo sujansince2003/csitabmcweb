@@ -92,6 +92,7 @@ export const styles = StyleSheet.create({
     fontSize: "13.1px",
     textAlign: "center",
     fontFamily: "Montserrat",
+    lineHeight: "20px",
   },
   signs: {
     position: "absolute",

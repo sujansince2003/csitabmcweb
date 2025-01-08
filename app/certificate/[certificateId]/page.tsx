@@ -74,7 +74,7 @@ const CertificateData = async ({
                   </h3>
                 </div>
                 <div className="max-w-[650px] m-auto">
-                  <p className="text-center text-[13.1px] font-montserrat text-black">
+                  <p className="text-center text-[13.1px] font-montserrat text-black leading-[25px]">
                     in recognition of their participation in the workshop titled
                     as
                     <span className="text-[red] font-bold">
@@ -90,9 +90,28 @@ const CertificateData = async ({
                     . This certificate acknowledges their successful completion
                     of the program.
                   </p>
-                  <div className="flex justify-between pt-[30px]">
-                    <div>Qr</div>
-                    <div>Sign</div>
+                  <div className="flex justify-between pt-[20px]">
+                    <div className="ml-10 h-[100px] w-[100px] flex items-end">
+                      <img
+                        src={`https://api.qrserver.com/v1/create-qr-code/?data=https://csitabmc.com/certificate/${data.uniqueId}&color=0c2044&bgcolor=F1F1F1`}
+                        className="object-contain h-full"
+                        style={{ objectFit: "contain", height: "100%" }}
+                      />
+                    </div>
+                    <div className="flex flex-col mr-[70px]">
+                      <img
+                        src="/sign.png"
+                        style={{
+                          objectFit: "contain",
+                          width: "12rem",
+                          height: "5rem",
+                        }}
+                      />
+                      <h4 className="border-t-2 text-[red] border-black mt-2 text-[18px]">
+                        Suman Bhattarai
+                      </h4>
+                      <h4 className="text-black">President </h4>
+                    </div>
                   </div>
                 </div>
               </div>
