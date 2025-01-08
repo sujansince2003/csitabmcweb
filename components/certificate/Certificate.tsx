@@ -73,7 +73,7 @@ const Certificate = ({ data }: { data: CertificateData }) => (
                 src="/sign.png"
                 style={{ objectFit: "contain", width: "12rem", height: "5rem" }}
               />
-              <Text style={styles.signName}>Suman Bhattatai</Text>
+              <Text style={styles.signName}>Suman Bhattarai</Text>
               <Text>President</Text>
             </View>
           </View>
