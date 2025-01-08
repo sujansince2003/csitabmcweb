@@ -1,7 +1,12 @@
-@import "react-datepicker/dist/react-datepicker.css";
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.cardo-font {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @layer base {
   :root {
