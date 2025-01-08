@@ -23,14 +23,14 @@ export default async function Profile({
   const profile = TeamDetails.find((item) => item.id === userId);
   if (!profile) return <NotFound />;
 
-  metadata.title = profile.Name + " | CSIT Assocaiotn Of BMC";
-  metadata.description = "CSIT Assocaiotn of BMC Team Member";
-  metadata.openGraph = metadata.openGraph ?? {};
-  metadata.openGraph.images = {
-    url: profile.img,
-    width: 1200,
-    height: 600,
-  };
+  // metadata.title = profile.Name + " | CSIT Assocaiotn Of BMC";
+  // metadata.description = "CSIT Assocaiotn of BMC Team Member";
+  // metadata.openGraph = metadata.openGraph ?? {};
+  // metadata.openGraph.images = {
+  //   url: profile.img,
+  //   width: 1200,
+  //   height: 600,
+  // };
 
   return (
     <div className="min-h-screen bg-gray-50">
