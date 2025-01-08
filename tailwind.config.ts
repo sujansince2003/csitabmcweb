@@ -15,6 +15,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        cardo: ["Cardo", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        greatVibes: ["Great Vibes", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -48,8 +48,7 @@ const Certificate = ({ data }: { data: CertificateData }) => (
         </View>
         <View>
           <Text style={styles.para}>
-            This certificate is proudly presented to {data.participantName} in
-            recognition of their participation in the workshop titled as{" "}
+            in recognition of their participation in the workshop titled as{" "}
             <Text style={{ color: "red" }}> {data.event.title}</Text>, organized
             by the CSIT Association of BMC. The workshop was conducted from{" "}
             <Text style={{ color: "red" }}>
