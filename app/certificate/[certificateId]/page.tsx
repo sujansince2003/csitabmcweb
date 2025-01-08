@@ -70,7 +70,7 @@ const CertificateData = async ({
               <div id="body" className="pt-[30px] ">
                 <div className="">
                   <h3 className="text-[3rem] overflow-hidden font-greatVibes text-[red] capitalize text-center">
-                    Anuska Sharma Bhattarai
+                    {data.participantName}
                   </h3>
                 </div>
                 <div className="max-w-[650px] m-auto">
