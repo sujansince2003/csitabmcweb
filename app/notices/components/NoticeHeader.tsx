@@ -8,9 +8,7 @@ import Link from "next/link";
 import Form from "next/form";
 
 import { useSearchParams } from "next/navigation";
-import { useSession } from "next-auth/react";
 const NoticeHeader = () => {
-  const { data: session, status } = useSession();
   return (
     <header className="pt-2 border-b">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
@@ -26,13 +24,6 @@ const NoticeHeader = () => {
             <SearchForm />
           </Suspense>
         </div>
-        {session &&
-          (session.user.role === "ADMIN" ||
-            session.user.role === "FACULTY") && (
-            <Link href={"/notices/addnotice"}>
-              <Button>Add Notice</Button>
-            </Link>
-          )}
       </div>
     </header>
   );
