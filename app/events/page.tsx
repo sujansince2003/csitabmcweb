@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Video } from "lucide-react";
 import { eventDetails } from "@/app/data";
 import QueryString from "qs";
 import { fetchWithToken } from "@/lib/fetch";
 import NotFound from "../not-found";
 import { EventTypes } from "@/types/events";
 import Link from "next/link";
+import EventDates from "./[eventId]/EventDates";
 
 export default async function Event() {
   const query = QueryString.stringify({
@@ -65,14 +66,21 @@ export default async function Event() {
                         {event.startDate && (
                           <div className="flex items-center gap-2">
                             <span className="text-sm font-medium">
-                              {event.startDate.toDateString()}
+                              <EventDates
+                                startDate={event.startDate}
+                                endDate={event.endDate}
+                              />
                             </span>
                           </div>
                         )}
                         {event.location && (
                           <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4" />
-                            <span className="text-sm">{event.location}</span>
+                            {event.location == "Google Meet" ? (
+                              <Video className="w-5 h-5 mr-2" />
+                            ) : (
+                              <MapPin className="w-5 h-5 mr-2" />
+                            )}
+                            <span>{event.location}</span>
                           </div>
                         )}
                       </div>

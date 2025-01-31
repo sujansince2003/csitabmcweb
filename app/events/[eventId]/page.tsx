@@ -2,7 +2,16 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin, Users, ExternalLink } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  ExternalLink,
+  Database,
+  Calendar1,
+  Video,
+} from "lucide-react";
 import { eventDetails } from "@/app/data";
 import NotFound from "@/app/not-found";
 import { metadata } from "@/app/layout";
@@ -95,8 +104,12 @@ export default async function EventPage({
               <EventDates startDate={event.startDate} endDate={event.endDate} />
               <EventTime startTime={event.startTime} endTime={event.endTime} />
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-2" />
-                <span>{eventData.location}</span>
+                {event.location == "Google Meet" ? (
+                  <Video className="w-5 h-5 mr-2" />
+                ) : (
+                  <MapPin className="w-5 h-5 mr-2" />
+                )}
+                <span>{event.location}</span>
               </div>
             </div>
           </div>

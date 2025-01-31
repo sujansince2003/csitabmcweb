@@ -36,11 +36,13 @@ const EventTime = ({
 export default EventTime;
 
 const formatTime = (time: string) => {
-  const timeArr = time.split(":");
+  const [hour, minute, second] = time.split(":").map(Number);
+  const formattedHour = hour % 12 || 12;
+  const meridiem = hour < 12 ? "AM" : "PM";
   return {
-    hour: (Number(timeArr[0]) % 12).toString(),
-    minute: timeArr[1],
-    second: timeArr[2],
-    meridiem: (Number(timeArr[0]) % 12).toString() == timeArr[0] ? "AM" : "PM",
+    hour: formattedHour.toString().padStart(2, "0"),
+    minute: minute.toString().padStart(2, "0"),
+    second: second.toString().padStart(2, "0"),
+    meridiem,
   };
 };
