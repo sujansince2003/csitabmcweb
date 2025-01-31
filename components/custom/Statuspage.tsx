@@ -41,7 +41,6 @@ export default function StatusPage({ result }: StatusPageProps) {
         />
       );
     }
-    console.log(result);
     if (!result.nameMatch) {
       return (
         <StatusCard
