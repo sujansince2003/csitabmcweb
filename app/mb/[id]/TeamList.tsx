@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MemberTypes } from "@/types/Members";
 import qs from "qs";
 import { fetchWithToken } from "@/lib/fetch";
+import NotFound from "@/app/not-found";
 export default async function TeamList() {
   const query = qs.stringify(
     {
@@ -19,6 +20,12 @@ export default async function TeamList() {
   const res = await fetchWithToken(
     `${process.env.STRAPI_API_URL}/members?${query}`
   );
+
+  if (!res || res.status !== 200) {
+    console.error("Failed to fetch team members", res);
+    return <NotFound />;
+  }
+
   const resJson = await res.json();
   const TeamDetails: MemberTypes[] = resJson.data;
 
