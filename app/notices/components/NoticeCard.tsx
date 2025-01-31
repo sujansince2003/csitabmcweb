@@ -16,8 +16,6 @@ import { Bell, Calendar, Search, Star, Trash2 } from "lucide-react";
 import { NoticeTypes } from "@/types/Notice";
 import DownloadNotice from "../[id]/DownloadNotice";
 import { getLocalDate } from "@/lib/data";
-import DeleteNotice from "../[id]/DeleteNotice";
-import { useSession } from "next-auth/react";
 import { Dispatch, SetStateAction } from "react";
 
 export const NoticeCardComponent = ({
@@ -27,7 +25,6 @@ export const NoticeCardComponent = ({
   notice: NoticeTypes;
   setdeletedNotice: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const { data: session, status } = useSession();
   return (
     <Card>
       <Link href={`notices/${notice.id}_${notice.title}`} passHref>
@@ -61,13 +58,8 @@ export const NoticeCardComponent = ({
           <Calendar className="mr-1 h-4 w-4" />
           {getLocalDate(notice.publishedDate)}
         </div>
-        {session?.user.role === "ADMIN" ? (
-          <div onClick={(e) => e.stopPropagation()}>
-            <DeleteNotice id={notice.id} setdeletedNotice={setdeletedNotice} />
-          </div>
-        ) : (
-          <DownloadNotice notice={notice} />
-        )}
+
+        <DownloadNotice notice={notice} />
       </CardFooter>
     </Card>
   );

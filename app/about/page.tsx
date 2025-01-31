@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import TeamList from "@/components/custom/TeamList";
+import TeamList from "@/app/mb/[id]/TeamList";
 
 export default function About() {
   return (
