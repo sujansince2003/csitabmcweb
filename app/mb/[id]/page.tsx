@@ -13,7 +13,6 @@ import {
 import { TeamDetails } from "@/app/data";
 import NotFound from "@/app/not-found";
 import { metadata } from "@/app/layout";
-import axios from "axios";
 import QueryString from "qs";
 import { MemberTypes } from "@/types/Members";
 
