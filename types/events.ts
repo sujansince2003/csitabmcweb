@@ -17,10 +17,15 @@ export type EventTypes = {
   organizer: string;
   availableSeats: number;
   registrationFeeBMC: number;
+  registrationOpen: boolean;
   registrationFee: number;
   image: {
     id: number;
     documentId: string;
     url: string;
+  }[];
+  mentors: {
+    id: number;
+    documentId: string;
   }[];
 };

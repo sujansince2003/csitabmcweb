@@ -22,7 +22,6 @@ export default async function Event() {
   );
   const resJson = await res.json();
   const eventDetails: EventTypes[] = resJson.data;
-  console.log(eventDetails);
   if (!res || res.status !== 200) return <NotFound />;
 
   return (
