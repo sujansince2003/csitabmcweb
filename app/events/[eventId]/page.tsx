@@ -6,7 +6,12 @@ import { Calendar, Clock, MapPin, Users, ExternalLink } from "lucide-react";
 import { eventDetails } from "@/app/data";
 import NotFound from "@/app/not-found";
 import { metadata } from "@/app/layout";
-
+import { fetchWithToken } from "@/lib/fetch";
+import { EventTypes } from "@/types/events";
+import QueryString from "qs";
+import Markdown from "react-markdown";
+import EventDates from "./EventDates";
+import EventTime from "./EventTime";
 // This would typically come from your API or database
 const eventData = {
   id: "1",
@@ -46,17 +51,26 @@ export default async function EventPage({
   params: Promise<{ eventId: string }>;
 }) {
   const eventId = (await params).eventId;
-  const data = eventDetails;
-  const myData = data.find((item) => item.id === eventId);
-  if (!myData) {
-    return <NotFound />;
-  }
+  const query = QueryString.stringify({
+    populate: {
+      image: {
+        fields: ["url"],
+      },
+    },
+  });
+  const res = await fetchWithToken(
+    `${process.env.STRAPI_API_URL}/events/${eventId}?${query}`
+  );
+  if (!res || res.status !== 200) return <NotFound />;
+  const resJson = await res.json();
+  const event: EventTypes = resJson.data;
+  // console.log(event);
 
-  metadata.title = myData.title;
-  metadata.description = "CSIT Association of BMC Present - " + myData.title;
+  metadata.title = event.title;
+  metadata.description = "CSIT Association of BMC Present - " + event.title;
   metadata.openGraph = metadata.openGraph ?? {};
   metadata.openGraph.images = {
-    url: myData.image,
+    url: event.image[0].url,
     width: 1200,
     height: 600,
     alt: "CSIT-BMC",
@@ -65,7 +79,7 @@ export default async function EventPage({
     <div className="min-h-screen bg-gray-50">
       <div className="relative h-96 md:h-[500px]">
         <Image
-          src={myData.image}
+          src={event.image[0].url}
           alt="banner image"
           fill
           className="object-cover"
@@ -75,17 +89,11 @@ export default async function EventPage({
           <div className="container mx-auto px-4 py-8">
             <Badge className="mb-4">{eventData.category}</Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {myData.title}
+              {event.title}
             </h1>
             <div className="flex flex-wrap gap-4 text-white">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
-                <span>{eventData.date}</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2" />
-                <span>{eventData.time}</span>
-              </div>
+              <EventDates startDate={event.startDate} endDate={event.endDate} />
+              <EventTime startTime={event.startTime} endTime={event.endTime} />
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />
                 <span>{eventData.location}</span>
@@ -97,10 +105,7 @@ export default async function EventPage({
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">About the Event</h2>
-            <p className="text-gray-600 mb-8">{eventData.description}</p>
-
+          <div className="md:col-span-2 ">
             <h2 className="text-2xl font-bold mb-4">Speakers</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               {eventData.speakers.map((speaker, index) => (
@@ -121,19 +126,10 @@ export default async function EventPage({
                 </div>
               ))}
             </div>
-
-            <h2 className="text-2xl font-bold mb-4">Location</h2>
-            <div className="aspect-w-16 aspect-h-9 mb-8">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.340063442644!2d83.46040731506156!3d27.700438982792193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996868a00000001%3A0x4a5f7f7a7c8e5d5a!2sButwal%20Multiple%20Campus!5e0!3m2!1sen!2snp!4v1635000000000!5m2!1sen!2snp"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                className="rounded-lg shadow-lg w-full"
-              ></iframe>
-            </div>
+            <h2 className="border-b border-gray-200 py-2 mb-4 font-semibold text-xl">
+              About Event
+            </h2>
+            <Markdown className="markdown">{event.description}</Markdown>
           </div>
 
           <div className="md:col-span-1">
