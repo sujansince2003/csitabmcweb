@@ -15,6 +15,7 @@ import NotFound from "@/app/not-found";
 import { metadata } from "@/app/layout";
 import QueryString from "qs";
 import { MemberTypes } from "@/types/Members";
+import { fetchWithToken } from "@/lib/fetch";
 
 export default async function Profile({
   params,
@@ -32,7 +33,7 @@ export default async function Profile({
     },
     { encodeValuesOnly: true }
   );
-  const res = await fetch(
+  const res = await fetchWithToken(
     `${process.env.STRAPI_API_URL}/members/${userId}?${query}`
   );
   if (!res || res.status !== 200) return <NotFound />;
