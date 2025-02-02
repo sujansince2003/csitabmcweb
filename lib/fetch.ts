@@ -3,5 +3,6 @@ export const fetchWithToken = async (url: string) => {
     headers: {
       Authorization: `Bearer ${process.env.TOKEN}`,
     },
+    next: { revalidate: 30 },
   });
 };
