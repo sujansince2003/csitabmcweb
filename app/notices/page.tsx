@@ -1,33 +1,25 @@
-"use client";
-import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { NoticeTypes } from "@/types/Notice";
 import { NoticeCardComponent } from "./components/NoticeCard";
 import NoticeHeader from "./components/NoticeHeader";
-import CSITLoader from "./loader";
-
-export default function NoticePage() {
-  const [notices, setNotices] = useState<NoticeTypes[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [deletedNotice, setdeletedNotice] = useState(false);
-
-  useEffect(() => {
-    const fetchNotices = async () => {
-      try {
-        const res = await fetch("/api/notices"); // Uses relative path
-        const data = await res.json();
-
-        setNotices(data);
-      } catch (error) {
-        console.error("Failed to fetch notices:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchNotices();
-  }, [deletedNotice]);
-
-  if (loading) return <CSITLoader />;
+import { fetchWithToken } from "@/lib/fetch";
+import NotFound from "../not-found";
+import QueryString from "qs";
+export default async function NoticePage() {
+  const query = QueryString.stringify({
+    populate: {
+      image: {
+        fields: ["url"],
+      },
+    },
+  });
+  const res = await fetchWithToken(
+    `${process.env.STRAPI_API_URL}/notices?${query}`
+  );
+  if (!res || res.status !== 200) return <NotFound />;
+  const resJson = await res.json();
+  const notices: NoticeTypes[] = resJson.data;
+  console.dir(notices, { depth: null });
   return (
     <>
       <NoticeHeader />
@@ -51,11 +43,7 @@ export default function NoticePage() {
               >
                 {notices?.map((notice) => {
                   return (
-                    <NoticeCardComponent
-                      key={notice.id}
-                      notice={notice}
-                      setdeletedNotice={setdeletedNotice}
-                    />
+                    <NoticeCardComponent key={notice.id} notice={notice} />
                   );
                 })}
               </TabsContent>
@@ -66,11 +54,7 @@ export default function NoticePage() {
                 {notices?.map((notice) => {
                   if (notice.category == "administrative")
                     return (
-                      <NoticeCardComponent
-                        key={notice.id}
-                        notice={notice}
-                        setdeletedNotice={setdeletedNotice}
-                      />
+                      <NoticeCardComponent key={notice.id} notice={notice} />
                     );
                 })}
               </TabsContent>
@@ -81,11 +65,7 @@ export default function NoticePage() {
                 {notices?.map((notice) => {
                   if (notice.category == "events")
                     return (
-                      <NoticeCardComponent
-                        key={notice.id}
-                        notice={notice}
-                        setdeletedNotice={setdeletedNotice}
-                      />
+                      <NoticeCardComponent key={notice.id} notice={notice} />
                     );
                 })}
               </TabsContent>
@@ -96,11 +76,7 @@ export default function NoticePage() {
                 {notices?.map((notice) => {
                   if (notice.category == "academic")
                     return (
-                      <NoticeCardComponent
-                        key={notice.id}
-                        notice={notice}
-                        setdeletedNotice={setdeletedNotice}
-                      />
+                      <NoticeCardComponent key={notice.id} notice={notice} />
                     );
                 })}
               </TabsContent>

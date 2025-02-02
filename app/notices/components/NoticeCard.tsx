@@ -1,3 +1,4 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -18,16 +19,10 @@ import DownloadNotice from "../[id]/DownloadNotice";
 import { getLocalDate } from "@/lib/data";
 import { Dispatch, SetStateAction } from "react";
 
-export const NoticeCardComponent = ({
-  notice,
-  setdeletedNotice,
-}: {
-  notice: NoticeTypes;
-  setdeletedNotice: Dispatch<SetStateAction<boolean>>;
-}) => {
+export const NoticeCardComponent = ({ notice }: { notice: NoticeTypes }) => {
   return (
     <Card>
-      <Link href={`notices/${notice.id}_${notice.title}`} passHref>
+      <Link href={`notices/${notice.documentId}`} passHref>
         <CardHeader className="flex flex-row items-center gap-4">
           <div className="grid gap-1 h-14">
             <CardTitle>{notice.title}</CardTitle>
@@ -42,8 +37,8 @@ export const NoticeCardComponent = ({
         <CardContent>
           <Image
             src={
-              notice.photo !== ""
-                ? (notice.photo as string)
+              notice.image[0].url !== ""
+                ? (notice.image[0].url as string)
                 : "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191383/logohero_nsqj8h.png"
             }
             width={800}
@@ -56,7 +51,7 @@ export const NoticeCardComponent = ({
       <CardFooter className="flex justify-between">
         <div className="flex items-center text-sm text-muted-foreground">
           <Calendar className="mr-1 h-4 w-4" />
-          {getLocalDate(notice.publishedDate)}
+          {getLocalDate(notice.publishedAt)}
         </div>
 
         <DownloadNotice notice={notice} />
