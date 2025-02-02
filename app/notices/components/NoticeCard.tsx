@@ -1,7 +1,4 @@
-"use client";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
 import {
   Card,
   CardContent,
@@ -10,14 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import { Bell, Calendar, Search, Star, Trash2 } from "lucide-react";
+import { Calendar, Download } from "lucide-react";
 import { NoticeTypes } from "@/types/Notice";
-import DownloadNotice from "../[id]/DownloadNotice";
 import { getLocalDate } from "@/lib/data";
-import { Dispatch, SetStateAction } from "react";
+import { Button } from "@/components/ui/button";
 
 export const NoticeCardComponent = ({ notice }: { notice: NoticeTypes }) => {
   return (
@@ -53,8 +48,12 @@ export const NoticeCardComponent = ({ notice }: { notice: NoticeTypes }) => {
           <Calendar className="mr-1 h-4 w-4" />
           {getLocalDate(notice.publishedAt)}
         </div>
-
-        <DownloadNotice notice={notice} />
+        <Link href={notice.image[0].url} download>
+          <Button>
+            <Download className="mr-2 h-4 w-4" />
+            Notice
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

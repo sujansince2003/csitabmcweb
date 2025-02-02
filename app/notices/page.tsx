@@ -19,7 +19,6 @@ export default async function NoticePage() {
   if (!res || res.status !== 200) return <NotFound />;
   const resJson = await res.json();
   const notices: NoticeTypes[] = resJson.data;
-  console.dir(notices, { depth: null });
   return (
     <>
       <NoticeHeader />
