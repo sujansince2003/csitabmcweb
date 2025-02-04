@@ -16,6 +16,7 @@ import { metadata } from "@/app/layout";
 import QueryString from "qs";
 import { MemberTypes } from "@/types/Members";
 import { fetchWithToken } from "@/lib/fetch";
+import Markdown from "react-markdown";
 
 export default async function Profile({
   params,
@@ -67,14 +68,14 @@ export default async function Profile({
                   </div>
                   <div className="flex gap-3">
                     <Link
-                      href={"profile.Facebook"}
+                      href={profile.facebookLink as string}
                       className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition-colors"
                       aria-label="Facebook Profile"
                     >
                       <Facebook className="w-5 h-5" />
                     </Link>
                     <Link
-                      href={"profile.LinkedIn"}
+                      href={profile.linkedLink as string}
                       className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition-colors"
                       aria-label="LinkedIn Profile"
                     >
@@ -89,10 +90,6 @@ export default async function Profile({
                     </Link>
                   </div>
                   <div className="space-y-3 pt-2 text-gray-600">
-                    {/* <div className="flex items-center gap-2">
-                      <Phone className="w-5 h-5" />
-                      <span>+977-9876543210</span>
-                    </div> */}
                     <Link
                       href={`mailto:${profile.email}`}
                       className="flex items-center gap-2"
@@ -111,23 +108,7 @@ export default async function Profile({
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   About {profile.fullName.split(" ")[0]}
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  I am {profile.fullName}, serving as the {profile.post} of the
-                  CSIT Association of BMC. In my role, I actively collaborate
-                  with fellow IT students to organize workshops, events, and
-                  seminars that foster learning, innovation, and skill
-                  development in the field of Information Technology.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Being an active member of the CSITABMC has not only helped me
-                  improve my technical skills but has also given me valuable
-                  chances to grow personally. I've developed important skills in
-                  leadership, teamwork, and communication, all of which are key
-                  for success in both my studies and future career. I'm
-                  passionate about supporting the association's mission to
-                  promote technology and look forward to working with others who
-                  share the same goal of driving innovation in the IT field.
-                </p>
+                <Markdown className="markdown">{profile.description}</Markdown>
                 <div className="flex flex-wrap gap-2">
                   {profile.tags?.split(",").map((tag, index) => (
                     <Badge key={index} variant="secondary">
