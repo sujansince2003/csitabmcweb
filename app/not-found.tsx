@@ -2,18 +2,19 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, CloudOff } from "lucide-react";
 
-export default function NotFound() {
+export default function NotFound({
+  heading = "Page Not Found",
+  message = " Oops! The page you're looking for doesn't exist or has been moved.",
+}) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-lg w-full space-y-8 text-center">
         <div>
           <CloudOff className="mx-auto h-24 w-24 text-gray-400" />
           <h1 className="mt-6 text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            404 - Page Not Found
+            404 - {heading}
           </h1>
-          <p className="mt-4 text-lg text-gray-600">
-            Oops! The page you're looking for doesn't exist or has been moved.
-          </p>
+          <p className="mt-4 text-lg text-gray-600">{message}</p>
         </div>
 
         <div className="mt-10">
