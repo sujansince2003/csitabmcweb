@@ -4,6 +4,7 @@ import { MemberTypes } from "@/types/Members";
 import qs from "qs";
 import { fetchWithToken } from "@/lib/fetch";
 import NotFound from "@/app/not-found";
+import { membersListFormatter } from "@/lib/members";
 export default async function TeamList() {
   const query = qs.stringify(
     {
@@ -28,6 +29,7 @@ export default async function TeamList() {
 
   const resJson = await res.json();
   const TeamDetails: MemberTypes[] = resJson.data;
+  membersListFormatter(TeamDetails);
 
   return (
     <section className="py-16 px-4 md:px-6 bg-gray-50">
