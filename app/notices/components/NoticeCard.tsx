@@ -13,6 +13,7 @@ import { Calendar, Download } from "lucide-react";
 import { NoticeTypes } from "@/types/Notice";
 import { getLocalDate } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import Markdown from "react-markdown";
 
 export const NoticeCardComponent = ({ notice }: { notice: NoticeTypes }) => {
   return (
@@ -22,7 +23,7 @@ export const NoticeCardComponent = ({ notice }: { notice: NoticeTypes }) => {
           <div className="grid gap-1 h-14">
             <CardTitle>{notice.title}</CardTitle>
             <CardDescription className="line-clamp-2">
-              {notice.description}
+              <Markdown>{notice.description}</Markdown>
             </CardDescription>
           </div>
           <Badge variant="secondary" className="ml-auto capitalize">
