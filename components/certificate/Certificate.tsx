@@ -1,31 +1,10 @@
 import React from "react";
 import { format } from "date-fns";
-import {
-  Page,
-  Text,
-  View,
-  Document,
-  Image,
-  StyleSheet,
-} from "@react-pdf/renderer";
+import { Page, Text, View, Document, Image } from "@react-pdf/renderer";
 import { styles } from "./style";
+import { CertificateTypes } from "@/types/certificate";
 
-interface CertificateData {
-  uniqueId: string;
-  participantName: string;
-  event: {
-    title: string;
-    startDate: string;
-    endDate: string;
-  };
-  user: {
-    name: string;
-    department: string;
-  };
-  issuedAt: string;
-}
-
-const Certificate = ({ data }: { data: CertificateData }) => (
+const Certificate = ({ data }: { data: CertificateTypes }) => (
   <Document>
     <Page size="A4" orientation="landscape" style={styles.page}>
       <Image src="/certificate.png" style={styles.pageBackground} />
@@ -44,7 +23,7 @@ const Certificate = ({ data }: { data: CertificateData }) => (
       </View>
       <View style={styles.body}>
         <View>
-          <Text style={styles.name}>{data.participantName}</Text>
+          <Text style={styles.name}>{data.fullName}</Text>
         </View>
         <View>
           <Text style={styles.para}>
@@ -62,7 +41,7 @@ const Certificate = ({ data }: { data: CertificateData }) => (
         <View style={styles.signs}>
           <View style={styles.qr}>
             <Image
-              src={`https://api.qrserver.com/v1/create-qr-code/?data=https://csitabmc.com/certificate/${data.uniqueId}&color=0c2044&bgcolor=F1F1F1`}
+              src={`https://api.qrserver.com/v1/create-qr-code/?data=https://csitabmc.com/certificate/${data.certificateID}&color=0c2044&bgcolor=F1F1F1`}
               style={{ objectFit: "contain", height: "100%" }}
             />
           </View>
