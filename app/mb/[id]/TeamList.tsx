@@ -51,7 +51,7 @@ export default async function TeamList() {
                 alt={member.fullName}
                 width={200}
                 height={200}
-                className="rounded-sm"
+                className="rounded-sm aspect-[1/1] object-cover"
               />
 
               <div className="text-center pt-2">
