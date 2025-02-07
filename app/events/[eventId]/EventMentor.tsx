@@ -32,7 +32,11 @@ const EventMentor = async ({ id }: { id: string }) => {
       className="flex items-center space-x-4 hover:bg-gray-100 active:bg-gray-200 duration-300 p-4 rounded-md"
     >
       <Avatar className="h-12 w-12">
-        <AvatarImage src={mentor.image.url} alt={mentor.fullName} />
+        <AvatarImage
+          src={mentor.image.url}
+          alt={mentor.fullName}
+          className="object-cover"
+        />
         <AvatarFallback>
           {mentor.fullName
             .split(" ")
