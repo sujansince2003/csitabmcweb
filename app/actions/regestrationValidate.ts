@@ -1,7 +1,5 @@
 "use server";
 
-import { Card } from "@/components/ui/card";
-
 export const getAllRegistration = async () => {
   try {
     const response = await fetch(process.env.REGESTATION_DATA_API as string);
@@ -32,18 +30,14 @@ export const validateRegistration = async (name: string, email: string) => {
       };
     }
 
-    const nameMatch =
-      user["Full Name"].toUpperCase().trim() === name.toUpperCase().trim();
-    const isPaid = user.Paid;
+    console.log("User:", {
+      exists: true,
+      paid: user.Paid,
+    });
 
     return {
       exists: true,
-      id: user.ID,
-      card: user["Image ID"],
-      nameMatch,
-      paid: isPaid,
-      name: { status: nameMatch },
-      payment: { status: isPaid },
+      paid: user.Paid,
     };
   } catch (error) {
     console.error("Error validating registration:", error);

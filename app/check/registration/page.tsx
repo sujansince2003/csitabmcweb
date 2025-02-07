@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { validateRegistration } from "@/app/actions/regestrationValidate";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import StatusPage from "@/components/custom/Statuspage";
+import { validateRegistration } from "@/app/actions/regestrationValidate";
 
 interface ValidationResult {
   exists: boolean;
@@ -61,7 +61,7 @@ const RegistrationValidation = () => {
           Enter your details to verify your registration status
         </p>
         <Image
-          src="/FOWD.png"
+          src="https://res.cloudinary.com/dol8m5gx7/image/upload/v1738947077/event_a6e2bc8c17.jpg"
           alt="form banner"
           width={500}
           height={300}

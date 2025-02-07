@@ -1,6 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
 import {
   Card,
   CardContent,
@@ -9,33 +7,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import { Bell, Calendar, Search, Star, Trash2 } from "lucide-react";
+import { Calendar, Download } from "lucide-react";
 import { NoticeTypes } from "@/types/Notice";
-import DownloadNotice from "../[id]/DownloadNotice";
 import { getLocalDate } from "@/lib/data";
-import DeleteNotice from "../[id]/DeleteNotice";
-import { useSession } from "next-auth/react";
-import { Dispatch, SetStateAction } from "react";
+import { Button } from "@/components/ui/button";
+import Markdown from "react-markdown";
 
-export const NoticeCardComponent = ({
-  notice,
-  setdeletedNotice,
-}: {
-  notice: NoticeTypes;
-  setdeletedNotice: Dispatch<SetStateAction<boolean>>;
-}) => {
-  const { data: session, status } = useSession();
+export const NoticeCardComponent = ({ notice }: { notice: NoticeTypes }) => {
   return (
     <Card>
-      <Link href={`notices/${notice.id}_${notice.title}`} passHref>
+      <Link href={`notices/${notice.documentId}`} passHref>
         <CardHeader className="flex flex-row items-center gap-4">
           <div className="grid gap-1 h-14">
             <CardTitle>{notice.title}</CardTitle>
             <CardDescription className="line-clamp-2">
-              {notice.description}
+              <Markdown>{notice.description}</Markdown>
             </CardDescription>
           </div>
           <Badge variant="secondary" className="ml-auto capitalize">
@@ -45,8 +33,8 @@ export const NoticeCardComponent = ({
         <CardContent>
           <Image
             src={
-              notice.photo !== ""
-                ? (notice.photo as string)
+              notice.image[0].url !== ""
+                ? (notice.image[0].url as string)
                 : "https://res.cloudinary.com/dol8m5gx7/image/upload/v1723191383/logohero_nsqj8h.png"
             }
             width={800}
@@ -59,15 +47,14 @@ export const NoticeCardComponent = ({
       <CardFooter className="flex justify-between">
         <div className="flex items-center text-sm text-muted-foreground">
           <Calendar className="mr-1 h-4 w-4" />
-          {getLocalDate(notice.publishedDate)}
+          {getLocalDate(notice.publishedAt)}
         </div>
-        {session?.user.role === "ADMIN" ? (
-          <div onClick={(e) => e.stopPropagation()}>
-            <DeleteNotice id={notice.id} setdeletedNotice={setdeletedNotice} />
-          </div>
-        ) : (
-          <DownloadNotice notice={notice} />
-        )}
+        <Link href={notice.image[0].url} download>
+          <Button>
+            <Download className="mr-2 h-4 w-4" />
+            Notice
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

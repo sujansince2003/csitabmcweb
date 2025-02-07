@@ -1,24 +1,13 @@
-import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { DiscIcon as Discord } from "lucide-react";
-import { Button } from "../ui/button";
 
 interface ValidationResult {
   exists: boolean;
   nameMatch: boolean;
   paid: boolean;
-  message: string;
   name?: {
     status: boolean;
-    message: string;
   };
-  payment?: {
-    status: boolean;
-    message: string;
-  };
-  id?: string;
-  card?: string;
 }
 
 interface StatusPageProps {
@@ -32,7 +21,7 @@ export default function StatusPage({ result }: StatusPageProps) {
         <StatusCard
           status="error"
           title="Registration Not Found"
-          description="No registration found with this email."
+          description="No registration found with this email. For registration query: 9867418196"
           details={{
             type: "register",
             content: "",
@@ -41,19 +30,19 @@ export default function StatusPage({ result }: StatusPageProps) {
         />
       );
     }
-    console.log(result);
-    if (!result.nameMatch) {
+    if (!result.paid) {
       return (
         <StatusCard
-          status="verified"
-          title="Verified"
-          description="Registration Verified, get your id card below"
+          status="pending"
+          title="Payment Pending"
+          description="Your registration is recorded, but payment is incomplete. For payment query: 9849511233"
           details={{
             type: "payment",
-            content: "ID Card",
-            imageUrl: `https://drive.google.com/uc?export=view&id=${result.card}`,
-            contactInfo:
-              "Your Name Doesn't match with the registration. Please contact us for further details.",
+            content: "",
+            imageUrl:
+              "https://res.cloudinary.com/dol8m5gx7/image/upload/v1738949671/payment_bmcevents_ye01zh_42de9ffa78.png",
+            link: "https://discord.com/invite/DHAKx3Aees",
+            contactInfo: "",
           }}
         />
       );
@@ -62,12 +51,13 @@ export default function StatusPage({ result }: StatusPageProps) {
       <StatusCard
         status="verified"
         title="Verified"
-        description="Registration Verified, get your id card below"
+        description="Registration Verified"
         details={{
           type: "payment",
-          content: "ID Card",
-          imageUrl: `https://drive.google.com/uc?export=view&id=${result.card}`,
-          contactInfo: "",
+          content: "GET YOUR ID Card",
+          link: "https://discord.com/invite/DHAKx3Aees",
+          contactInfo:
+            "ID card will be sent to your registered email once registration closes.",
         }}
       />
     );
@@ -155,72 +145,42 @@ function StatusCard({ status, title, description, details }: StatusCardProps) {
         >
           {details.content}
         </h3>
+        {details.imageUrl && (
+          <div className="rounded-lg bg-white p-4">
+            <img
+              src={details.imageUrl}
+              alt="Payment"
+              className="w-full h-auto"
+            />
+          </div>
+        )}
 
-        {details.type === "payment" && details.imageUrl && (
-          <div>
-            <div className=" w-full overflow-hidden rounded-lg  text-center ">
-              <Image
-                src={details.imageUrl}
-                alt="Payment details"
-                width={800}
-                height={800}
-                className="object-contain w-full max-h-80"
-              />
-            </div>
-            <a href={details.imageUrl} download>
-              <Button className="w-full bg-[#3063a1] hover:bg-blue-900 active:bg-blue-900 my-2">
-                Download
-              </Button>
+        {details.errorMessage && (
+          <p className="text-red-600 text-sm text-center rounded-md p-4 mt-2 bg-red-50">
+            <span className="text-red-600 font-semibold">Error:</span>{" "}
+            {details.errorMessage}
+          </p>
+        )}
+
+        {details.contactInfo && (
+          <p className="text-black text-sm text-center rounded-md p-4 mt-2 bg-stone-200">
+            <span className="text-red-600 font-semibold"></span>{" "}
+            {details.contactInfo}
+          </p>
+        )}
+
+        {details.link && (
+          <div className="rounded-lg bg-green-50 p-4">
+            <a
+              href={details.link}
+              className="inline-flex w-full items-center justify-center rounded-lg bg-[#5865F2] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#4752C4]"
+            >
+              <Discord className="mr-2 h-5 w-5" />
+              Join Discord Server
             </a>
-
-            {details.contactInfo && (
-              <p className="text-black text-sm text-center rounded-md p-4 mt-2 bg-stone-200">
-                <span className="text-red-600 font-semibold"> NOTE:</span>{" "}
-                {details.contactInfo}
-              </p>
-            )}
-          </div>
-        )}
-
-        {(details.type === "discord" || details.type === "name") &&
-          details.link && (
-            <div className="rounded-lg bg-green-50 p-4">
-              <a
-                href={details.link}
-                className="inline-flex w-full items-center justify-center rounded-lg bg-[#5865F2] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#4752C4]"
-              >
-                <Discord className="mr-2 h-5 w-5" />
-                Join Discord Server
-              </a>
-              <p className="mt-2 text-center text-xs text-gray-600">
-                Direct link:{" "}
-                <a
-                  href={details.link}
-                  className="text-[#5865F2] hover:underline"
-                >
-                  {details.link}
-                </a>
-              </p>
-            </div>
-          )}
-
-        {details.type === "name" && details.errorMessage && (
-          <div className="mt-6 space-y-3 rounded-lg bg-red-100 p-4">
-            <h3 className="text-lg font-medium text-red-600">Name Incorrect</h3>
-            <p className="text-sm text-gray-700">{details.errorMessage}</p>
-            {details.contactInfo && (
-              <p className="text-sm italic text-gray-600">
-                {details.contactInfo}
-              </p>
-            )}
-          </div>
-        )}
-
-        {details.type === "register" && details.link && (
-          <div className="rounded-lg bg-red-50 p-4">
-            <p className="text-sm text-gray-700">
-              Registration Link :{" "}
-              <a href={details.link} className="text-blue-600 hover:underline">
+            <p className="mt-2 text-center text-xs text-gray-600">
+              Direct link:{" "}
+              <a href={details.link} className="text-[#5865F2] hover:underline">
                 {details.link}
               </a>
             </p>
