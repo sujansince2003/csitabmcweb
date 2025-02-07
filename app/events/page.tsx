@@ -24,6 +24,10 @@ export default async function Event() {
   const eventDetails: EventTypes[] = resJson.data;
   if (!res || res.status !== 200) return <NotFound />;
 
+  eventDetails.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
   return (
     <section className="py-16 px-4 md:px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">

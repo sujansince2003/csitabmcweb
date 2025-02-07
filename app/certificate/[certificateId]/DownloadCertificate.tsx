@@ -1,17 +1,12 @@
 "use client";
-
 import React from "react";
-import dynamic from "next/dynamic";
 import Certificate from "@/components/certificate/Certificate";
 import { Button } from "@/components/ui/button";
-import { BlobProvider, PDFViewer } from "@react-pdf/renderer";
-
-export interface CertificateData {
-  participantName: string;
-}
+import { BlobProvider } from "@react-pdf/renderer";
+import { CertificateTypes } from "@/types/certificate";
 
 interface DownloadCertificateProps {
-  certificateData: CertificateData;
+  certificateData: CertificateTypes;
 }
 
 const DownloadCertificate: React.FC<DownloadCertificateProps> = ({
@@ -32,7 +27,7 @@ const DownloadCertificate: React.FC<DownloadCertificateProps> = ({
               if (url) {
                 const link = document.createElement("a");
                 link.href = url;
-                link.download = `${certificateData.participantName}.pdf`;
+                link.download = `${certificateData.fullName}.pdf`;
                 link.click();
               }
             }}

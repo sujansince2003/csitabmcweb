@@ -131,7 +131,17 @@ export default async function EventPage({
                   registrationFee={event.registrationFee}
                 />
               </div>
-              {event.registrationOpen ? (
+
+              {(event.registrationFeeBMC || event.registrationFee) &&
+                event.registrationOpen && (
+                  <Link href="/check/registration">
+                    <Button className="w-full mb-2" variant="secondary">
+                      Verify Registration
+                    </Button>
+                  </Link>
+                )}
+
+              {event.registrationOpen && event.registrationFormUrl ? (
                 <Link href={event.registrationFormUrl} target="_blank">
                   <Button className="w-full">Register Now</Button>
                 </Link>

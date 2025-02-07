@@ -3,6 +3,8 @@ import Link from "next/link";
 import { MemberTypes } from "@/types/Members";
 import qs from "qs";
 import { fetchWithToken } from "@/lib/fetch";
+import NotFound from "@/app/not-found";
+import { membersListFormatter } from "@/lib/members";
 export default async function TeamList() {
   const query = qs.stringify(
     {
@@ -19,8 +21,15 @@ export default async function TeamList() {
   const res = await fetchWithToken(
     `${process.env.STRAPI_API_URL}/members?${query}`
   );
+
+  if (!res || res.status !== 200) {
+    console.error("Failed to fetch team members", res);
+    return <NotFound />;
+  }
+
   const resJson = await res.json();
   const TeamDetails: MemberTypes[] = resJson.data;
+  membersListFormatter(TeamDetails);
 
   return (
     <section className="py-16 px-4 md:px-6 bg-gray-50">
@@ -42,7 +51,7 @@ export default async function TeamList() {
                 alt={member.fullName}
                 width={200}
                 height={200}
-                className="rounded-sm"
+                className="rounded-sm aspect-[1/1] object-cover"
               />
 
               <div className="text-center pt-2">
