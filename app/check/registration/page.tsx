@@ -1,11 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import StatusPage from "@/components/custom/Statuspage";
-import { validateRegistration } from "@/app/actions/regestrationValidate";
+import {
+  getEvent,
+  validateRegistration,
+} from "@/app/actions/regestrationValidate";
 
 interface ValidationResult {
   exists: boolean;
@@ -26,9 +29,19 @@ interface ValidationResult {
 }
 
 const RegistrationValidation = () => {
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<ValidationResult | null>(null);
+  useEffect(() => {
+    (async () => {
+      setEvent(await getEvent());
+    })();
+  }, []);
 
+  const [loading, setLoading] = useState(false);
+  const [event, setEvent] = useState({
+    eventTitle: "CSIT EVENT",
+    bannerLink:
+      "https://res.cloudinary.com/dol8m5gx7/image/upload/v1737813608/CSITABMC_09cb284d82.jpg",
+  });
+  const [result, setResult] = useState<ValidationResult | null>(null);
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
@@ -58,14 +71,15 @@ const RegistrationValidation = () => {
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">Event Registration Status</h1>
         <p className="text-gray-500">
-          Enter your details to verify your registration status
+          Enter your details to verify your registration status for{" "}
+          {event?.eventTitle}
         </p>
         <Image
-          src="https://res.cloudinary.com/dol8m5gx7/image/upload/v1738947077/event_a6e2bc8c17.jpg"
+          src={event?.bannerLink}
           alt="form banner"
           width={500}
           height={300}
-          className="rounded-md mx-auto"
+          className="rounded-md mx-auto max-h-[15rem] object-contain"
         />
       </div>
 

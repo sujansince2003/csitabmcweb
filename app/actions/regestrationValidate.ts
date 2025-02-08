@@ -1,5 +1,20 @@
 "use server";
 
+import { fetchWithToken } from "@/lib/fetch";
+
+export const getEvent = async () => {
+  try {
+    const response = await fetchWithToken(
+      `${process.env.STRAPI_API_URL}/the-event-banner`
+    );
+    const resJson = await response.json();
+    return resJson.data;
+  } catch (error) {
+    console.error("Error fetching event data:", error);
+    throw error;
+  }
+};
+
 export const getAllRegistration = async () => {
   try {
     const response = await fetch(process.env.REGESTATION_DATA_API as string);
@@ -29,11 +44,6 @@ export const validateRegistration = async (name: string, email: string) => {
         payment: { status: false },
       };
     }
-
-    console.log("User:", {
-      exists: true,
-      paid: user.Paid,
-    });
 
     return {
       exists: true,
