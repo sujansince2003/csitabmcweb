@@ -45,8 +45,8 @@ const EventMentor = async ({ id }: { id: string }) => {
         </AvatarFallback>
       </Avatar>
       <div>
-        <p className="font-semibold">{mentor.fullName}</p>
-        <p className="text-sm text-gray-500">{mentor.role}</p>
+        <p className="font-semibold line-clamp-2">{mentor.fullName}</p>
+        <p className="text-sm text-gray-500 line-clamp-2">{mentor.role}</p>
       </div>
     </Link>
   );
