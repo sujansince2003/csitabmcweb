@@ -25,7 +25,7 @@ interface ValidationResult {
   };
 
   id?: string;
-  card?: string;
+  IdCard?: string;
 }
 
 const RegistrationValidation = () => {

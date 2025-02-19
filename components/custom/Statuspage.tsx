@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { DiscIcon as Discord } from "lucide-react";
+import Image from "next/image";
+import { Button } from "../ui/button";
 
 interface ValidationResult {
   exists: boolean;
@@ -8,6 +10,7 @@ interface ValidationResult {
   name?: {
     status: boolean;
   };
+  IdCard?: string;
 }
 
 interface StatusPageProps {
@@ -47,6 +50,22 @@ export default function StatusPage({ result }: StatusPageProps) {
         />
       );
     }
+    if (result.IdCard) {
+      return (
+        <StatusCard
+          status="verified"
+          title="Verified"
+          description="Registration Verified"
+          details={{
+            type: "payment",
+            content: "GET YOUR ID Card",
+            link: "https://discord.com/invite/DHAKx3Aees",
+            IdCard: result.IdCard,
+            imageUrl: result.IdCard,
+          }}
+        />
+      );
+    }
     return (
       <StatusCard
         status="verified"
@@ -74,6 +93,7 @@ interface StatusCardProps {
   description: string;
   details: {
     type: "payment" | "discord" | "name" | "register";
+    IdCard?: string;
     content: string;
     imageUrl?: string;
     link?: string;
@@ -146,13 +166,24 @@ function StatusCard({ status, title, description, details }: StatusCardProps) {
           {details.content}
         </h3>
         {details.imageUrl && (
-          <div className="rounded-lg bg-white p-4">
-            <img
-              src={details.imageUrl}
-              alt="Payment"
-              className="w-full h-auto"
-            />
-          </div>
+          <>
+            <div className=" w-full overflow-hidden rounded-lg  text-center ">
+              <Image
+                src={details.imageUrl}
+                alt="Payment details"
+                width={800}
+                height={800}
+                className="object-contain w-full max-h-80"
+              />
+            </div>
+            {details.IdCard && (
+              <a href={details.imageUrl} download>
+                <Button className="w-full bg-[#3063a1] hover:bg-blue-900 active:bg-blue-900 my-2">
+                  Download
+                </Button>
+              </a>
+            )}
+          </>
         )}
 
         {details.errorMessage && (
@@ -163,7 +194,7 @@ function StatusCard({ status, title, description, details }: StatusCardProps) {
         )}
 
         {details.contactInfo && (
-          <p className="text-black text-sm text-center rounded-md p-4 mt-2 bg-stone-200">
+          <p className="text-black text-sm rounded-md p-4 mt-2 bg-stone-200">
             <span className="text-red-600 font-semibold"></span>{" "}
             {details.contactInfo}
           </p>
