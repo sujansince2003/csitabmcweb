@@ -170,10 +170,10 @@ function StatusCard({ status, title, description, details }: StatusCardProps) {
             <div className=" w-full overflow-hidden rounded-lg  text-center ">
               <Image
                 src={details.imageUrl}
-                alt="Payment details"
+                alt="Failed to get Card"
                 width={800}
                 height={800}
-                className="object-contain w-full max-h-80"
+                className="object-contain w-full max-h-80 text-red-500"
               />
             </div>
             {details.IdCard && (
