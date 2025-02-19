@@ -48,6 +48,7 @@ export const validateRegistration = async (name: string, email: string) => {
     return {
       exists: true,
       paid: user.Paid,
+      IdCard: user.IdCard,
     };
   } catch (error) {
     console.error("Error validating registration:", error);
